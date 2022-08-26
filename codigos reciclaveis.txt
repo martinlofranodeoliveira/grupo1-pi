@@ -91,3 +91,11 @@
 
 <!-- Image of location/map -->
   <img src="images/map.jpg" class="consult-image consult-greyscale" style="width:100%;margin-top:48px">
+
+
+<!-- Nav Menu -->
+      <a href="#planos" class="consult-bar-item consult-button"><i class="fa fa-usd"></i> Planos</a>
+
+
+<!-- Nav Menu Mobile -->
+  <a href="#planos" onclick="consult_close()" class="consult-bar-item consult-button">Planos</a>

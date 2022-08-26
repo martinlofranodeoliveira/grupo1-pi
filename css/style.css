@@ -1353,8 +1353,8 @@ a{
 }
 
 .consult-button:hover{
-    color:#000!important;
-    background-color:#ccc!important
+    color: #02505c!important;
+    background-color: #D4E3DE!important;
 }
 
 .consult-transparent,.consult-hover-none:hover{
@@ -1472,7 +1472,7 @@ a{
 }
 
 .consult-white,.consult-hover-white:hover{
-    color:#000!important;
+    color: #02505C!important;
     background-color:#fff!important
 }
 
@@ -1740,6 +1740,3 @@ a{
     border-color:#e7ffff!important
 }
 
-.consult-border-azul-principal, .consult-hover-border-azul-principal:hover{
-    border-color: #02505C !important;
-}
