@@ -1481,6 +1481,11 @@ a{
     background-color:#000!important
 }
 
+.consult-verde, .consult-hover-verde:hover {
+    color: #fff!important;
+    background-color: #8acca6!important;
+}
+
 .consult-grey,.consult-hover-grey:hover,.consult-gray,.consult-hover-gray:hover{
     color:#000!important;
     background-color:#9e9e9e!important
