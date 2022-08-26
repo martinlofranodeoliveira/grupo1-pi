@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-<script src="index.js"></script>
+<script src="app.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
@@ -38,9 +38,9 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="consult-right consult-hide-small">
       <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
-      <a href="#sejaparceiro" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja Parceiro </a>
-      <a href="#serviços" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
-      <!--<a href="#planos" class="consult-bar-item consult-button"><i class="fa fa-usd"></i> Planos</a>-->
+      <a href="#profissionais" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Profissionais</a>
+      <a href="#trabalho" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Trabalho</a>
+      <a href="#planos" class="consult-bar-item consult-button"><i class="fa fa-usd"></i> Planos</a>
       <a href="#" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Shop</a>
       <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
       <a href="#" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
@@ -57,9 +57,9 @@ body, html {
 <nav class="consult-sidebar consult-bar-block consult-black consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Close ×</a>
   <a href="#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
-  <a href="#sejaparceiro" onclick="consult_close()" class="consult-bar-item consult-button">Seja Parceiro</a>
-  <a href="#serviços" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
- <!-- <a href="#planos" onclick="consult_close()" class="consult-bar-item consult-button">Planos</a>-->
+  <a href="#profissionais" onclick="consult_close()" class="consult-bar-item consult-button">Profissionais</a>
+  <a href="#trabalho" onclick="consult_close()" class="consult-bar-item consult-button">Trabalho</a>
+  <a href="#planos" onclick="consult_close()" class="consult-bar-item consult-button">Planos</a>
   <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Shop</a>
   <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
   <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
@@ -117,7 +117,7 @@ body, html {
     <div class="consult-col m6">
       <h3>We know design.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#serviços" class="consult-button consult-black"><i class="fa fa-th"> </i> Serviços</a></p>
+      <p><a href="#trabalho" class="consult-button consult-black"><i class="fa fa-th"> </i> Trabalhos</a></p>
     </div>
     <div class="consult-col m6">
       <img class="consult-image consult-round-large" src="images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
@@ -126,8 +126,8 @@ body, html {
 </div>
 
 <!-- Profissionais Section -->
-<div class="consult-container" style="padding:128px 16px" id="sejaparceiro">
-  <h3 class="consult-center">Seja Parceiro</h3>
+<div class="consult-container" style="padding:128px 16px" id="profissionais">
+  <h3 class="consult-center">Profissionais</h3>
   <p class="consult-center consult-large">The ones who runs this company</p>
   <div class="consult-row-padding consult-grayscale" style="margin-top:64px">
     <div class="consult-col l3 m6 consult-margin-bottom">
@@ -242,7 +242,6 @@ body, html {
   </div>
 </div>
 
-
 <!-- Contato Section -->
 <div class="consult-container consult-light-grey" style="padding:128px 16px" id="contato">
   <h3 class="consult-center">Contato</h3>
@@ -263,7 +262,11 @@ body, html {
         </button>
       </p>
     </form>
-  
+    <!-- Image of location/map -->
+    <img src="images/map.jpg" class="consult-image consult-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="consult-center consult-black consult-padding-64">
   <a href="#home" class="consult-button consult-light-grey"><i class="fa fa-arrow-up consult-margin-right"></i>To the top</a>
@@ -277,6 +280,39 @@ body, html {
   </div>
   <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
 </footer>
+<script>
+  // Galeria de imagens modal
+
+
+function onClick(element) {
+   
+   document.getElementById("img01").src = element.src;
+   document.getElementById("modal01").style.display = "block";
+   var captionText = document.getElementById("caption");
+   captionText.innerHTML = element.alt;
+}
  
+ 
+ // Alterne entre mostrar e ocultar a barra lateral ao clicar no ícone do menu
+ 
+ 
+ var mySidebar = document.getElementById("mySidebar");
+ 
+ function consult_open() {
+   if (mySidebar.style.display === 'block') {
+     mySidebar.style.display = 'none';
+   } else {
+     mySidebar.style.display = 'block';
+   }
+}
+ 
+ // Close the sidebar with the close button
+ 
+ 
+ function consult_close() {
+     mySidebar.style.display = "none";
+ 
+}
+</script> 
 </body>
 </html>

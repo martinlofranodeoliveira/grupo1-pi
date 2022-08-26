@@ -1739,3 +1739,7 @@ a{
 .consult-border-pale-blue,.consult-hover-border-pale-blue:hover{
     border-color:#e7ffff!important
 }
+
+.consult-border-azul-principal, .consult-hover-border-azul-principal:hover{
+    border-color: #02505C !important;
+}
