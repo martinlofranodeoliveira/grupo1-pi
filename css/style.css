@@ -245,6 +245,10 @@ hr{
     height:auto
 }
 
+.d-flex{
+    display: flex;
+}
+
 img{
     vertical-align:middle
 }
@@ -310,7 +314,8 @@ a{
     background-color:inherit;
     text-align:center;
     cursor:pointer;
-    white-space:nowrap
+    white-space:nowrap;
+    border-radius:20px;
 }
 
 .consult-btn:hover{
@@ -808,6 +813,7 @@ a{
     .consult-sidebar.consult-collapse{
         display:block!important
     }
+    
 }
 
 @media (max-width:992px) and (min-width:601px){
@@ -1187,7 +1193,7 @@ a{
 }
 
 .consult-medium{
-    font-size:15px!important
+    font-size:14px!important
 }
 
 .consult-large{
@@ -1206,8 +1212,9 @@ a{
     font-size:48px!important
 }
 
-.consult-jumbo{
-    font-size:64px!important
+.consult-jumbo {
+    font-size: 45px!important;
+    line-height: 1.5;
 }
 
 .consult-left-align{
@@ -1475,6 +1482,17 @@ a{
     color: #02505C!important;
     background-color:#fff!important
 }
+
+.consult-verde-aqua, .consult-hover-verde-aqua:hover {
+    color: #ffffff!important;
+    background-color: #39B55F!important;
+}
+
+.consult-azul-aqua, .consult-hover-azul-aqua:hover {
+    color: #ffffff!important;
+    background-color: #00A698!important;
+}
+
 
 .consult-black,.consult-hover-black:hover{
     color:#fff!important;
@@ -1744,4 +1762,5 @@ a{
 .consult-border-pale-blue,.consult-hover-border-pale-blue:hover{
     border-color:#e7ffff!important
 }
+
 
