@@ -303,6 +303,7 @@ a{
     padding-left:16px
 }
 
+
 .consult-btn,.consult-button{
     border:none;
     display:inline-block;
@@ -315,7 +316,6 @@ a{
     text-align:center;
     cursor:pointer;
     white-space:nowrap;
-    border-radius:20px;
 }
 
 .consult-btn:hover{
@@ -957,7 +957,7 @@ a{
 }
 
 .consult-round-xlarge{
-    border-radius:16px
+    border-radius:20px
 }
 
 .consult-round-xxlarge{
