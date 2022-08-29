@@ -1493,6 +1493,15 @@ a{
     background-color: #00A698!important;
 }
 
+.consult-azul-aqua-lg, .consult-hover-azul-aqua-lg:hover {
+    color: #ffffff!important;
+    background-color: #D4EBE3!important;
+}
+
+.consult-azul-aqua-md, .consult-azul-aqua-md:hover{
+    color: #ffffff!important;
+    background-color:#87AAAE!important;
+}
 
 .consult-black,.consult-hover-black:hover{
     color:#fff!important;
