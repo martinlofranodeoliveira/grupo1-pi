@@ -400,6 +400,14 @@ a{
     width:100%
 }
 
+.consult-input2{
+    padding:8px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #ccc;
+    width:50%
+}
+
 .consult-select{
     padding:9px 0;
     width:100%;
@@ -764,6 +772,10 @@ a{
 }
 
 @media (max-width:600px){
+    .consult-col{
+        margin-top: 10px;
+    }
+
     .consult-modal-content{
         margin:0 10px;
         width:auto!important
@@ -1372,6 +1384,10 @@ a{
     box-shadow:none!important
 }
 
+.consult-quarter{
+    font-variant-numeric: lining-nums;
+}
+
 /* Colors */
 .consult-amber,.consult-hover-amber:hover{
     color:#000!important;
@@ -1481,6 +1497,15 @@ a{
 .consult-white,.consult-hover-white:hover{
     color: #02505C!important;
     background-color:#fff!important
+}
+
+.consult-blue-aqua-st,.consult-hover-blue-aqua-st:hover{
+    color: #fff!important;
+    background-color:#02505C!important
+}
+
+.consult-redes-blue-aqua,.consult-redes-blue-aqua:hover{
+    color:#02505C!important;
 }
 
 .consult-verde-aqua, .consult-hover-verde-aqua:hover {
