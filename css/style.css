@@ -1527,6 +1527,11 @@ a{
     background-color: #D4EBE3!important;
 }
 
+.consult-azul-aqua-lg-input, .consult-hover-azul-aqua-lg-input:hover {
+    color: #02505C!important;
+    background-color: #D4EBE3!important;
+}
+
 .consult-azul-aqua-md, .consult-azul-aqua-md:hover{
     color: #ffffff!important;
     background-color:#87AAAE!important;
