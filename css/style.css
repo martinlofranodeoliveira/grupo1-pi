@@ -1388,6 +1388,10 @@ a{
     font-variant-numeric: lining-nums;
 }
 
+.text-hg{
+    min-height: 240px !important;
+}
+
 /* Colors */
 .consult-amber,.consult-hover-amber:hover{
     color:#000!important;
