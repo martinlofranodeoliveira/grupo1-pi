@@ -1392,6 +1392,11 @@ a{
     min-height: 240px !important;
 }
 
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 /* Colors */
 .consult-amber,.consult-hover-amber:hover{
     color:#000!important;
@@ -1805,5 +1810,4 @@ a{
 .consult-border-pale-blue,.consult-hover-border-pale-blue:hover{
     border-color:#e7ffff!important
 }
-
 
