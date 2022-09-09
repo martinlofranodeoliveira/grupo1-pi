@@ -1298,6 +1298,10 @@ a{
     margin-top:16px!important
 }
 
+.consult-margin-top-carrinho{
+    margin-top:70px!important
+}
+
 .consult-margin-bottom{
     margin-bottom:16px!important
 }
@@ -1395,6 +1399,14 @@ a{
 .container{
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.consult-carrinho-h1{
+    font-size: 22px;
+}
+
+.consult-carrinho-h1 small{
+    font-size: 14px;
 }
 
 /* Colors */
