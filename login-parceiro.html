@@ -7,89 +7,84 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-
+    <title>PARCEIRO</title>
     <link rel="stylesheet" href="css/login-parceiro.css">
 
 </head>
 
 <body>
-    
+
 
     <main>
         <section class="text-primario">
-            <ul>
-                <li><a href="index.html"><img src="images/LOgo.png" alt=""></a></li>
-            </ul>
+            <!-- titulo principal da tela -->
+            <p id="logo-login">LOGO</p>
             <h1 id="text-bem-vindo">Bem vindo(a) de volta</h1>
-            <p id="text-subtitulo">Acesse sua conta agora mesmo e vamos ao trabalho!</p>
-
-           
-
-            <form class="organizar" >
-                <div class="Igmail">
-                    <label for="gmail">
+            <p id="text-subtitulo">Acesse sua conta agora mesmo</p>
+            <!-- forms de login  -->
+            <form class="organizar">
+                <div class="Ie-mail">
+                    <label for="e-mail-login">
                         <span class="material-symbols-outlined">
                             contact_mail
                         </span>
                     </label>
-                    <input type="email" id="gmail" placeholder="  E-mail" required>
+                    <input type="email" id="gmail-login" placeholder="  E-mail" required>
                 </div>
-
-                <div class="Isenha">
+                <!-- forms de cadastro  -->
+                <div class="Isenha-login">
                     <label for="senha"><span class="material-symbols-outlined">
                             password
                         </span></label>
-                    <input type="password" id="senha"   placeholder="  Senha" required>
+                    <input type="password" id="senha-login" placeholder="  Senha" required>
                 </div>
 
-                <input id="Ientra" type="submit" value="ENTRAR">
-                <p id="recuperar"><a href="">Esqueci minha senha</a></p>
-                
+                <input id="Ientra-login" type="submit" value="ENTRAR">
+                <p id="recuperar-login"><a href="">Esqueci minha senha</a></p>
+
             </form>
 
 
         </section>
-
+        <!-- Titulo principal da pagina-->
         <section class="cadrastro">
             <h1>Criar uma conta</h1>
-            <p>Preencha seus dados e torne-se nosso parceiro</p>
-            
+            <p>Preencha seus dados</p>
 
+            <!--forms de trabalho login e cadrastro   -->
             <div class="organizar">
-            <form >
-
-                <div class="Iprof">
-                    <label for="porf"><span class="material-symbols-outlined">
-                        heart_plus
-                        </span></label>
+                <form id>
+                    <div class="Iprof-cadrastro">
+                        <label for="porf"><span class="material-symbols-outlined">
+                                heart_plus
+                            </span></label>
                         <input type="text" id="prof" required placeholder="  Profição">
-                </div>
+                    </div>
 
-                <div class="Inome">
-                    <label for="nome"><span class="material-symbols-outlined">
-                        person
-                        </span></label>
-                        <input type="text" id="nome" placeholder="  Nome" required>
-                </div>
+                    <div class="Iname-cadrastro">
+                        <label for="nome-cadrastro"><span class="material-symbols-outlined">
+                                person
+                            </span></label>
+                        <input type="text" id="nome-cadrastro" placeholder="  Nome" required>
+                    </div>
 
-                <div class="Igmail2">
-                    <label for="Igmail"> <span class="material-symbols-outlined">
-                        contact_mail</label>
-                        <input type="email" id="Igmail" placeholder="  E-mail" required>
-                </div>
+                    <div class="Ie-mail-cadrastro">
+                        <label for="gmail-cadrastro"> <span class="material-symbols-outlined">
+                                contact_mail</label>
+                        <input type="email" id="gmail-cadrastro" placeholder="  E-mail" required>
+                    </div>
 
-                <div class="Isenha2">
-                    <label for="Isenha"><span class="material-symbols-outlined">
-                            password
-                        </span></label>
-                    <input type="password" id="Isenha"   placeholder="  Senha" required>
-                </div>
+                    <div class="Isenha-cadrastro">
+                        <label for="senha-cadrastro"><span class="material-symbols-outlined">
+                                password
+                            </span></label>
+                        <input type="password" id="senha-cadrastro" placeholder="  Senha" required>
+                    </div>
 
 
-                <input type="submit" id="Ientra" value="Cadrastrar">
+                    <input type="submit" id="Ientra-cadrastro" value="Cadrastrar">
             </div>
-                
+
             </form>
         </section>
     </main>
