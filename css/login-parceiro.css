@@ -1,6 +1,10 @@
 @charset "UFT-8";
 
 
+/* tabelas de cores 
+ verde: #8ACCA6
+
+*/
 * {
     margin: 0px;
     padding: 0px;
@@ -13,29 +17,10 @@
 
 
 
+
 html,
 body {
-
-    background: url('../images/celular.jpg');
-    background-size: cover;
-}
-
-
-
-/* logo */
-
-
-ul>li {
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 30px;
-    list-style: none;
-
-}
-
-ul>li>a>img {
-    width: 55px;
-    height: 45px;
+    background: #8ACCA6;
 }
 
 /* text de bem vindo  */
@@ -63,7 +48,7 @@ main>.text-primario>p#text-subtitulo {
 
 /*Forms */
 
-form>.Igmail {
+form>.Igmail-login {
     display: flex;
 
     background-color: #0EA6BD;
@@ -75,7 +60,7 @@ form>.Igmail {
 }
 
 
-form>.Igmail>label {
+form>.Igmail-login>label {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
@@ -83,14 +68,14 @@ form>.Igmail>label {
 
 
 
-form>.Igmail>input {
+form>.Igmail-login>input {
     width: 100%;
     border: 1px solid #0EA6BD;
-    ;
+
 }
 
 
-form>.Isenha {
+form>.Isenha-login {
     display: flex;
 
     background-color: #0EA6BD;
@@ -101,34 +86,34 @@ form>.Isenha {
 
 }
 
-form>.Isenha>label {
+form>.Isenha-login>label {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
 }
 
-form>.Isenha>input {
+form>.Isenha-login>input {
     width: 100%;
     border: 1px solid #0EA6BD;
 
 }
 
-input#Ientra {
-    margin-top: 10px;
-    width: 70vw;
+
+input#Ientra-login {
+    width: 100%;
+    height: 30px;
+
     border-radius: 8px;
+    border: 1px solid white;
+
     color: white;
     background: #00A698;
-    border: 1px solid white;
-    height: 30px;
-    box-shadow: 2px 2px 8px black;
-
+    margin-top: 10px;
 }
 
-input#Ientra:hover {
+input#Ientra-login:hover {
     cursor: pointer;
 }
-
 
 
 p#recuperar {
@@ -142,9 +127,11 @@ p#recuperar>a {
 }
 
 .cadrastro {
-    background: #B9B3B3;
-    width: 100vw;
+    background: white;
+    width: 90vw;
     height: 400px;
+
+    margin: auto;
 
 
 
@@ -159,7 +146,6 @@ p#recuperar>a {
     flex-direction: column;
     align-items: center;
 
-    box-shadow: 0px 0px 10px black;
 }
 
 
@@ -171,82 +157,83 @@ p#recuperar>a {
 
 
 
-form>.Inome {
+form>.Ipof-cadrastro {
     display: flex;
 
     background-color: #0EA6BD;
-    margin-top: 15px;
-    border-radius: 8px;
-    width: 70vw;
-    box-shadow: 2px 2px 8px gray;
-}
-
-
-form>.Inome>label {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-}
-
-form>.Inome>input {
-    width: 100%;
-    border: 1px solid #0EA6BD;
-}
-
-form>.Igmail2 {
-    display: flex;
-
-    background-color: #0EA6BD;
-    margin-top: 15px;
-    border-radius: 8px;
-    width: 100%;
-
-    box-shadow: 2px 2px 8px gray;
-}
-
-form>.Igmail2>label {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-}
-
-form>.Igmail2>input {
-    width: 100%;
-    border: 1px solid #0EA6BD;
-}
-
-
-form>.Isenha2 {
-    display: flex;
-
-    background-color: #0EA6BD;
-    margin-top: 15px;
-    border-radius: 8px;
-    width: 100%;
-
-
-    box-shadow: 2px 2px 8px gray;
-}
-
-
-form>.Isenha2>label {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-}
-
-form>.Isenha2>input {
-    width: 100%;
-    border: 1px solid #0EA6BD;
-}
-
-form>.Iprof {
-    display: flex;
-
     margin-top: 50px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 2px 2px 8px gray;
+}
+
+
+form>.Ipof-cadrastro>label {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+form>.Ipof-cadrastro>input {
+    width: 100%;
+    border: 1px solid #0EA6BD;
+    background: #B9B3B3;
+}
+
+form>.Inome-cadrastro {
+    display: flex;
 
     background-color: #0EA6BD;
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 100%;
 
+    box-shadow: 2px 2px 8px gray;
+}
+
+form>.Inome-cadrastro>label {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+
+}
+
+form>.Inome-cadrastro>input {
+    width: 100%;
+    border: 1px solid #0EA6BD;
+    background: #B9B3B3;
+}
+
+
+form>.Igmail-cadrastro {
+    display: flex;
+
+    background-color: #0EA6BD;
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 100%;
+
+    box-shadow: 2px 2px 8px gray;
+}
+
+form>.Igmail-cadrastro>label {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+
+}
+
+form>.Igmail-cadrastro>input {
+    width: 100%;
+    border: 1px solid #0EA6BD;
+    background: #B9B3B3;
+}
+
+form>.Isenha-cadrastro {
+    display: flex;
+
+    background-color: #0EA6BD;
+    margin-top: 15px;
     border-radius: 8px;
     width: 100%;
 
@@ -255,47 +242,51 @@ form>.Iprof {
 }
 
 
-form>.Iprof>label {
+form>.Isenha-cadrastro>label {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
 }
 
-
-form>.Iprof>input {
+form>.Isenha-cadrastro>input {
     width: 100%;
     border: 1px solid #0EA6BD;
+    background: #B9B3B3;
 }
 
+#Ientra-cadrastro {
+    width: 100%;
+    height: 30px;
 
+    border-radius: 8px;
+    border: 1px solid white;
+
+    color: white;
+    background: #00A698;
+    margin-top: 10px;
+
+
+}
 
 
 @media (min-width:992px) {
 
     html,
     body {
-        background: url(../images/pexels-pixabay-263402.jpg) no-repeat;
-        background-size: cover;
-
-
-
-
-    }
-
-    .text-primario>ul {
-        text-decoration: none;
-        ;
+        background: #C3E4D3;
     }
 
     main {
-        margin: auto;
-        display: flex;
-        width: 90vw;
 
+        display: flex;
         justify-content: center;
+
         height: 500px;
+
+
+
         background-color: white;
-        margin-top: 70px;
+        margin-top: 110px;
         align-items: center;
         border-radius: 12px;
     }
@@ -315,46 +306,22 @@ form>.Iprof>input {
 
         margin-top: 0px;
 
-        background-color: #0d7439;
+        background-color: #8ACCA6;
         box-shadow: none;
     }
 
-    form>.Igmail {
-        display: flex;
 
-        background-color: #0EA6BD;
-
-        border-radius: 8px;
+    form>.Igmail-login,
+    form>.Isenha-login {
         width: 90%;
-        box-shadow: 2px 2px 8px gray;
-        margin-top: 40px;
-
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
-    form>.Isenha {
-        display: flex;
-
-        background-color: #0EA6BD;
-
-        border-radius: 8px;
+    input#Ientra-login {
         width: 90%;
-        box-shadow: 2px 2px 8px gray;
-        margin-left: 10px;
     }
 
 
-    input#Ientra {
-        margin-top: 10px;
-        width: 100%;
-        border-radius: 8px;
-        color: white;
-        background: #00A698;
-        border: 1px solid white;
-        height: 30px;
-        box-shadow: 2px 2px 8px black;
-
-    }
 
     .cadrastro {
         background: #B9B3B3;
@@ -375,8 +342,6 @@ form>.Iprof>input {
         align-items: center;
         justify-content: center;
 
-
-
         box-shadow: none;
 
         background-color: white;
@@ -387,99 +352,8 @@ form>.Iprof>input {
         width: 100%;
     }
 
-    form>.Inome {
-        display: flex;
-
-        background-color: #0EA6BD;
-        margin-top: 15px;
-        border-radius: 8px;
-        width: 100%;
-        box-shadow: 2px 2px 8px gray;
-    }
 
 
-    form>.Inome>label {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-    }
-
-    form>.Inome>input {
-        width: 100%;
-        border: 1px solid #0EA6BD;
-    }
-
-
-    form>.Igmail2 {
-        display: flex;
-
-        background-color: #0EA6BD;
-        margin-top: 15px;
-        border-radius: 8px;
-        width: 100%;
-
-        box-shadow: 2px 2px 8px gray;
-    }
-
-    form>.Igmail2>label {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-    }
-
-    form>.Igmail2>input {
-        width: 100%;
-        border: 1px solid #0EA6BD;
-    }
-
-
-    form>.Isenha2 {
-        display: flex;
-
-        background-color: #0EA6BD;
-        margin-top: 15px;
-        border-radius: 8px;
-        width: 100%;
-
-
-        box-shadow: 2px 2px 8px gray;
-    }
-
-
-    form>.Isenha2>label {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 5px;
-    }
-
-    form>.Isenha2>input {
-        width: 100%;
-        border: 1px solid #0EA6BD;
-    }
-    form>.Iprof {
-        display: flex;
     
-        margin-top: 50px;
-    
-        background-color: #0EA6BD;
-    
-        border-radius: 8px;
-        width: 100%;
-    
-    
-        box-shadow: 2px 2px 8px gray;
-    }
 
-    @media (min-width:px) {
-
-        html,
-        body {
-            background: url(../images/pexels-pixabay-263402.jpg) no-repeat;
-            background-size: cover;
-
-
-
-        }
-
-    }
 }
