@@ -1141,6 +1141,12 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
     display:inline-block!important
 }
 
+@media (max-width:480px){
+    .text-hg {
+        padding: 10px !important;
+    }
+}
+
 @media (max-width:1205px){
     .consult-auto{
         max-width:95%
