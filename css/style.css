@@ -362,7 +362,11 @@ input, textarea, .uneditable-input {
     font-size: 18px;
     text-transform: uppercase;
 }
-.subtotal, .total, .descontos {
+tbody .subtotal, .total, .descontos {
+    text-align: right !important;
+    vertical-align: baseline;
+}
+td .subtotal, .total, .descontos {
     text-align: right !important;
     vertical-align: baseline;
 }
@@ -395,7 +399,7 @@ input, textarea, .uneditable-input {
     font-weight: 600;
 }
 .cor-secundaria {
-    color: #02505c;
+    color: #035866de;
 }
 .tabela-carrinho td, .tabela-carrinho th {
     border-width: 1px;
@@ -1147,6 +1151,10 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
     }
 }
 
+#corpo{
+    margin-top: 60px;
+}
+
 @media (max-width:1205px){
     .consult-auto{
         max-width:95%
@@ -1222,6 +1230,10 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
 }
 
 @media (max-width:768px){
+    td .subtotal, .total, .descontos {
+        text-align: center !important;
+        vertical-align: baseline;
+    }
     .consult-modal-content{
         width:500px
     }
