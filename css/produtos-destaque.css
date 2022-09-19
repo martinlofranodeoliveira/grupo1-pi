@@ -1,0 +1,267 @@
+@charset "UFT-8";
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+    
+p {color: #02505C;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.consult-bar .consult-button {
+  padding: 16px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px 0;
+}
+
+
+h1,
+p {
+  color: #02505C;
+}
+
+/*conteudo principal*/
+
+section#produto-destaque {
+  background: #D4EBE3;
+  text-align: center;
+  width: 100vw;
+  height: 70vh;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+section#produto-destaque>h1#titulo-produto {
+  padding-top: 40px;
+}
+
+section#produto-destaque>div#fotos-produto {
+  
+  width: 95%;
+  height: 70%;
+
+  background: #D9D9D9;
+  margin: 20px auto;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  
+}
+section#produto-destaque>div#fotos-produto>span {
+  text-transform: uppercase;
+  color: red;
+}
+
+/* part da imgs de serviço */
+
+section#produto-destaque {
+  background: #D4EBE3;
+  text-align: center;
+  width: 100vw;
+  padding-bottom:30px
+}
+
+section#produto-destaque>h1#titulo-produto {
+  padding-top: 20px;
+
+
+}
+
+section#produto-destaque>p#subtitulo-produto {
+  font-size: 9px;
+  padding-top: 8px;
+}
+
+section#produto-destaque>div#local-produto {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: 75px;
+  align-items: center;
+  justify-content: center;
+}
+
+section#produto-destaque>div#local-produto>.org1 {
+  display: flex;
+  gap: 20px;
+
+
+}
+
+section#produto-destaque>div#local-produto>.org1>div {
+  background: #D9D9D9;
+  padding: 8px;
+  width: 17vw;
+  height: 17vh;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#produto-destaque>div#local-produto>.org2 {
+  display: flex;
+  gap: 20px;
+
+}
+
+section#produto-destaque>div#local-produto>.org2>div {
+  background: #D9D9D9;
+  padding: 8px;
+  width: 17vw;
+  height: 17vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* CONFIRA TODOS NOSSOS PRODUTOS */
+
+section#nosso-produto {
+  background: white;
+  text-align: center;
+  width: 100vw;
+  padding-bottom: 30px;
+}
+
+section#nosso-produto>h1 {
+  padding-top: 20px;
+}
+
+section#nosso-produto>p {
+  font-size: 12px;
+  padding-top: 8px;
+}
+
+section#nosso-produto>div#local-produto {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+  flex-direction: column;  
+  margin-top: 75px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+div#local-produto>div#local-org1 {
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  gap: 25px;
+
+
+}
+
+
+.prof {
+  width: 18vw;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.back-image {
+  background: #D9D9D9;
+
+  width: 100%;
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dados>p {
+  color: #A7C6BE;
+  margin: 10px 10px 10px 0px;
+  text-align: start;
+  right: 0px;
+  font-size: 13px;
+}
+
+.dados>.name {
+  padding-left: 10px;
+}
+
+.dados>.Categoria {
+  padding-left: 10px;
+}
+.dados>.descrição {
+  padding-left: 10px;
+}
+
+#buttomW, #buttomX, #buttomY,#buttomZ {
+  width: 90%;
+  background-color: #39B55F;
+  border: none;
+  height: 29px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+#buttomW[type= button],#buttomX[type= button],#buttomY[type= button],#buttomZ[type= button]  {
+  font-size: 10px;
+  color : white
+}
+
+@media (max-width:600px){
+
+  section#produto-destaque{
+    width: 100vw;
+    height: auto;
+    padding-bottom:30px ;
+  }
+  section#produto-destaque>div#local-produto{
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+
+  section#produto-destaque>div#local-produto>.org1 {
+    flex-direction:column;
+  }
+  section#produto-destaque>div#local-produto>.org1>div {
+    width: 80vw;
+    height: 30vh;
+
+
+  }
+
+  section#nosso-produto>div#local-produto {
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+
+  div#local-produto>div#local-org1 {
+    flex-direction:column;
+  }
+
+  .prof {
+    width: 80vw;
+  }
+  div#local-produto>div#local-org1 {
+    flex-direction:column;
+  }
+
+
+}

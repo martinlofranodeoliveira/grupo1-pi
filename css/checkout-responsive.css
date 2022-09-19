@@ -1950,7 +1950,11 @@ fieldset {
   float: left;
   margin: 3px 3px 0px 0px;
 }
-  @media (min-width: 980px) {
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (min-width: 980px) {
     .nav-collapse.collapse {
       height: auto !important;
       overflow: visible !important;
