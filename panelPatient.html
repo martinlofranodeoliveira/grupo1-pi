@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grupo 01 PI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/panelPatient.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+
+p {color: #02505C;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/saude.jpg");
+  min-height: 100%;
+}
+
+.consult-bar .consult-button {
+  padding: 16px;
+}
+</style>
+</head>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="consult-top">
+        <div class="consult-bar consult-white consult-card" id="myNavbar">
+        <a href="#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+        <!-- Right-sided navbar links -->
+        <div class="consult-right consult-hide-small">
+            <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+            <a href="#sejaumparceiro" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+            <a href="#servicos" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+            <a href="#" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+            <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+            <a href="#" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
+    </div>
+    
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+        <a href="#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+        <a href="#sejaumparceiro" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+        <a href="#servicos" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+        <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+        <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+        <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+    </nav>
+
+    <header>
+        <div class="space-advertising">
+            <a href="#">ESPAÇO PARA PROPAGANDA TERCEIROS</a>
+        </div>
+    </header> 
+    
+    <main>
+        <div class="container-dashsup">
+            <div class="container-panel-usuario">
+                <img src="./images/saude.jpg" alt="imagem usuário">
+                <p><a href="#">Gustavo de Jesus Fernandes</a></p>
+                <p><a href="#">N° ID: 000 000 001</a></p>
+                <p><a href="#">Platinum</a></p>
+            </div>
+
+            <div class="container-panel-search">
+                <div class="bloc-search">
+                    <form action="#" method="post">
+                        <input type="text" name="search" id="search" placeholder="O que você precisa hoje?" required>
+                        <button type="submit"><i class="lupa"><img src="./images/icone-lupa.png"></i></button> <!--Colocar icone de lupa--->
+                    </form>
+                <div class="container-consult">  
+                    <span id="consult-panel">Histórico de consultas</span>
+        
+                    <div class="container-hist">
+                        <span class="consult-hist"><a href="#">Data última <br> consulta</a></span>
+                        <span class="consult-hist"><a href="#">Data próxima consulta</a></span>
+                    </div> 
+                  
+                </div>     
+                </div>
+            </div>
+
+            <div class="container-publi">
+                <div class="ofert-prod">
+                    <a href="#">Ofertas do <br> dia Produtos</a><!--colocar slides ou imagem dos produtos?--->
+                </div>
+                <div class="ofert-serv">
+                    <a href="#">Ofertas do dia <br> serviços parceiros</a><!--Colocar slide ou textos dos serviços em promoção--->
+                </div>
+
+            </div>    
+            
+        </div>
+
+        <div class="container-dashinf">
+
+            <div class="container-menu">
+                <div class="perfil">
+                    <div><img src="./images/icone-formulario.png" width="40px" height="60px"></div>
+                    <br>
+                    <div><a href="#">Perfil</a></div>
+                </div>
+
+                <div class="planos">
+                    <span><img src="./images/" width="40px" height="60px"></span>
+                    <br>
+                    <span><a href="#">Planos</a></span>
+                </div>
+
+                <div class="chat">
+                    <span><img src="./images/icone-chat.png" width="40px" height="60px"></span>
+                    <br>
+                    <span><a href="#">Chat</a></span>
+                </div>
+            </div>
+
+            <div class="container-utility1">
+
+                
+                <div class="iten-1">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>TOKEN DE <br>
+                        ATENDIMENTO</strong></h5>
+                    <p><button>Acessar</button></p>
+                </div>
+                 <br>       
+                
+                <div class="iten-2">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>AVALIE SUA <br>
+                        CONSULTA</strong></h5>
+                    <p><button>Acessar</button></p>
+                </div>
+            </div>
+
+            <div class="container-utility2">
+                
+                <div class="iten-3">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>CANCELAMENTO <br>
+                        DE CONSULTA</strong></h5>
+                    <p><button>Cancelar</button></p>
+                </div>
+                            
+                <br>
+                <div class="iten-4">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>SOLICITAÇÃO
+                        DE DOCUMENTOS
+                        MÉDICOS <br></strong></h5>
+                    <p><button>Acessar</button></p>
+                </div>
+            </div>
+            
+
+            <div class="container-utility3">
+
+                
+                <div class="iten-5">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>AGENDAMENTO <br>
+                        DE EXAMES</strong></h5>
+                    <p><button>Acessar</button></p>
+                </div>
+                 <br>   
+                
+                <div class="iten-6">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>CANCELAMENTO <br>
+                        DE EXAME</strong></h5>
+                    <p><button>Cancelar</button></p>
+                </div>
+            </div>
+
+            <div class="container-utility4">
+                
+                <div class="iten-7">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>PRONTUÁRIO <br>
+                        MÉDICO</strong></h5>
+                    <p><button>Acessar</button></p>
+                </div>
+                <br>      
+                
+                <div class="iten-8">
+                    <div class="spn-img"> Imagem / Icone </div>
+                    <h5><strong>ARTIGOS <br> 
+                        MÉDICOS</strong></h5>
+                    <p><button>Saiba mais</button></p>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+     <footer class="consult-center consult-verde consult-padding-64">
+        <a href="#home" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+        <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+            <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+            <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+            <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+            <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+            <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+            <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+        </div>
+        <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
+    </footer>
+</body>
+<script src="app.js" type="text/javascript"></script>
+</html>
