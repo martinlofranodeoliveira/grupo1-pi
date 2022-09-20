@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/descricao-produto.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   
+    <title>PRODUTOS</title>
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+    
+    p {color: #02505C;}
+    
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .consult-bar .consult-button {
+      padding: 16px;
+    }
+    </style>
+  <body>
+    <header>
+  
+  <!-- Navbar (sit on top) -->
+  <div class="consult-top">
+    <div class="consult-bar consult-white consult-card" id="myNavbar">
+      <a href="index.html#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="consult-right consult-hide-small">
+        <a href="index.html#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+        <a href="login-parceiro.html" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+        <a href="servicos.html" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+        <a href="produtos.html" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+        <a href="index.html#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+        <a href="login-usuario.html" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+    <a href="index.html#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+    <a href="login-parceiro.html" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+    <a href="servicos.html" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+    <a href="produtos.html" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+    <a href="index.html#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+    <a href="login-usuario.html" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+  </nav>
+    </header>
+   <div id="descproduto"></div>
+    <!-- produto visual -->
+    <section class="cabesalho-produto">
+        <div id="org2">
+
+            <div id="imagem-produto">
+    
+                
+    
+            </div>
+    
+            <div id="descricao-produto">
+    
+                <h1>NOME DO PRODUTO</h1>
+    
+                <div id="estrela">
+                    <a href="javascript:void(0)" onclick="Avaliar(1)">
+                        <img src="images/estrela.png" id="s1"></a>
+    
+                    <a href="javascript:void(0)" onclick="Avaliar(2)">
+                        <img src="images/estrela.png" id="s2"></a>
+    
+                    <a href="javascript:void(0)" onclick="Avaliar(3)">
+                        <img src="images/estrela.png" id="s3"></a>
+    
+                    <a href="javascript:void(0)" onclick="Avaliar(4)">
+                        <img src="images/estrela.png" id="s4"></a>
+    
+                    <a href="javascript:void(0)" onclick="Avaliar(5)">
+                        <img src="images/estrela.png" id="s5"></a>
+                </div>
+    
+                <div id="subtiulo">
+    
+                    <p> Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai
+                        girarzis!Detraxit consequat et quo num tendi nada.</p>
+    
+                    <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
+                        morreus.</p>
+    
+                </div>
+    
+                <div id="frete">
+                    <p>CALCULAR FRETE</p>
+                    <form action="" method="post">
+    
+                        <input type="number" id="CalcularFrete">
+    
+                        <input type="button" name="" id="button-frete" value="COMPRAR AGORA">
+                    </form>
+                </div>
+    
+    
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- descrição do produto -->
+    <section class="descricao">
+
+        <div id="barra">ㅤ</div>
+
+        <div id="detalhes">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
+                itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
+                hic. Aut, sit.</p>
+            
+        </div>
+        <div id="barra">ㅤ</div>
+
+        <section id="produtos-relacionavaies">
+
+            <h1 id="TITULO">PRUDUTOS RELACIONADOS</h1>
+            <p id="subtitulo">complementar</p>
+
+
+            <div id="org1">
+                <!-- div pruduto -->
+                <div id="card">
+
+                    <div id="img">IMAGEM <br> PRODUTO X</div>
+                    <div id="descricao">
+
+                        <h1>NOME X</h1>
+
+                        <p id="subname">Nome</p>
+                        <p></p>
+
+                        <p>Lorem ipsum dolor sit, amet <br> consectetur adipisicing <br> elit. Nobis explicabo <br>
+                            veritatis
+                            provident, error atque vitae? <br></p>
+
+
+                        <input type="button" name="" id="COMPRA" value="COMPRAR AGORA">
+
+                    </div>
+
+                </div>
+
+
+
+                <div id="card">
+
+                    <div id="img">IMAGEM <br> PRODUTO X</div>
+                    <div id="descricao">
+
+                        <h1>NOME X</h1>
+
+                        <p id="subname">Nome</p>
+                        <p></p>
+
+                        <p>Lorem ipsum dolor sit, amet <br> consectetur adipisicing <br> elit. Nobis explicabo <br>
+                            veritatis
+                            provident, error atque vitae? <br></p>
+
+
+                        <input type="button" name="" id="COMPRA" value="COMPRAR AGORA">
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div id="card">
+
+                    <div id="img">IMAGEM <br> PRODUTO X</div>
+                    <div id="descricao">
+
+                        <h1>NOME X</h1>
+
+                        <p id="subname">Nome</p>
+                        <p></p>
+
+                        <p>Lorem ipsum dolor sit, amet <br> consectetur adipisicing <br> elit. Nobis explicabo <br>
+                            veritatis
+                            provident, error atque vitae? <br></p>
+
+
+                        <input type="button" name="" id="COMPRA" value="COMPRAR AGORA">
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div id="card">
+
+                    <div id="img">IMAGEM <br> PRODUTO X</div>
+                    <div id="descricao">
+
+                        <h1>NOME X</h1>
+
+                        <p id="subname">Nome</p>
+                        <p></p>
+
+                        <p>Lorem ipsum dolor sit, amet <br> consectetur adipisicing <br> elit. Nobis explicabo <br>
+                            veritatis
+                            provident, error atque vitae? <br></p>
+
+
+                        <input type="button" name="" id="COMPRA" value="COMPRAR AGORA">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+         <!--  Section "Estatísticas" -->
+         <div class=" consult-azul-aqua-md ">
+            <div class="consult-container container consult-row consult-center consult-padding-64">
+                <div class="consult-quarter">
+
+                    <span class="consult-xxlarge">+de 1500</span>
+                    <br>Parceiros
+                </div>
+
+                <div class="consult-quarter">
+                    <span class="consult-xxlarge">99%</span>
+                    <br>Pessoas atendidas em menos de 24 horas
+                </div>
+
+                <div class="consult-quarter">
+                    <span class="consult-xxlarge">27</span>
+                    <br>Presente em todos os Estados Brasileiros
+                </div>
+
+                <div class="consult-quarter">
+
+                    <span class="consult-xxlarge">+100.000</span>
+                    <br>Usuários
+                </div>
+
+            </div>
+
+        </div>
+<!-- contatos -->
+        <div class="consult-container container consult-white" style="padding:128px 16px" id="contato">
+            <h3 class="consult-center">Contato</h3>
+            <p class="consult-center consult-large">Para Dúvidas, Reclamações ou Sugestões preencha o formulário abaixo</p>
+            <div style="margin-top:48px">
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Nome"
+                            required name="Nome"></p>
+                    <p class="d-flex">
+                        <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right"
+                            type="email" placeholder="Email" required name="Email">
+                        <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel"
+                            placeholder="Telefone" required name="Telefone">
+                    </p>
+                    <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem"
+                            required name="Mensagem"></p>
+                    <p>
+                        <button class="consult-button consult-verde consult-round-xlarge" type="submit">
+                            <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
+                        </button>
+                    </p>
+                </form>
+        
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer class="consult-center consult-verde consult-padding-64">
+    <a href="#descproduto" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i
+            class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+    <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+        <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+        <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+        <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+        <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+        <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+        <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+    </div>
+    <p>Criado por <a href="" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a>
+    </p>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
