@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Raleway, sans-serif;
+}
+
+main {
+    width: 100%;
+    background-color: #D4EBE3;
+    padding-bottom: 10%;
+}
+
+.imagens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.principal{
+    margin-top: 60px;
+}
+#check {
+    width: 20%;
+}
+
+#cel{
+    width: 30%;
+}
+
+.send {
+    background-color: #8acca6;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enviamos {
+    flex-direction: column;
+    background-color: #D4EBE3;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 4%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.enviamos p {
+    color:#02505C;
+    margin-top: 4%;
+}
+
+.container-final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #87AAAE;
+}
+
+.container-estatisticas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3%;
+}
+
+.container-estatisticas p {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.parceiros {
+    width: 80%;
+    padding-bottom: 4%;
+}
+
+#letra-maior {
+    font-size: 2.0rem;
+}
+
+p{
+    font-weight: bold;
+}
+
+
+/*Tablet*/
+@media(min-width: 690px){
+    #check{
+        width: 15%;
+    }
+    
+    #cel{
+        width: 15%;
+    }
+
+    .enviamos p {
+        font-size: 1.9rem;
+    }
+}
+
+@media(min-width: 990px){
+    #check{
+        width: 10%;
+    }
+    
+    #cel{
+        width: 12%;
+    }
+
+    .enviamos p{
+        font-size: 2.0rem;
+    }
+    .parceiros {
+        width: 25%;
+    }
+}

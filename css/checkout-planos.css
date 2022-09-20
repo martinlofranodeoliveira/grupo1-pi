@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Raleway, sans-serif;
+}
+
+main{
+    width: 100%;
+    background-color: #D4EBE3;
+    padding-bottom: 10%;
+}
+
+.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 50px;
+}
+
+h2{
+    color:#02505C;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 3.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#check{
+    width: 25%;
+    margin-top: 5%;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario{
+    background-color: #8acca6;
+    border-radius: 15px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#02505C;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    font-size: 0.9rem;
+    background-color: #D4EBE3;
+    width: 70%;
+    height: 30px;
+}
+
+.input{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+input{
+    background-color: #D4EBE3 !important;
+    border: none !important;
+    height: 30px !important;
+    width: 90% !important;
+    margin-bottom: 5% !important;
+    padding-left: 1% !important;
+}
+
+.formh4{
+    font-size: 17px;
+}
+
+#send{
+    background-color: #39B55F;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    width: 50%;
+    height: 30px;
+}
+
+.container-final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #87AAAE;
+}
+
+.container-estatisticas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3%;
+}
+
+.container-estatisticas p {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.parceiros {
+    width: 80%;
+    padding-bottom: 4%;
+}
+
+#letra-maior {
+    font-size: 2.0rem;
+}
+
+p{
+    font-weight: bold;
+}
+
+
+
+@media(min-width: 690px){
+    h2{
+        font-size: 1.5rem;
+    }
+
+    #check{
+        width: 20%;
+    }
+}
+
+@media(min-width: 990px){
+    h2{
+        font-size: 3rem;
+    }
+
+    #check{
+        width: 10%;
+    }
+
+    h4{
+        font-size: 1.2rem;
+        width: 50%;
+        height: 60px;
+    }
+
+    input{
+        height: 50px;
+        width: 40% !important;
+        margin-bottom: 3% !important;
+        padding-left: 1%;
+    }
+
+    #send{
+        border-radius: 15px;
+        width: 30%;
+        height: 40px;
+    }
+
+    .parceiros {
+        width: 25%;
+    }
+    
+}

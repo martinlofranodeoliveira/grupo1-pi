@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos usuários</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/planos-usuarios.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+    
+    p {color: #02505C;}
+    
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .consult-bar .consult-button {
+      padding: 16px;
+    }
+    </style>
+  <body>
+    <header>
+  
+  <!-- Navbar (sit on top) -->
+  <div class="consult-top">
+    <div class="consult-bar consult-white consult-card" id="myNavbar">
+      <a href="index.html#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="consult-right consult-hide-small">
+        <a href="index.html#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+        <a href="login-parceiro.html" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+        <a href="servicos.html" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+        <a href="produtos.html" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+        <a href="index.html#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+        <a href="login-usuario.html" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+    <a href="index.html#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+    <a href="login-parceiro.html" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+    <a href="servicos.html" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+    <a href="produtos.html" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+    <a href="index.html#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+    <a href="login-usuario.html" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+  </nav>
+    </header>
+    <div id="planousu"></div>
+    <main class="principal">
+        <section class="join">
+            <h1 id="title">SEJA ASSINANTE AGORA MESMO!</h1>
+            <h2 id="sub-title">UMA ASSINATURA E INÚMEROS BENEFÍCIOS PARA SUA SAÚDE FÍSICA E SUA SAÚDE MENTAL*</h2>
+            <p>*consultas online realizadas somente na plataforma</p>
+        </section>
+
+        <section class="planos">
+            <h1>ESCOLHA A ASSINATURA QUE CABE NO SEU BOLSO*</h1>
+            <p>*assinatura sem cobrança de taxas extras</p>
+            <p>**em caso de insatisfação, cancele a qualquer momento sem pagar qualquer taxa</p>
+            <div class="planos-cards">
+                <div class="card">
+                    <div class="simbolo">
+                        <h3>FREE</h3>
+                        <img src="images/shield.png" alt="Simbolo plano gratuito">
+                    </div>
+                    <h3>ACESSO GRATUITO</h3>
+                    <div class="card-beneficios">
+                        <ul>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a vídeos de curta duração;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a News Letter semanal formulada por um de nossos parceiros;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a todos os produtos de nossa loja online.</p></li>
+                        </ul>
+                    </div>
+                    <div class="btn-assine">
+                        <button id="btn-assine">ASSINE AGORA MESMO</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="simbolo">
+                        <h3>SILVER</h3>
+                        <img src="images/shield-silver.png" alt="Simbolo plano silver">
+                    </div>
+                        <h3>R$ 39,90</h3>
+                    <div class="card-beneficios">
+                        <ul>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a vídeos de curta duração;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a News Letter semanal formulada por um de nossos parceiros;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a todos os produtos de nossa loja online;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a PDFs com matérias exclusivas;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a 1 categoria de profissionais cadastrados;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a consulta de 20min.</p></li>
+                        </ul>
+                    </div>
+                    <div class="btn-assine">
+                        <button id="btn-assine">ASSINE AGORA MESMO</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="simbolo">
+                        <h3>GOLD</h3>
+                        <img src="images/shield-gold.png" alt="Simbolo plano gold">
+                    </div>
+                    <h3>R$ 44,90</h3>
+                    <div class="card-beneficios">
+                        <ul>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a vídeos de curta duração;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a News Letter semanal formulada por um de nossos parceiros;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a todos os produtos de nossa loja online;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a PDFs com matérias exclusivas;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a 2 categorias de profissionais cadastrados;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a consulta de 30min;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Desconto de 5% nos produtos com selo promocional.</p></li>
+                        </ul>
+                    </div> 
+                    <div class="btn-assine">
+                        <button id="btn-assine">ASSINE AGORA MESMO</button>
+                    </div>
+                </div>
+                <div class="card" default="hover">
+                    <div class="simbolo">
+                        <h3>PLATINUM</h3>
+                        <img src="images/shield-platinum.png" alt="Simbolo plano platinum">
+                    </div>
+                    <h3>R$ 54,90</h3>
+                    <div class="card-beneficios">
+                        <ul>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a vídeos de curta duração;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a News Letter semanal formulada por um de nossos parceiros;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a todos os produtos de nossa loja online;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a PDFs com matérias exclusivas;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a TODAS as categorias de profissionais cadastrados;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Acesso a consulta de 45min;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Desconto de 10% nos produtos com selo promocional;</p></li>
+                        <li><img id="check" src="images/check.png" alt=""><p>Frete GRÁTIS nas compras acima de R$ 100,00 para todo o Brasil.</p></li>
+                        </ul>
+                    </div>
+                    <div class="btn-assine">
+                        <button id="btn-assine">ASSINE AGORA MESMO</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="sc-beneficios">
+            <h1>VOCÊ É A SUA MELHOR VERSÃO, PRIORIZE VOCÊ, PRIORIZE SUA SAÚDE!</h1>
+            <div class="beneficios">
+                <ul class="lista-ben">
+                    <li><img id="heart" src="images/heart-vector.png" alt="">CONSULTAS 100% ONLINE</li>
+                    <li><img id="heart" src="images/heart-vector.png" alt="">PROFISSIONAIS RENOMADOS E CAPACITADOS</li>
+                    <li><img id="heart" src="images/heart-vector.png" alt="">ATENDIMENTO INDIVIDUALIZADO CONFORME A SUA NECESSIDADE</li>
+                    <li><img id="heart" src="images/heart-vector.png" alt="">RECEBA OS PRODUTOS DA NOSSA LOJA SEM SAIR DE CASA</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container-final">
+            <div class="container-estatisticas">
+              <div class="parceiros">
+                <p id="letra-maior">+1500</p>
+                <p>Parceiros</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">99%</p>
+                <p>Pessoas Atendidas em menos de 24horas</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">27</p>
+                <p>Presente em todos os estados Brasileiros</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">+100.000</p>
+                <p>Usuários</p>
+              </div>
+        </div>
+    </main>
+   <!-- Footer -->
+<footer class="consult-center consult-verde consult-padding-64">
+    <a href="#planousu" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+    <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+      <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+      <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+      <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+      <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+      <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+      <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+    </div>
+    <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
+  </footer>
+  </body>
+  <script src="app.js" type="text/javascript"></script>
+  
+</html>

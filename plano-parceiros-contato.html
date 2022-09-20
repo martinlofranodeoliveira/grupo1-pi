@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Parceiros Contato</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/plano-parceiros-contato.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+    
+    p {color: #02505C;}
+    
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .consult-bar .consult-button {
+      padding: 16px;
+    }
+    </style>
+  <body>
+    <header>
+  
+  <!-- Navbar (sit on top) -->
+  <div class="consult-top">
+    <div class="consult-bar consult-white consult-card" id="myNavbar">
+      <a href="index.html#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="consult-right consult-hide-small">
+        <a href="index.html#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+        <a href="login-parceiro.html" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+        <a href="servicos.html" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+        <a href="produtos.html" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+        <a href="index.html#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+        <a href="login-usuario.html" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+    <a href="index.html#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+    <a href="login-parceiro.html" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+    <a href="servicos.html" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+    <a href="produtos.html" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+    <a href="index.html#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+    <a href="login-usuario.html" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+  </nav>
+    </header>
+    <div id="planocontato"></div>
+    <main>
+        <section class="principal">
+            <div class="imagens">
+                <img id="check" src="images/check-2.png" alt="">
+                <img id="cel" src="images/cel.png" alt="">
+            </div>
+        </section>
+
+        <section class="send container">
+            <div class="enviamos">
+                <p>Enviamos um E-mail/WhatsApp para você</p>
+                <p>Faça o download do aplicativo e tenha inúmeros clientes!</p>
+                <p>Caso você não complete o seu cadastro nos próximos 10 dias, os seus dados serão apagados automaticamente</p>
+            </div>
+        </section>
+
+        <div class="container-final">
+            <div class="container-estatisticas">
+              <div class="parceiros">
+                <p id="letra-maior">+1500</p>
+                <p>Parceiros</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">99%</p>
+                <p>Pessoas Atendidas em menos de 24horas</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">27</p>
+                <p>Presente em todos os estados Brasileiros</p>
+              </div>
+              <div class="parceiros">
+                <p id="letra-maior">+100.000</p>
+                <p>Usuários</p>
+              </div>
+        </div>
+    </main>
+
+   <!-- Footer -->
+   <footer class="consult-center consult-verde consult-padding-64">
+    <a href="#planocontato" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+    <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+      <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+      <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+      <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+      <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+      <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+      <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+    </div>
+    <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
+  </footer>
+  </body>
+  <script src="app.js" type="text/javascript"></script>
+</html>
