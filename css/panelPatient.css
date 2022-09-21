@@ -1,0 +1,465 @@
+@charset "utf-8"
+
+html {
+  box-sizing:border-box
+}
+
+*,*:before,*:after {
+  box-sizing:inherit
+}
+
+html {
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%
+}
+
+body {
+  margin:0
+}
+
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
+  display:block
+}
+
+/*  ESPAÇO PARA PUBLICIDADE VERTICAL NO TOP */ 
+.space-advertising {
+  width: 100vw;
+  margin-top: 60px;
+  background: grey;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+/* PARTE SUPERIRO DASHBOARD */
+.container-dashsup {
+  display: flex;
+  margin-top: 20px;
+  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw; 
+}
+
+.container-panel-usuario {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  background: #87AAAE;
+  align-items: center;
+}
+
+.container-panel-usuario img {
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+  border-radius: 50% 50%;
+}
+
+.container-panel-usuario p {
+  background-color: #D9D9D9;
+  width: 90%;
+  text-align: center;
+}
+
+.container-panel-usuario p a {
+  text-decoration: none;
+  width: 40%;
+  text-align: center;
+  
+}
+/* FINAL BLOCO PAINEL USUARIO */
+
+.container-panel-search {
+  width: 35%;
+  background: #87AAAE;
+  padding: 20px;
+}
+
+.block-search {
+  background: #D9D9D9;
+}
+
+form {
+  background: #D9D9D9;
+  border-radius: 20px;
+  height: 25px;
+  
+}
+
+.container-panel-search input{
+  background: #D9D9D9;
+  width: 80%;
+  margin-left: 5px;
+  
+}
+
+.container-panel-search button {
+  border-radius: 10px;
+  padding: 3px;
+  background: #D9D9D9;
+  width: 15%;
+  height: 100%;
+  border: #D9D9D9;
+} 
+
+i, img{
+  width: 25px;
+  height: 30px;
+  padding-bottom: 9px;
+}
+/* FINAL BLOCO PAINEL DE BUSCA */
+
+.container-consult {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: #D4EBE3;
+}
+.container-consult span {
+  text-align: center;
+  
+}
+#consult-panel {
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  background: #D9D9D9;
+}
+
+.container-hist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consult-hist {
+  background-color: #00A698;
+  padding: 10px;
+  margin: 25px;
+
+} 
+/* FINAL BLOCO PAINEL HISTORICO */
+
+.container-publi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 38%;
+  height: 100%;
+  background: #87AAAE;
+  padding: 10px;
+}
+
+.ofert-prod {
+  width: 100%;
+  height: 35vh;
+  text-align: center;
+  background: #00A698;
+  margin: 20px;
+}
+
+.ofert-prod a {
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.ofert-serv {
+  width: 100%;
+  height: 35vh;
+  text-align: center;
+  background: #00A698;
+  margin: 20px;
+}
+
+.ofert-serv a {
+  text-align: center;
+  text-decoration: none;
+}
+/* FINAL BLOCO PAINEL DE PUBLICIDADE INTERNA */
+
+/* ------------------------------------------------ */
+
+/* PARTE INFERIOR DASHBOARD USUARIO */
+.container-dashinf {
+  display: flex;
+  margin-top: 20px;
+  padding-right: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw; 
+
+}
+
+.container-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:column;
+  background: #87AAAE;
+  width: 15%;
+  padding: 10px;
+  margin: 20px;
+}
+
+.perfil {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 33.33%;
+  background: #D9D9D9;
+}
+
+.planos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 33.34%;
+  background: #D9D9D9;
+  margin: 10px;
+}
+
+.chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 33.33%;
+  background: #D9D9D9;
+}
+/* FINAL BLOCO PAINEL USUARIO */
+
+.container-utility1 {
+  width: 15%;
+  height: 20%;
+  display: block;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+
+.iten-1{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+  
+}
+
+.iten-1 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-1 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-1 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.iten-2{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-2 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-2 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-2 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.container-utility2 {
+  width: 15%;
+  height: 20%;
+  display: block;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+ 
+}
+
+.iten-3{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-3 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-3 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-3 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.iten-4{
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-4 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-4 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-4 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.container-utility3 {
+  width: 15%;
+  height: 20%;
+  display: block;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px;
+  padding: 20px;
+ 
+}
+
+.iten-5{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-5 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-5 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-5 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.iten-6{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-6 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-6 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-6 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.container-utility4 {
+  width: 15%;
+  height: 20%;
+  display: block;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+ 
+}
+
+.iten-7{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-7 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-7 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-7 p button {
+  width: 90%;
+  font-weight: bolder;
+}
+
+.iten-8{
+  width: 100%;
+  text-align: center;
+  background: #87AAAE;
+  padding: 2px;
+}
+
+.iten-8 .spn-img {
+  width: 100%;
+  text-align: center;
+  background: #D9D9D9; 
+}
+
+.iten-8 h5 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.iten-8 p button {
+  width: 90%;
+  font-weight: bolder;
+}

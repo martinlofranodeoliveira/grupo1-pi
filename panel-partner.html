@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grupo 01 PI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/panelPartner.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
+    
+    p {color: #02505C;}
+    
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("images/saude.jpg");
+      min-height: 100%;
+    }
+    
+    .consult-bar .consult-button {
+      padding: 16px;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <!-- Navbar (sit on top) -->
+    <div class="consult-top">
+      <div class="consult-bar consult-white consult-card" id="myNavbar">
+        <a href="#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+        <!-- Right-sided navbar links -->
+        <div class="consult-right consult-hide-small">
+          <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+          <a href="login-parceiro.html" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+          <a href="servicos.html" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+          <a href="produtos.html" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+          <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+          <a href="login-usuario.html" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+        <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+      <a href="#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+      <a href="login-parceiro.html" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+      <a href="servicos.html" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+      <a href="produtos.html" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+      <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+      <a href="login-usuario.html" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+    </nav>
+
+
+    <section class="container-general">
+
+        <div class="menu-partner">
+
+            <div class="menu-sup">
+                
+                <div><img src="./images/icone-parceiro.png" class="img-parc"></div>
+               
+                <div class="sup-item"><a href="#"> Nome completo </a></div>
+               
+                <div class="sup-item"><a href="#"> ID parceiro </a></div>
+                
+                <div class="sup-item"><a href="#"> Platinum </a></div>
+            </div>
+
+            <div class="menu-inf">
+                
+                <div class="perfil">
+                    <div><img src="./images/icone-formulario.png"></div>
+                    
+                    <div><a href="#">Perfil</a></div>
+                </div>
+                <br>
+                <div class="planos">
+                    <div><img src="./images/"></div>
+                
+                    <div><a href="#">Meus Planos</a></div>
+                </div>
+                <br>
+                <div class="planos">
+                    <div><img src="./images/icone-email2.png"></div>
+                    
+                    <div><a href="#">Lembretes</a></div>
+                </div>
+                <br>
+                <div class="chat">
+                    <div><img src="./images/icone-chat.png"></div>
+                    
+                    <div><a href="#">Chat</a></div>
+                </div>
+            </div>
+
+        </div> 
+    
+    
+        <section class="container-out">
+
+            <div class="container-panel-partner">
+                <span class="panel-itens1"><strong>PAINEL DO PARCEIRO</strong></span>
+                <span class="panel-itens2"><a href="#">CONSULTAS DO DIA</a></span>
+                <span class="panel-itens3"><a href="#">PAINEL DE AVALIAÇÃO DO PROFISSIONAL</a></span>
+                <span class="panel-itens4"><a href="#">SUA PONTUAÇÃO ATUAl É DE...</a></span>
+            </div>
+
+            <div class="container2">
+
+                <div class="bloc">
+
+                    <div class="atend">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div> 
+
+                    <br>
+
+                    <div class="guia">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                </div>
+
+
+                <div class="bloc">
+
+                    <div class="pront">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                    <br>
+
+                    <div class="agend">
+                        <div class="spn-img"> Imagem / Icone </div>
+                <h5><strong>CANCELAMENTO <br>
+                    DE EXAME</strong></h5>
+                <p><button>Cancelar</button></p>
+                    </div>
+
+                </div>
+
+                
+                <div class="bloc">
+
+                    <div class="doc">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                    <br>
+                    
+                    <div class="novid">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                </div>
+
+                
+                <div class="bloc">
+
+                    <div class="aval">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                    <br>
+
+                    <div class="pub">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5><strong>CANCELAMENTO <br>
+                            DE EXAME</strong></h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </section>   
+ 
+    <footer class="consult-center consult-verde consult-padding-64">
+        <a href="#home" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+        <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+            <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+            <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+            <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+            <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+            <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+            <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+        </div>
+        <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
+    </footer>
+</body>
+<script src="app.js" type="text/javascript"></script>
+</html>
