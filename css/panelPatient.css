@@ -39,7 +39,11 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+<<<<<<< HEAD
   width: 100vw; 
+=======
+  width: 100%; 
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 }
 
 .container-panel-usuario {
@@ -51,8 +55,13 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
 }
 
 .container-panel-usuario img {
+<<<<<<< HEAD
   width: 50%;
   height: 50%;
+=======
+  width: 60%;
+  height: 80%;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
   padding: 5px;
   border-radius: 50% 50%;
 }
@@ -67,11 +76,16 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
   text-decoration: none;
   width: 40%;
   text-align: center;
+<<<<<<< HEAD
   
+=======
+  padding: 10px;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 }
 /* FINAL BLOCO PAINEL USUARIO */
 
 .container-panel-search {
+<<<<<<< HEAD
   width: 35%;
   background: #87AAAE;
   padding: 20px;
@@ -79,12 +93,31 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
 
 .block-search {
   background: #D9D9D9;
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 30%;
+  background: #87AAAE;
+  padding: 20px;
+  margin: 10px;
+}
+
+.container-panel-search bloc-search {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 }
 
 form {
   background: #D9D9D9;
   border-radius: 20px;
   height: 25px;
+<<<<<<< HEAD
   
 }
 
@@ -93,6 +126,18 @@ form {
   width: 80%;
   margin-left: 5px;
   
+=======
+  align-items: center;
+}
+
+.container-panel-search input{
+  text-decoration: none;
+  background: #D9D9D9;
+  width: 80%;
+  height: 80%;
+  margin-left: 5px;
+  border: #D9D9D9;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 }
 
 .container-panel-search button {
@@ -104,10 +149,16 @@ form {
   border: #D9D9D9;
 } 
 
+<<<<<<< HEAD
 i, img{
   width: 25px;
   height: 30px;
   padding-bottom: 9px;
+=======
+.container-panel-search button img{
+  width: 25px;
+  height: 30px;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 }
 /* FINAL BLOCO PAINEL DE BUSCA */
 
@@ -116,6 +167,7 @@ i, img{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+<<<<<<< HEAD
   padding: 10px;
   background: #D4EBE3;
 }
@@ -123,6 +175,13 @@ i, img{
   text-align: center;
   
 }
+=======
+  margin: 0 auto;
+  padding: 10px;
+  background: #D4EBE3;
+}
+
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 #consult-panel {
   text-align: center;
   width: 100%;
@@ -130,6 +189,20 @@ i, img{
   background: #D9D9D9;
 }
 
+<<<<<<< HEAD
+=======
+.container-consult .consult-hist {
+  background-color: #00A698;
+  padding: 10px;
+  margin: 25px;
+}
+
+.container-consult span {
+  text-align: center;
+  margin: 0 auto;
+}
+
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 .container-hist {
   display: flex;
   justify-content: space-between;
@@ -137,11 +210,19 @@ i, img{
 }
 
 .consult-hist {
+<<<<<<< HEAD
   background-color: #00A698;
   padding: 10px;
   margin: 25px;
 
 } 
+=======
+  width: 100%;
+  height: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
 /* FINAL BLOCO PAINEL HISTORICO */
 
 .container-publi {
@@ -208,8 +289,15 @@ i, img{
 }
 
 .perfil {
+<<<<<<< HEAD
   justify-content: center;
   align-items: center;
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+>>>>>>> 2e09d4e286a3111edb508c8f612c7eb408732cf3
   width: 100%;
   height: 33.33%;
   background: #D9D9D9;
