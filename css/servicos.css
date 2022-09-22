@@ -6,11 +6,60 @@
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
 }
+/* imagens de fundo  */
+#nutricionista{
+  background: url(../images/Nutricionista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
 
-
+}
+#clinico-geral{
+  background: url(../images/clinico.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#Ortopedista{
+  background: url(../images/Ortopedista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#veterinario{
+  background: url(../images/veterinario.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#yoga{
+  background:url(../images/yoga.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#ginecologista{
+  background: url(../images/cardiologista.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+#cardiologista{
+  background: url(../images/ginecolgista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center left;
+}
+#dermatologista{
+  background: url(../images/dermatologista.jpg);
+  background-size: cover;
+  background-position: center center;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0;
+}
+
+.consult-bar .consult-button {
+  padding: 16px;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
 }
 
 
@@ -30,13 +79,13 @@ section#parceiro-destaque {
   padding-bottom: 30px;
 }
 
-section#parceiro-destaque>h1#titulo-parceiro {
+section#parceiro-destaque>h1#titulo-produto {
   padding-top: 40px;
 }
 
-section#parceiro-destaque>div#fotos-parceiro {
+section#parceiro-destaque>div#fotos-produto {
   width: 95%;
-  height: 70%;
+  height: 80%;
 
   background: #D9D9D9;
   margin: 20px auto;
@@ -47,9 +96,10 @@ section#parceiro-destaque>div#fotos-parceiro {
   border-radius: 20px;
   
 }
-section#parceiro-destaque>div#fotos-parceiro>span {
+section#parceiro-destaque>div#fotos-produto>span {
   text-transform: uppercase;
   color: red;
+  height: 40vh;
 }
 
 /* part da imgs de serviço */
@@ -58,6 +108,7 @@ section#serviço-destaque {
   background: #D4EBE3;
   text-align: center;
   width: 100vw;
+
   padding-bottom:30px
 }
 
@@ -91,7 +142,7 @@ section#serviço-destaque>div#local-serviços>.org1 {
 }
 
 section#serviço-destaque>div#local-serviços>.org1>div {
-  background: #D9D9D9;
+  cursor: pointer;
   padding: 8px;
   width: 17vw;
   height: 17vh;
@@ -162,7 +213,6 @@ div#local-proficional>div#local-org1 {
 
 .prof {
   width: 18vw;
-
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -172,7 +222,7 @@ div#local-proficional>div#local-org1 {
   background: #D9D9D9;
 
   width: 100%;
-  height:100px;
+  height:200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,6 +243,8 @@ div#local-proficional>div#local-org1 {
   padding-left: 10px;
 }
 .dados>.descrição {
+  min-height: 200px;
+
   padding-left: 10px;
 }
 
@@ -213,7 +265,6 @@ div#local-proficional>div#local-org1 {
 
   section#parceiro-destaque{
     width: 100vw;
-    height: auto;
     padding-bottom:30px ;
   }
   section#serviço-destaque>div#local-serviços{
@@ -248,4 +299,89 @@ div#local-proficional>div#local-org1 {
   }
 
 
+}
+
+#img1{
+  background:url(../images/covid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-enthusiastic-smiling-doctor-physi.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+
+}
+
+#img2{
+  background:url(../images/depositphotos_14994909-stock-photo-two-holding-hands.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+}
+#img3{
+  background:url(../images/hands-of-unrecognizable-female-doctor-writing-on-form-and-typing-on-laptop-keyboard.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+
+}
+
+.slider{
+  margin: 0 auto ;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides{
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+}
+
+
+.manual-navgation{
+  position: relative;
+  width: 100%;
+  margin-top:-30px ;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid rgb(50, 50, 249);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background-color: gray;
+}
+
+#radio1:checked ~.first {
+  margin-left:0 ;
+}
+#radio2:checked ~.first {
+  margin-left:-25% ;
+}
+#radio3:checked ~.first {
+  margin-left:-50%;
 }
