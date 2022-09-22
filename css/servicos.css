@@ -79,11 +79,11 @@ section#parceiro-destaque {
   padding-bottom: 30px;
 }
 
-section#parceiro-destaque>h1#titulo-parceiro {
+section#parceiro-destaque>h1#titulo-produto {
   padding-top: 40px;
 }
 
-section#parceiro-destaque>div#fotos-parceiro {
+section#parceiro-destaque>div#fotos-produto {
   width: 95%;
   height: 80%;
 
@@ -96,7 +96,7 @@ section#parceiro-destaque>div#fotos-parceiro {
   border-radius: 20px;
   
 }
-section#parceiro-destaque>div#fotos-parceiro>span {
+section#parceiro-destaque>div#fotos-produto>span {
   text-transform: uppercase;
   color: red;
   height: 40vh;
@@ -108,6 +108,7 @@ section#serviço-destaque {
   background: #D4EBE3;
   text-align: center;
   width: 100vw;
+
   padding-bottom:30px
 }
 
@@ -264,7 +265,6 @@ div#local-proficional>div#local-org1 {
 
   section#parceiro-destaque{
     width: 100vw;
-    height: auto;
     padding-bottom:30px ;
   }
   section#serviço-destaque>div#local-serviços{
@@ -299,4 +299,89 @@ div#local-proficional>div#local-org1 {
   }
 
 
+}
+
+#img1{
+  background:url(../images/covid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-enthusiastic-smiling-doctor-physi.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+
+}
+
+#img2{
+  background:url(../images/depositphotos_14994909-stock-photo-two-holding-hands.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+}
+#img3{
+  background:url(../images/hands-of-unrecognizable-female-doctor-writing-on-form-and-typing-on-laptop-keyboard.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+
+}
+
+.slider{
+  margin: 0 auto ;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides{
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+}
+
+
+.manual-navgation{
+  position: relative;
+  width: 100%;
+  margin-top:-30px ;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid rgb(50, 50, 249);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background-color: gray;
+}
+
+#radio1:checked ~.first {
+  margin-left:0 ;
+}
+#radio2:checked ~.first {
+  margin-left:-25% ;
+}
+#radio3:checked ~.first {
+  margin-left:-50%;
 }
