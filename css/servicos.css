@@ -6,11 +6,60 @@
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
 }
+/* imagens de fundo  */
+#nutricionista{
+  background: url(../images/Nutricionista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
 
-
+}
+#clinico-geral{
+  background: url(../images/clinico.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#Ortopedista{
+  background: url(../images/Ortopedista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#veterinario{
+  background: url(../images/veterinario.jpg)no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#yoga{
+  background:url(../images/yoga.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#ginecologista{
+  background: url(../images/cardiologista.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+#cardiologista{
+  background: url(../images/ginecolgista.jpg) no-repeat;
+  background-size: cover;
+  background-position: center left;
+}
+#dermatologista{
+  background: url(../images/dermatologista.jpg);
+  background-size: cover;
+  background-position: center center;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0px 0;
+}
+
+.consult-bar .consult-button {
+  padding: 16px;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
 }
 
 
@@ -36,7 +85,7 @@ section#parceiro-destaque>h1#titulo-parceiro {
 
 section#parceiro-destaque>div#fotos-parceiro {
   width: 95%;
-  height: 70%;
+  height: 80%;
 
   background: #D9D9D9;
   margin: 20px auto;
@@ -50,6 +99,7 @@ section#parceiro-destaque>div#fotos-parceiro {
 section#parceiro-destaque>div#fotos-parceiro>span {
   text-transform: uppercase;
   color: red;
+  height: 40vh;
 }
 
 /* part da imgs de serviço */
@@ -91,7 +141,7 @@ section#serviço-destaque>div#local-serviços>.org1 {
 }
 
 section#serviço-destaque>div#local-serviços>.org1>div {
-  background: #D9D9D9;
+  cursor: pointer;
   padding: 8px;
   width: 17vw;
   height: 17vh;
@@ -162,7 +212,6 @@ div#local-proficional>div#local-org1 {
 
 .prof {
   width: 18vw;
-
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -172,7 +221,7 @@ div#local-proficional>div#local-org1 {
   background: #D9D9D9;
 
   width: 100%;
-  height:100px;
+  height:200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,6 +242,8 @@ div#local-proficional>div#local-org1 {
   padding-left: 10px;
 }
 .dados>.descrição {
+  min-height: 200px;
+
   padding-left: 10px;
 }
 
