@@ -48,7 +48,7 @@ document.querySelector('.botaoEnviaForm').addEventListener('click',function (eve
       formulario.Mensagem.focus();
       return false;
   }
-  
+
   if (formulario.Telefone.value.length < 8){
       alert("Telefone com menos de 8 caracteres");
       formulario.Telefone.focus();
@@ -59,6 +59,26 @@ document.querySelector('.botaoEnviaForm').addEventListener('click',function (eve
     formulario.Telefone.focus();
     return false;
     }
-  alert("Dados enviados com sucesso!");
+  if(formulario.Nome.value === "") {
+    alert("Campo nome não foi preenchido");
+    formulario.Nome.focus();
+    return false;
+  }
+  if(formulario.Email.value === "") {
+    alert("Campo email não foi preenchido");
+    formulario.Email.focus();
+    return false;
+  }
+  if(formulario.Telefone.value === "") {
+    alert("Campo telefone não foi preenchido");
+    formulario.Telefone.focus();
+    return false;
+  }
+  if(formulario.Mensagem.value === "") {
+    alert("Campo mensagem não foi preenchido");
+    formulario.Mensagem.focus();
+    return false;
+  }
+  alert("Dados enviados com sucesso!"); 
   // return true;
 });
