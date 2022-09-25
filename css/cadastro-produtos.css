@@ -1,0 +1,200 @@
+@charset "UFT-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* top page */
+#NewProduct {
+  padding: 20px;
+  color: #017F73;
+  font-weight: bolder;
+  font-size: 3em;
+  border-bottom: 1px solid #39B55F;
+}
+
+/*    Register your new product below */
+
+.RegisterYourNewProductBelow {
+  width: 90vw;
+  height: 70vh;
+  margin: 0 auto;
+  background: #C3E4D3;
+}
+
+h2#RegisterTitle {
+  color: #02505C;
+  text-align: center;
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.ProductBox {
+  width: 95%;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  margin-left: 20px;
+  
+}
+
+.ProductBox input {
+  width: 85%;
+  height: 30px;
+  margin: 0 8px 0 8px;
+  border-radius: 10px;
+  background:#D9D9D9;
+}
+
+
+input#Image{
+  background: white;
+
+  height: 80px;
+  display: flex;
+  padding-left: 25%;
+  padding-top: 25px;
+}
+
+.button{
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+ 
+}
+
+#Name{
+  margin-left:78px
+}
+#Product{
+margin-left:49px
+}
+#price{
+  margin-left:79px
+}
+#category{
+  margin-left:49px
+}
+#image{
+  margin-left:60px
+}
+
+@media (max-width:1024px) {
+  .RegisterYourNewProductBelow {
+    height: 80vh;
+    margin-bottom: 10px;
+}
+}
+
+@media (min-width:600px ) and (max-width:768px){
+
+  .ProductBox input {
+    width: 70%;
+    height: 30px;
+    margin: 0 8px 0 8px;
+    border-radius: 10px;
+    background:#D9D9D9;
+  }
+  
+  input#Image{
+    background: white;
+  
+    height: 80px;
+    display: flex;
+    padding-left: 15%;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width:600px){
+
+  #NewProduct {
+    padding: 20px;
+    color: #017F73;
+    font-weight: bolder;
+    font-size: 2em;
+    border-bottom: 1px solid #39B55F;
+  }
+  
+  /*    Register your new product below */
+  
+  .RegisterYourNewProductBelow {
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    background: #C3E4D3;
+  }
+  .ProductBox input {
+    width: 50%;
+    height: 30px;
+    margin: 0 8px 0 8px;
+    border-radius: 10px;
+    background:#D9D9D9;
+  }
+  
+  input#Image{
+    background: white;
+  
+    height: 80px;
+    display: flex;
+    padding-left: 0%;
+    padding-top: 25px;
+  }
+
+}
+
+@media (max-width:400px){
+.button{
+  font-size: small;
+  
+  
+}
+.ProductBox label {
+ margin-left: 0px;
+}
+
+
+#Name{
+  margin-left:34px
+}
+#Product{
+margin-left:7px
+}
+#price{
+  margin-left:37px
+}
+#category{
+  margin-left:7px
+}
+#image{
+  margin-left:17px
+}
+.ProductBox input {
+ 
+  width: 60%;
+  margin: 0 20px 0 10px;
+
+
+}
+
+
+
+}
+
+@media (max-width:280px) {
+  .RegisterYourNewProductBelow {
+    width: 95vw;
+    height: 100vh;
+
+}
+}
