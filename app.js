@@ -25,6 +25,40 @@ function consult_close() {
 
 }
 
-
-
+// Criação do evento no botão Formulário de Contato
+document.querySelector('.botaoEnviaForm').addEventListener('click',function (event){
+  event.preventDefault();
+  if(formulario.Nome.value.length > 100){
+      alert("Nome com mais de 100 caracteres");
+      formulario.Nome.focus();
+      return false;
+  }
+  if (formulario.Email.value.length > 100){
+      alert("Email com mais de 100 caracteres");
+      formulario.Email.focus();
+      return false;
+  }
+  if (formulario.Telefone.value.length > 15){
+      alert("Telefone com mais de 15 caracteres");
+      formulario.Telefone.focus();
+      return false;
+  }
+  if (formulario.Mensagem.value.length > 1000){
+      alert("Mensagem com mais de 1000 caracteres");
+      formulario.Mensagem.focus();
+      return false;
+  }
   
+  if (formulario.Telefone.value.length < 8){
+      alert("Telefone com menos de 8 caracteres");
+      formulario.Telefone.focus();
+      return false;
+  }
+  if (isNaN(formulario.Telefone.value)){
+    alert("Telefone deve ser números");
+    formulario.Telefone.focus();
+    return false;
+    }
+  alert("Dados enviados com sucesso!");
+  // return true;
+});
