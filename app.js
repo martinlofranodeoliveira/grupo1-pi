@@ -1,3 +1,13 @@
+
+/* const express = require('express');
+const rotasLoginUsuario = require('./rotas/rotasLoginUsuario');
+
+let app = express();
+app.get('/', (req,res)=>res.send(''));
+app.use('/login-usuario', rotasLoginUsuario);
+app.listen(3000, ()=>console.log("Servidor rodando na porta 3000")) */
+
+
 // Galeria de imagens modal
 function onClick(element) {
   
