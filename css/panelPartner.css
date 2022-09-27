@@ -284,7 +284,7 @@ button {
         padding: 10px !important;
     }
 
-    .container-general {
+    #container-general {
         margin-top: 80px;
         margin-bottom: 50px;
         display: flex;
@@ -481,7 +481,7 @@ button {
     .text-hg {
         padding: 10px !important;
     }
-    .container-general {
+    #container-general {
         margin-top: 80px;
         margin-bottom: 50px;
         display: flex;
