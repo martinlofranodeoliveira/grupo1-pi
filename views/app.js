@@ -1,6 +1,6 @@
 
 /* const express = require('express');
-const rotasLoginUsuario = require('./rotas/rotasLoginUsuario');
+const rotasLoginUsuario = require('./routes/rotasLoginUsuario');
 
 let app = express();
 app.get('/', (req,res)=>res.send(''));
