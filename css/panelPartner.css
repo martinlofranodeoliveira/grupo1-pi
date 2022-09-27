@@ -17,7 +17,7 @@ a {
 .color5 {color: #37ccae;}
  */
 
-.container-general {
+#container-general {
     width: 100%;
     margin-top: 80px;
     margin-bottom: 50px;
