@@ -44,7 +44,7 @@ a {
 .color5 {color: #37ccae;}
 */
 
-.container-general {
+#container-general {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
