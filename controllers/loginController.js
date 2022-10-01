@@ -1,7 +1,7 @@
-const IndexController = {
+const loginontroller = {
  criarUsuario: (req, res)=>{
     res.send("Criar usuário");   
 }
 }
 
-module.exports = IndexController;
+module.exports = loginController;
