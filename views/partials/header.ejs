@@ -1,62 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Grupo 01 PI</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-<script src="views/app.js" defer type="text/javascript"></script>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
-
-p {color: #02505C;}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-.consult-bar .consult-button {
-  padding: 16px;
-}
-</style>
-</head>
-<body>
-
 <!-- Navbar (sit on top) -->
 <div class="consult-top">
-    <div class="consult-bar consult-white consult-card" id="myNavbar">
-      <a href="#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
-      <!-- Right-sided navbar links -->
-      <div class="consult-right consult-hide-small">
-        <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
-        <a href="#sejaumparceiro" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
-        <a href="#servicos" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
-        <a href="#" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
-        <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
-        <a href="#" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
-      </div>
-      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-  
-      <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
-        <i class="fa fa-bars"></i>
-      </a>
+  <div class="consult-bar consult-white consult-card" id="myNavbar">
+    <a href="#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
+    <!-- Right-sided navbar links -->
+    <div class="consult-right consult-hide-small">
+      <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
+      <a href="login-parceiro.html" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
+      <a href="servicos.html" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
+      <a href="produtos.html" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
+      <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
+      <a href="login-usuario.html" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
     </div>
-  </div>
-  
-  <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
-    <a href="#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
-    <a href="#sejaumparceiro" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
-    <a href="#servicos" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
-    <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
-    <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
-    <a href="#" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
-  </nav>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-  </body>
-  </html>
-  
+    <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+  <a href="#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
+  <a href="login-parceiro.html" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
+  <a href="servicos.html" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
+  <a href="produtos.html" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
+  <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
+  <a href="login-usuario.html" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
+</nav>
