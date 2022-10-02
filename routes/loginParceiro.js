@@ -1,7 +1,7 @@
 let express = require('express')
 let router = express.Router();
 
-const loginParceiroController = require('../controllers/loginParceiroController')
+const loginParceiroController = require('../controllers/loginParceiroController.js')
 
 
 router.get('/login-parceiro', loginParceiroController.login)

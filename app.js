@@ -4,7 +4,7 @@ const path = require('path')
 
 const routerHome = require('./routes/home')
 const routerLoginUsuario = require('./routes/loginUsuario')
-const routerLoginParceiro = require('./routes/loginParceiro')
+const routerLoginParceiro = require('./routes/loginParceiro.js')
 
 app.set('view engine', 'ejs')
 
