@@ -208,28 +208,8 @@
     <p id="caption" class="consult-opacity consult-large"></p>
   </div>
 </div>
+<%- include('./partials/contato') %>
 
-<!-- Contato Section -->
-<div class="consult-container container consult-white" style="padding:128px 16px" id="contato">
-  <h3 class="consult-center">Contato</h3>
-  <p class="consult-center consult-large">Para Dúvidas, Reclamações ou Sugestões preencha o formulário abaixo</p>
-  <div style="margin-top:48px">
-    <form action="" method="post"  onsubmit="return validaForm()" name="formulario">
-      <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Nome" required name="Nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"></p>
-      <p class="d-flex">
-         <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email" placeholder="Email" required name="Email">
-         <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" required name="Telefone" pattern="[0-9]+$">
-      </p>
-      <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" required name="Mensagem"></textarea></p>
-      <p>
-        <button class="botaoEnviaForm consult-button consult-verde consult-round-xlarge" type="submit">
-          <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
-        </button>
-      </p>
-    </form>
-   
-  </div>
-</div>
 <%- include('./partials/footer') %>
 </body>
 </html>

@@ -18,71 +18,9 @@
     
 <body>
     
-    <!-- Navbar  -->
-
-    <div class="consult-top">
-           
-        <div class="consult-bar consult-white consult-card"id="myNavbar">
-           
-            <a href="index" class="consult-bar-item consult-button consult-wide">LOGO</a>
-              <div class="consult-right consult-hide-small">
-            
-            <a href="index#quemsomos" 
-              class="consult-bar-item consult-button">Quem Somos</a>
-
-            <a href="login-parceiro" 
-              class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
-            
-            <a href="servicos" 
-              class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
-            
-            <a href="produtos" 
-              class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
-            
-            <a href="index#contato" 
-              class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
-            
-            <a href="login-usuario"
-              class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
-         
-        
-        </div>
-           
-        <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
-            <i class="fa fa-bars"></i>
-          
-         </a>
-        </div>
-      </div>
-      
-      <!-- icones nav bar -->
-      
-      <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
-        
-        <a href="javascript:void(0)" onclick="consult_close()" 
-        class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
-        
-        <a href="index#quemsomos" onclick="consult_close()"
-           class="consult-bar-item consult-button">Quem Somos</a>
-       
-        <a href="login-parceiro" onclick="consult_close()"
-           class="consult-bar-item consult-button">Seja um Parceiro</a>
-       
-        <a href="servicos" onclick="consult_close()"
-           class="consult-bar-item consult-button">Serviços</a>
-        
-        <a href="produtos" onclick="consult_close()" 
-           class="consult-bar-item consult-button">Produtos</a>
-       
-        <a href="index#contato" onclick="consult_close()" 
-           class="consult-bar-item consult-button">Contato</a>
-       
-        <a href="login-usuario" onclick="consult_close()" 
-           class="consult-bar-item consult-button">Login</a>
-       
-    </nav>
+    <%- include('./partials/navbar') %>
     
-<div id="produtosdestaque"></div>
+<div id="home"></div>
       <!--conteudo principal-->
    
       <section id="produto-Destaque">
@@ -666,50 +604,9 @@
     </div>
   </div>
 
-  <!-- contatos -->
+  <%- include('./partials/contato') %>
 
-  
-  <div class="consult-container container consult-white" style="padding:128px 16px" id="contato">
-    <h3 class="consult-center">Contato</h3>
-    <p class="consult-center consult-large">Para Dúvidas, Reclamações ou Sugestões preencha o formulário abaixo</p>
-    <div style="margin-top:48px">
-      <form action="/action_page.php" target="_blank">
-        <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Nome" required name="Nome"></p>
-        <p class="d-flex">
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email" placeholder="Email" required name="Email">
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" required name="Telefone">
-        </p>
-        <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" required name="Mensagem"></p>
-        <p>
-          <button class="consult-button consult-verde consult-round-xlarge" type="submit">
-            <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
-          </button>
-        </p>
-      </form>
-     
-    </div>
-  </div>
-
-  <!-- Footer -->
-
-
-  <footer class="consult-center consult-verde consult-padding-64">
-   
-    <a href="#produtosdestaque" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
-    <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
-      <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
-      <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
-      <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
-      <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
-      <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
-      <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
-    
-    </div>
-
-
-    <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
-  
-</footer>
+  <%- include('./partials/footer') %>
   
 </body>
 
