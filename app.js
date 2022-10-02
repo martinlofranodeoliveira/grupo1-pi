@@ -3,11 +3,12 @@ const app = express();
 const path = require('path')
 
 const routerHome = require('./routes/home')
-
+const routerLoginUsuario = require('./routes/loginUsuario')
 
 app.set('view engine', 'ejs')
 
 app.use('/', routerHome)
+app.use('/', routerLoginUsuario)
 
 
 app.use(express.static(path.join(__dirname, '/public')));
