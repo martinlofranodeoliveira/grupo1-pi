@@ -1,7 +1,7 @@
 const path = require("path");
 
 const produtosController = {
-    login: (req, res) => {
+    listaProdutos: (req, res) => {
         
         res.render("produtos", {
             title: 'Produtos',
