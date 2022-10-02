@@ -1,7 +1,7 @@
 let express = require('express')
 let router = express.Router();
 
-const loginUsuarioController = require('../controllers/loginUsuarioController')
+const loginUsuarioController = require('../controllers/loginUsuarioController.js')
 
 
 router.get('/login-usuario', loginUsuarioController.login)
