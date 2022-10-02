@@ -3,6 +3,7 @@ const app = express();
 const path = require('path')
 
 const routerHome = require('./routes/home.js')
+const routerAdmin = require('./routes/admin.js')
 const routerLoginUsuario = require('./routes/loginUsuario.js')
 const routerPainelUsuario = require('./routes/painelUsuario.js')
 const routerLoginParceiro = require('./routes/loginParceiro.js')
@@ -19,6 +20,7 @@ const routerPlanoParceiro = require('./routes/planoParceiro.js')
 app.set('view engine', 'ejs')
 
 app.use('/', routerHome)
+app.use('/', routerAdmin)
 app.use('/', routerLoginUsuario)
 app.use('/', routerPainelUsuario)
 app.use('/', routerLoginParceiro)
