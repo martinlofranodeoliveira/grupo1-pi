@@ -9,61 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <link rel="stylesheet" href="css/plano-parceiro.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="views/app.js" defer type="text/javascript"></script>
+  <script src="js/main.js"  defer type="text/javascript"></script>
   <title>Plano Parceiro</title>
 </head>
-<style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
-  
-  p {color: #02505C;}
-  
-  body, html {
-    height: 100%;
-    line-height: 1.8;
-  }
-  .consult-bar .consult-button {
-    padding: 16px;
-  }
-  </style>
 <body>
   <header>
-
-<!-- Navbar (sit on top) -->
-<div class="consult-top">
-  <div class="consult-bar consult-white consult-card" id="myNavbar">
-    <a href="index#home" class="consult-bar-item consult-button consult-wide">LOGO</a>
-    <!-- Right-sided navbar links -->
-    <div class="consult-right consult-hide-small">
-      <a href="index#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
-      <a href="login-parceiro" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Seja um Parceiro</a>
-      <a href="servicos" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
-      <a href="produtos" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
-      <a href="index#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
-      <a href="login-usuario" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Login</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
-  <a href="index#quemsomos" onclick="consult_close()" class="consult-bar-item consult-button">Quem Somos</a>
-  <a href="login-parceiro" onclick="consult_close()" class="consult-bar-item consult-button">Seja um Parceiro</a>
-  <a href="servicos" onclick="consult_close()" class="consult-bar-item consult-button">Serviços</a>
-  <a href="produtos" onclick="consult_close()" class="consult-bar-item consult-button">Produtos</a>
-  <a href="index#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
-  <a href="login-usuario" onclick="consult_close()" class="consult-bar-item consult-button">Login</a>
-</nav>
+    <%- include('./partials/navbar') %>
   </header>
-
-
-
-<div id="planoparc"></div>
+<div id="home"></div>
   <main>
     <div class="container-seja-nosso-parceiro">
       <h1 id="parceiro-agora">SEJA NOSSO PARCEIRO AGORA MESMO!</h1>
@@ -154,25 +107,6 @@
     </div>
 
   </main>
-
-
-
-
-
-
-  
-  <!-- Footer -->
-<footer class="consult-center consult-verde consult-padding-64">
-  <a href="#planoparc" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
-  <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
-    <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
-    <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
-    <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
-    <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
-    <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
-    <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
-  </div>
-  <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
-</footer>
+  <%- include('./partials/footer') %>
 </body>
 </html>
