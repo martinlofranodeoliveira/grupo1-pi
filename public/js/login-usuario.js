@@ -23,7 +23,7 @@ var usuarios = [
     for(var i = 0; i < usuarios.length; i++){
       if(usuarios[i].email == email && usuarios[i].senha == senha){
         localStorage.setItem("usuario", JSON.stringify(usuarios[i]));
-        window.location = "panelPatient.html";
+        window.location = "panelPatient";
         return;
       }
     }
@@ -49,6 +49,6 @@ var usuarios = [
 
   function verificarUsuarioLogado(){
     if(localStorage.getItem("usuario")){
-      window.location = "panelPatient.html";
+      window.location = "panelPatient";
     }
   }
