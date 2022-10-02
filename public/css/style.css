@@ -1160,8 +1160,11 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
 }
 
 @media (max-width:480px){
-    .text-hg {
+    .consult-container{
         padding: 10px !important;
+    }
+    form{
+        padding: 20px;
     }
 }
 
@@ -1275,9 +1278,6 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
     }
     .tabela-carrinho .form-horizontal .controls input {
         width: 90px !important;
-    }
-    .consult-container, .consult-panel {
-        padding: 0 !important;
     }
     .consult-carrinho-h1{
         padding: 10px;
