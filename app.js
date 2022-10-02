@@ -13,6 +13,7 @@ const routerDescricaoProduto = require('./routes/descricaoProduto.js')
 const routerCarrinho = require('./routes/carrinho.js')
 const routerCheckout = require('./routes/checkout.js')
 const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
+const routerPlanoUsuario = require('./routes/planoUsuario.js')
 
 app.set('view engine', 'ejs')
 
@@ -27,6 +28,7 @@ app.use('/', routerDescricaoProduto)
 app.use('/', routerCarrinho)
 app.use('/', routerCheckout)
 app.use('/', routerCheckoutPlanos)
+app.use('/', routerPlanoUsuario)
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.listen(3000, () => {console.log("Servidor rodando na porta 3000")}) 
