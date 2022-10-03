@@ -22,13 +22,14 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
 }
 
 /*  ESPAÇO PARA PUBLICIDADE VERTICAL NO TOP */ 
-.space-advertising {
+#space-advertising {
   width: 100vw;
-  margin-top: 60px;
+  margin: 15px 15px 15px 15px;
   background: grey;
   height: 100px;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 /* PARTE SUPERIRO DASHBOARD */
@@ -57,13 +58,16 @@ a {
 .container1 {
   display: flex;
   flex-direction: column;
+  width: 20%;
+  padding: 0px 2px 0px 2px;
 }
 
 .menu-sup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #6db2b4;
+  background: #02aaaf;
+  margin: 0px 0px 12px 0px;
 }
 
 .img-parc {
@@ -84,20 +88,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #6db2b4;
+  background: #02aaaf;
   margin-top: 15px;
-  padding: 10px;
-}
-
-.menu-inf span a{
-  text-align: center;
-  background: #D9D9D9;
-  width: 95%;   
+  padding: 13px;
 }
 
 .menu-inf img {
   align-items: center;
-  width: 30px;
+  width: 40px;
   height: 40px;
   
 }
@@ -118,91 +116,93 @@ a {
   align-items: center;
   width: 100%;
   background: #D9D9D9;
-  
 }
 
 .lembre {
   display: flex;
   flex-direction: column;
-  padding: 1px;
+  padding: 15px;
   align-items: center;
   width: 100%;
   background: #D9D9D9;
-  
 }
 
 .chat {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 15px;
   align-items: center;
   width: 100%;
   background: #D9D9D9;
 }
 
 .container2{
-  width: 42%;
+  width: 40%;
   margin-left: 20px;
 }
 
 .container-color{
-  background: #6db2b4;
-  height: 300px;
-  margin-bottom: 5px;
+  background: #02aaaf;
+  height: 309px;
+  margin-bottom: 18px;
+  padding: 10px;
 }
 
 .bloc-search {
   padding-top:10px ;
-  padding: 5px;
-  height: 50px;
+  margin: 0 auto;
+  height: 58px;
+  border-radius: 15px;
+  width: 90%;
 }
 
 .bloc-search form{
   display: flex;
-  justify-content: center;
   background: #D9D9D9;
-  text-align:center;
   border-radius: 10px;
   width: 100%;
-  height: 35px;
-
+  height: 30px;
+  border-radius: 15px;
 }
 
 .bloc-search input {
   background: #D9D9D9;
-  border: none;
-  font-size: 15px;
-  height: auto;
-  font-weight: bold;
-  width: 60%;
-  margin-top: 5px;
-
+  border-color: #D9D9D9;
+  font-size: 14px;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 15px;
 }
 
-.bloc-search button {
+#lupa {
+  width: 12%;
   border: none;
-  background: #D9D9D9;
+  background: #D9D9D9;  
+  border-radius: 15px;
 }
 
-.lupa img{
-  width: 15px;
-  height: 15px;
-  background: #D9D9D9;
-  
+#lupa img {
+    width: auto;
+    height: 23px;
+    background: #D9D9D9;  
+    border-radius: 15px;
 }
 
 .container-consult {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   align-items: center;
-  padding: 15px;
-  background: #6db2b4;
+  padding: 9px;
+  background: #8acca6;
+  margin: 0 auto;
 }
 
 .container-panel-publi{
   width: 100%;
-  background: #6db2b4;
+  background: #8acca6;
 }
 
 #consult-panel{
@@ -214,20 +214,20 @@ a {
 
 .container-hist {
   display: flex;
-  width: 90%;
-  margin-top: 15px;
+  width: 95%;
   margin-bottom: 10px;
-  background: #37ccae;
+  background: #8acca6;
   padding: 15px;
 }
 
 .consult-hist {
   width: 50%;
   height: 100px;
-  background: #14967c;
+  background: #02aaaf;
   margin: 10px;
   text-align: center;
   padding-top: 25px;
+  font-weight: bold;
 }
 
 .container-consult-inf {
@@ -243,38 +243,54 @@ a {
   align-items: center;
 }
 
-.atend {
+.token {
   width: 95%;
-  height: 150px;
-  border: solid #14967c;
-  background: #37ccae;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
   margin: 0 auto;
-
 }
 
-.guia {
+.cancela {
   width: 95%;
-  height: 150px;
-  border: solid #14967c;
-  background: #37ccae;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
+  margin: 0 auto;
+}
+
+.avalie {
+  width: 95%;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
+  margin: 0 auto;
+}
+
+.solic {
+  width: 95%;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
   margin: 0 auto;
 }
 
 .container3 {
-  width: 45%;
+  width: 40%;
   margin-left: 20px;
 }
 
 .container-publi {
   display: flex;
   width: 100%;
-  background: #6db2b4;
+  background: #02aaaf;
+  height: 309px;
   margin-bottom: 5px;
 }
 
 .publi-item {
   width: 80%;
-  background: #14967c;
+  background: #8acca6;
   margin: 15px;
   text-align: center;
   min-height: 270px;
@@ -288,6 +304,31 @@ a {
   display: flex;
   width: 100%;
   height: 365px;
+  padding-top: 13px;
+}
+
+.agend {
+  width: 95%;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
+  margin: 0 auto;
+}
+
+.prontu {
+  width: 95%;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
+  margin: 0 auto;
+}
+
+.art {
+  width: 95%;
+  height: 170px;
+  border: solid #02aaaf;
+  background: #8acca6;
+  margin: 0 auto;
 }
 
 .spn-img {
@@ -297,9 +338,10 @@ a {
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   min-height: 60px;
+  font-weight: bold;
 }
 
 p {
@@ -307,7 +349,7 @@ p {
 }
 
 button {
-  width: 90%;
+  width: 70%;
   font-size: 14px;
   font-weight: bolder;
   border-radius: 10px;
@@ -315,10 +357,8 @@ button {
   margin: 0 auto;
 }
 
-@media (max-width: 600px){
-  .text-hg {
-      padding: 10px !important;
-  }
+@media (max-width: 480px){
+
   .container-hist {
     display: flex;
     /* width: 90%; */
