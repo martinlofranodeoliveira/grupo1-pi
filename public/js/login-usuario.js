@@ -1,54 +1,28 @@
-var usuarios = [
-    {
-      "nome": "Martin",
-      "email": "genesisrecordshouse@gmail.com",
-      "senha": "123456",
-    },
-    {
-      "nome": "Gustavo",
-      "email": "gustavo@gmail.com",
-      "senha": "123456",
-    },
-    {
-      "nome": "Italo",
-      "email": "italo@gmail.com",
-      "senha": "123456",
-    }
-  ];
+var gmailCadastro = document.getElementById("gmail-cadrastro");
+var senhaCadastro = document.getElementById("senha-cadrastro");
+var nomeCadastro = document.getElementById("nome");
 
-  function logar(){
-    var email = document.getElementById("gmail-login").value;
-    var senha = document.getElementById("senha-login").value;
-  
-    for(var i = 0; i < usuarios.length; i++){
-      if(usuarios[i].email == email && usuarios[i].senha == senha){
-        localStorage.setItem("usuario", JSON.stringify(usuarios[i]));
-        window.location = "panelPatient";
-        return;
-      }
-    }
-  
-    alert("Usuario ou senha incorretos!");
+var  btnEntrar = document.getElementById("Ientra-cadrastro");
+
+
+
+
+function validaCadastro(){
+  var usuarios = localStorage.getItem("usuarios");
+  usuarios = JSON.parse(usuarios);
+
+  if(usuarios == null){
+    usuarios = [];
   }
 
-  function cadastrar(){
-    var nome = document.getElementById("nome").value;
-    var email = document.getElementById("gmail-cadrastro").value;
-    var senha = document.getElementById("senha-cadrastro").value;
-  
-    var usuario = {
-      nome: nome,
-      email: email,
-      senha: senha
-    }
-  
-    usuarios.push(usuario);
-  
-    alert("Usuario cadastrado com sucesso!");
-  }
+  var usuario = {
+        nome: nomeCadastro.value,
+        email: gmailCadastro.value,
+        senha: gmailCadastro.value
+  };
+  usuarios.push(usuario);
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  alert("Usuário criado com sucesso");
+}
 
-  function verificarUsuarioLogado(){
-    if(localStorage.getItem("usuario")){
-      window.location = "panelPatient";
-    }
-  }
+btnEntrar.addEventListener("click", validaCadastro);
