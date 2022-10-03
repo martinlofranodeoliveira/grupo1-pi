@@ -1,175 +1,113 @@
-body{
-    margin:0;
-    font-family: Nunito, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.users{
-    background: gray;
-    color: black;
+body,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  color: #02505C
 }
 
 
-html{
-    background: #02505c;
+
+body , html {
+  background-color: #cbcdcf;
+  width: 100vw;
 }
 
-div.menu{
-    box-shadow: 1px 0px 2px 0px black;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15%;
-    font-size: 18px;
-    background: #8ACCA6;
+
+
+header {
+  margin-top :30px;
+  background: #8ACCA6;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  transition: all 540ms;
 }
 
-div.menu div.profile{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
+
+.box{
+  padding: 30px 50px;
 }
 
-div.menu div.profile img.profile-icon{
-    width: 60%;
-    border: 1.5px solid black;
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 
-div.menu div.profile span.profile-name{
-    margin-top: 2%;
-    text-align: center;
+
+.lineInput {
+  display: grid;
+  margin-bottom: 10px;
 }
 
-div.menu div.profile span.profile-admin{
-    margin-top: 1%;
-    text-align: center;
+input,textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: 0;
+  width: 100%;
 }
 
-div.menu div.logout-container{
-    position: absolute;
-    bottom: 2%;
-    width: 100%;
-    display: flex;
+button {
+  border: 0px;
+  padding: 10px;
+  outline: 0;
+  background-color: #8ACCA6;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #02505C;
+  transition: 540ms;
 }
 
-div.menu div.logout-container div.logout{
-    cursor: pointer;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button:hover {
+  background-color: #6b9f81;
 }
 
-div.content {
-    display: flex;
-    width: calc(85% - 50px);
-    margin-left: 15%;
-    padding: 50px 0 0 50px;
+
+.content {
+  margin-top: 35px;
 }
 
-div.content img.logo {
-    width: 60px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
+table {
+ border-collapse: collapse ;
+ border: 1px solid gray;
+ width: 100%;
 }
 
-table.users {
-    border-collapse: collapse;
+table th {
+  background-color: rgb(161, 155, 155);
 }
 
-table.users tr {
-    border: 1px solid black;
+table td, th {
+  text-align: left;
+  padding: 1px 5px;
 }
 
-table.users td{
-    width: fit-content;
-    padding: 0 10px;
-    text-align: center;
+
+
+
+table td img{
+  width: 22px;
 }
 
-table.users span.delete-btn {
-    color: red;
+
+#navabar {
+ font-size: 15px;
+ text-transform: uppercase;
+
 }
 
-table.users tr:not(:first-child):hover{
-    background-color:#e2e2e2;
+.mostra:hover {
+background: #34ca73;
 }
 
-td.table-actions span {
-    cursor: pointer;
-}
-
-td.table-icon img {
-    width: 50px;
-    margin-top: 3px;
-}
-
-div.form {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.form-container {
-    position: relative;
-    background-color: white;
-    padding: 25px;
-    border-radius: 21px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-}
-
-div.form-container>* {
-    margin: 5px 0;
-}
-
-div.form-container>input {
-    width: 260px;
-    font-size: 15px;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-div.form-container input:focus {
-    outline: 0;
-}
-
-div.form-container>input[type='text'], div.form-container>input[type='password'] {
-    height: 25px;
-    font-size: 18px;
-}
-
-span.form-title {
-    font-size: 30px;
-}
-
-div.form-container span.check {
-    font-size: 30px;
-    position: absolute;
-    left: 25px;
-    bottom: 10px;
-    cursor: pointer;
-}
-
-div.form-container span.close {
-    font-size: 30px;
-    position: absolute;
-    right: 25px;
-    top: 10px;
-    cursor: pointer;
-}
-
-div.form-container input.form-icon{
-    border:0
-}
