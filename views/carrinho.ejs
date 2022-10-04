@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Grupo 01 PI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="js/main.js"  defer type="text/javascript"></script>
+
+</head>
+<body>
+<%- include('./partials/navbar') %>
+
+<div id="home"></div>
+  <div class="consult-container container consult-white ">
+    <div class="consult-cell-row finalizar-compra">
+        <h1 class="consult-cell-row consult-margin-top-carrinho consult-carrinho-h1">
+          Carrinho de Compras 
+          <small> Clique em finalizar compra para efetuar o seu pedido.</small>
+        </h1>
+        <div class="caixa-sombreada">
+          <table class="table tabela-carrinho">
+            <thead>
+                <tr class="bg-dark">
+                  <th colspan="2" width="45%">
+                    <h6 class="cor-secundaria">Produto</h6>
+                  </th>
+                  <th width="15%">
+                    <h6 class="cor-secundaria">Preço unitário</h6>
+                  </th>
+                  <th width="15%">
+                    <h6 class="cor-secundaria">Quantidade</h6>
+                  </th>
+                  <th width="15%">
+                    <h6 class="cor-secundaria">Subtotal</h6>
+                  </th>
+                  <th width="10%">
+                    <h6 class="cor-secundaria">Excluir</h6>
+                  </th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr data-produto-id="158911202" data-produto-quantidade="1">
+                <td class="sem-borda conteiner-imagem">
+                  <div class="imagem">
+                      <a href="#">
+                      <img src="images/produto-1.webp" alt="Produto com 1 Variação"></a>
+                  </div>
+                </td>
+                <td class="sem-borda">
+                  <div class="produto-info">
+                    <a href="#" class="cor-secundaria">
+                      Produto com 1 Variação 
+                    </a>
+                    <ul>
+                      <li>
+                        <span>
+                          SKU:
+                          <strong>
+                            ZK7SWVRE3-m
+                          </strong>
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          Estoque:
+                          <strong>
+                            Disponível
+                          </strong>
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          Tamanho de camisa/camiseta:
+                          <strong>M</strong>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="hidden-phone">
+                  <div class="preco-produto destaque-parcela ">
+                    <div>
+                      <s class="preco-venda ">
+                        R$ 95,00
+                      </s>
+                      <strong class="preco-promocional cor-principal ">
+                        R$ 70,00
+                      </strong>
+                    </div>
+                  </div>
+                </td>
+                <td class="clearfix">
+                  <form action="/carrinho/produto/1/atualizar" method="post">
+                    <div class="quantidade">
+                      <a href="/carrinho/produto/1/atualizar/0" class="cor-secundaria icon-minus"><i class="fa-solid fa-minus"></i></a>
+                      <input type="text" class="input-mini" name="quantidade" value="1" autocomplete="off">
+                      <a href="/carrinho/produto/1/atualizar/2" class="cor-secundaria icon-plus"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <div class="preco-produto">
+                    <strong class="preco-promocional cor-principal titulo">
+                      R$ 70,00
+                    </strong>
+                  </div>
+                </td>
+                <td>
+                  <div class="excluir">
+                    <a href="/carrinho/produto/1/remover" class="icon-trash cor-secundaria"><i class="fa-solid fa-trash-can"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-dark">
+                <td class="display-none" colspan="4">&nbsp;
+                </td>
+                  <td colspan="2">
+                    <div class="subtotal">
+                      <span>Subtotal: </span>
+                      <strong class="titulo cor-principal" data-subtotal-valor="70.0">
+                        R$ 70,00
+                      </strong>
+                    </div>
+                  </td>
+              </tr>
+              <tr class="bg-dark">
+                <td colspan="4">
+                  <form class="form-horizontal" id="formCalcularFrete">
+                    <div class="control-group">
+                      <label class="control-label float-left" for="calcularFrete">
+                        <b class="cor-secundaria">Calcule o frete:</b>
+                      </label>
+                      <div class="controls text-left">
+                        <div class="input-append text-left">
+                          <input type="tel" name="cep_destino" id="calcularFrete" class="input-small input-cep" value="37470-000" maxlength="9">
+                          <button class="btn" id="btn-frete">Calcular</button>
+                        </div>
+                        <span class="help-inline">
+                          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"><i class="fa-solid fa-circle-question"></i> Não sei meu CEP</a>
+                        </span>
+                      </div>
+                    </div>
+                  </form>
+                </td>
+                <td colspan="2">
+                  <div class="formas-envio">
+                    <ul>
+                      <li>
+                        <label class="radio">
+                          <input type="radio" name="formaEnvio" value="2" data-valor="24.3" data-code="pac">
+                          <b class="prazo">7 dias úteis</b> 
+                          <span class="cor-principal valor">R$ 24,30</span> 
+                          <span class="nome">PAC</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="radio">
+                          <input type="radio" name="formaEnvio" value="1" data-valor="25.8" data-code="sedex">
+                          <b class="prazo">3 dias úteis</b> 
+                          <span class="cor-principal valor">R$ 25,80</span> 
+                          <span class="nome">SEDEX</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr class="bg-dark hidden ">
+              </tr>
+              <tr class="bg-dark">
+                <td colspan="6" class="line-18">
+                  <div class="total">
+                    <span>Total:</span>
+                    <strong class="titulo cor-principal valor-total" data-total-valor="70">R$ 70,00</strong>
+                  </div>
+                  <div class="valores-descontos">
+                    <div class="descontos parcelas">
+                      <span>
+                        ou em até <strong>2x</strong> de <strong>R$ 35,00</strong> sem juros
+                      </span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="li-box-payment-minimum-value" data-value="0" class="alert" style="display: none;font-size: 14px;padding: 10px;text-align: center;margin-top: 10px;">
+          <i class="icon-info-sign"></i>
+          <strong style="color: #ae8640;">
+              Adicione mais
+              <span class="li-box-payment-minimum-value-left">
+                  R$-.140,00
+              </span>
+              ao carrinho
+          </strong>
+          para poder finalizar a compra.
+        </div>
+        <form class="mt-10" action="checkout" method="post">
+          <div class="acao-editar row-fluid">
+            <div class="span12">
+                <a href="produtos" class="botao"><i class="fa-solid fa-chevron-left"></i>Continuar comprando</a>
+                <a href="checkout">
+                  <button class="consult-button consult-verde-aqua botao principal grande"><i class="fa-solid fa-check"></i>Finalizar compra</button>
+                </a>
+            </div>
+             <div class="selo-ssl hidden-phone">
+               <img src="images/stamp_encryptssl_cart.png" alt="Compra 100% Segura">
+             </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include('./partials/footer') %>
+</body>
+</html>

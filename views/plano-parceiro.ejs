@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="css/plano-parceiro.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"  defer type="text/javascript"></script>
+  <title>Plano Parceiro</title>
+</head>
+<body>
+  <header>
+    <%- include('./partials/navbar') %>
+  </header>
+<div id="home"></div>
+  <main>
+    <div class="container-seja-nosso-parceiro">
+      <h1 id="parceiro-agora">SEJA NOSSO PARCEIRO AGORA MESMO!</h1>
+      <h3 id="aumente">AUMENTE SEU PORTFÓLIO E TENHA SEUS PRÓPRIOS CLIENTES</h1>
+    </div>
+
+    <div class="container container-plano-adesao">
+      <h1 id="plano-adesao">PLANO DE ADESÃO*</h1>
+      <h5 id="especificacao-plano-adesao">*assinatura sem cobrança de taxas extras</h5>
+      <h5 id="especificacao-plano-adesao">**em caso de insatisfação, cancele a qualquer momento sem pagar qualquer taxa
+      </h5>
+
+      <div>
+        <div class="container-faca-parte">
+          <h2 id="faca-parte">FAÇA PARTE DO TIME QUE MAIS TEM CLIENTES NO BRASIL!</h2>
+          <h4 id="pedidos">+300 mil pedidos solicitados por mês</h4>
+          <h3 id="cadastre">CADASTRE-SE GRATUITAMENTE!*</h3>
+          <h5 id="cadastre-detalhes">*cadastre e-mail ou telefone/whatsapp ou ambos, como preferir</h5>
+          <div class="formulario-e-imagem">
+            <div class="formulario">
+              <form action="">
+                <input type="text" placeholder="Digite seu Nome Completo">
+                <input type="text" placeholder="Digite seu E-mail">
+                <input type="text" placeholder="Digite seu Telefone/whatsapp">
+              </form>
+              <a href="checkout-planos">
+                <button type="submit" id="enviar">SEJA UM PARCEIRO AGORA MESMO</button>
+              </a>
+            </div>
+            <div class="imagem">
+              <img id="img-parceiro" src="images/depositphotos_14994909-stock-photo-two-holding-hands.jpg"
+                alt="Imagem ilustrativa de parceiro">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="sc-beneficios">
+      <h1 id="confira">CONFIRA NOSSOS PLANOS, ASSINE AGORA MESMO E  TENHA OS SEUS PRÓPRIOS CLIENTES!</h1>
+      <div class="beneficios">
+          <ul class="lista-ben">
+              <li><img id="heart" src="images/heart-vector.png" alt="">ATENDA SEM SAIR DE CASA</li>
+              <li><img id="heart" src="images/heart-vector.png" alt="">TENHA CLIENTES EM TODO O TERRITÓRIO NACIONAL</li>
+              <li><img id="heart" src="images/heart-vector.png" alt="">SEJA UM ESPECIALISTA NA SUA ÁREA</li>
+              <li><img id="heart" src="images/heart-vector.png" alt="">TRANSFORME A VIDA DOS SEUS CLIENTES</li>
+              <li><img id="heart" src="images/heart-vector.png" alt="">SEJA UM PARCEIRO E LIDERE NO RAMO DA SAÚDE</li>
+          </ul>
+      </div>
+  </section>
+
+    <div class="container-final">
+      <div class="container-estatisticas">
+        <div class="parceiros">
+          <p id="letra-maior">+1500</p>
+          <p>Parceiros</p>
+        </div>
+        <div class="parceiros">
+          <p id="letra-maior">99%</p>
+          <p>Pessoas Atendidas em menos de 24horas</p>
+        </div>
+        <div class="parceiros">
+          <p id="letra-maior">27</p>
+          <p>Presente em todos os estados Brasileiros</p>
+        </div>
+        <div class="parceiros">
+          <p id="letra-maior">+100.000</p>
+          <p>Usuários</p>
+        </div>
+      </div>
+      <div class="faca-como">
+        <p>Faça como nossos parceiros e seja líder no ramo da saúde em todo o Brasil!</p>
+      </div>
+      <div class="container-logos-parceiros">
+        <div class="logo-parceiro">
+          <img id="img-amil" src="images/logo-amil.webp" alt="Logo parceiro Amil">
+        </div>
+        <div class="logo-parceiro">
+          <img id="img-unimed" src="images/unimed-logo-1-2.png" alt="Logo parceiro Unimed">
+        </div>
+        <div class="logo-parceiro">
+          <img id="img-sul-america" src="images/images.png" alt="Logo parceiro Sul América">
+        </div>
+        <div class="logo-parceiro">
+          <img id="img-doctor-clin" src="images/logo-doctor-clin.jpg" alt="Logo Doctor Clin">
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <%- include('./partials/footer') %>
+</body>
+</html>

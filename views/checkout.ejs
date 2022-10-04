@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Grupo 01 PI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout-responsive.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <script src="js/main.js"  defer type="text/javascript"></script>
+</head>
+
+<body>
+  <%- include('./partials/navbar') %>
+<div  id="home" ></div>
+  <div id="corpo">
+    <div class="consult-container container ">
+      <div class="secao-principal row-fluid sem-coluna">
+        <div class="campos-pedido">
+          <div class="cabecalho-interno row-fluid">
+            <div class="span12">
+              <h3 class="titulo cor-secundaria">
+                Finalizar compra <small> Preencha os dados necessários para finalizar o pedido.</small>
+              </h1>
+            </div>
+          </div>
+          <div class="campos-pedido">
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="resumo-compra caixa-sombreada">
+                  <table class="table tabela-carrinho borda-alpha">
+                    <thead class="cor-secundaria">
+                      <tr>
+                        <th>
+                          <h6>Produtos</h6>
+                        </th>
+                        <th width="80">
+                          <h6>Qtd.</h6>
+                        </th>
+                        <th width="140" class="padding-preco">
+                          <div>
+                            <h6 style="margin-left: 10px;">Preço</h6>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="phone-pullleft" data-produto-id="158911186" data-produto-quantidade="1">
+                          <div class="produto-info">
+                            Produto Simples 3
+                            <ul>
+                              <li>
+                                <span>
+                                  SKU:
+                                  <strong>
+                                    7AT7EPAU5
+                                  </strong>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="conteiner-qtd">
+                          <div>1</div>
+                        </td>
+                        <td class="conteiner-preco padding-preco">
+                          <div class="preco-produto">
+                            <strong class="preco-promocional cor-principal titulo">
+                              R$ 280,00
+                            </strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="bg-dark esconder-mobile">
+                        <td>&nbsp;</td>
+                        <td class="text-right">
+                          <span>Subtotal:</span>
+                        </td>
+                        <td class="padding-preco">
+                          <div class="subtotal-checkout" data-subtotal="280,00" data-float="280.0">
+                            <strong class="titulo cor-principal">
+                              R$ 280,00
+                            </strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="bg-dark tr-checkout-frete hide" style="display: table-row;">
+                        <td>&nbsp;</td>
+                        <td class="text-right">
+                          <span>Frete:</span>
+                        </td>
+                        <td class="padding-preco">
+                          <div class="frete-preco">
+                            <small class="muted" style="display: none;">(defina abaixo)</small>
+                            <strong class="titulo cor-principal hide" style="display: inline;">R$ 24,30</strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="bg-dark esconder-mobile desconto-tr hide">
+                        <td>&nbsp;</td>
+                        <td class="text-right">
+                          <span>Desconto à vista:</span>
+                          <small class="hide texto-aplicar-total muted">(frete não incluso)</small>
+                        </td>
+                        <td class="padding-preco">
+                          <div class="desconto-preco">
+                            <strong class="titulo cor-principal">R$ 0,00</strong>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="bg-dark tr-checkout-total hide">
+                        <td colspan="2" class="text-right hidden-phone">
+                          <span>Total:</span>
+                        </td>
+                        <td class="padding-preco">
+                          <span class="visible-phone">Total:</span>
+                          <div class="total-checkout" data-total="304.3">
+                            <strong class="titulo cor-principal preco-carrinho-total">R$ 304,30</strong>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="alert alert-error hide" id="alertError">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="checkout/finalizar" method="POST"
+              id="formularioCheckout">
+              <div class="row-fluid hide" style="display: block;">
+                <div class="span4">
+                  <div class="caixa-sombreada borda-principal dados-cadastro hide">
+                    <fieldset data-recording-ignore="events">
+                      <legend class="titulo cor-secundaria"><i class="icon-list"></i>Dados cadastrais</legend>
+                      <ul class="caixa-info">
+                        <li>
+                          <strong id="carrinho-cliente-nome" data-nome="Martin Lofrano de Oliveira">Nome:</strong> Martin Lofrano de
+                          Oliveira
+                        </li>
+                        <li>
+                          <strong>Email:</strong> genesisrecordshouse@gmail.com
+                        </li>
+                        <li>
+                          <strong>Celular:</strong> (22) 22222-2222
+                        </li>
+                        <li>
+                          <strong>Tipo de cadastro:</strong> Pessoa Física
+                        </li>
+                        <li>
+                          <strong>CPF:</strong> 391.582.198-54
+                        </li>
+                      </ul>
+                    </fieldset>
+                    <fieldset data-recording-ignore="events">
+                      <div class="lista-endereco formas accordion" id="listaEndereco">
+                        <legend class="titulo cor-secundaria"><i class="icon-list-alt"></i>Meus endereços</legend>
+                        <div class="endereco accordion-group ">
+                          <label for="idEnderecoPrincipal1" class="accordion-heading collapsed" data-toggle="collapse"
+                            data-target="#enderecoPrincipal1" data-parent="#listaEndereco">
+                            <span class="radio-conteiner">
+                              <input type="radio" value="52925918" name="endereco_principal" id="idEnderecoPrincipal1"
+                                class="endereco-principal" data-cep="37470000" checked="checked">
+                            </span>
+                            <span class="forma-conteiner">
+                              <strong>Minha Casa </strong>
+                            </span>
+                          </label>
+                          <div id="enderecoPrincipal1" class="in collapse" style="height: auto;">
+                            <div class="accordion-inner">
+                              Avenida Antônio Junqueira de Souza, 233
+                              <br>
+                              Minha Casa, São Lourenço / MG<br>
+                              37470000
+                            </div>
+                          </div>
+                        </div>
+                        <div class="endereco accordion-group">
+                          <label for="idEnderecoPrincipal0" class="accordion-heading" data-toggle="collapse" data-target="#"
+                            data-parent="#listaEndereco">
+                            <span class="radio-conteiner">
+                              <input type="radio" name="endereco_principal" class="endereco-principal" id="idEnderecoPrincipal0"
+                                value="0">
+                            </span>
+                            <span class="forma-conteiner">
+                              <strong>Cadastrar novo endereço</strong>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="caixa-sombreada borda-principal dados-cadastro">
+                    <fieldset data-recording-ignore="events">
+                      <legend class="titulo cor-secundaria"><i class="fa-solid fa-list"></i> Novo cadastro ou <a
+                          href="javascript:;" class="titulo cor-secundaria fazer-login-btn"
+                          style="text-decoration: underline;">identifique-se</a></legend>
+                      <input id="id_tipo" name="tipo" type="hidden" value="PF">
+                      <input id="id_tipo_usuario" name="tipo_usuario" type="hidden" value="PF">
+                      <div class="control-group  required">
+                        <label class="control-label font-bold" for="id_email">E-mail</label>
+                        <div class="controls">
+                          <input autocomplete="email" class="input-xlarge span12" id="id_email" maxlength="128"
+                            name="email" type="text">
+                          <p class="help-block hide">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="control-group span6   required erro error">
+                          <label class="control-label font-bold" for="id_senha">Criar senha</label>
+                          <div class="controls">
+                            <input class="input-small span12" id="id_senha" maxlength="32" name="senha" type="password">
+                            <p class="help-block hide" style="display: block;">Mínimo 5 caracteres</p>
+                          </div>
+                        </div>
+                        <div class="control-group span6  required">
+                          <label class="control-label font-bold" for="id_confirmacao_senha">Confirmar senha</label>
+                          <div class="controls">
+                            <input class="input-small span12" id="id_confirmacao_senha" maxlength="32"
+                              name="confirmacao_senha" type="password">
+                            <p class="help-block hide">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="userExtraInfo">
+                        <ul id="tipoCadastro" class="row-fluid tipo-cadastro divisor borda-alpha">
+                          <li class="span6 active">
+                            <a href="#tipoFisica" id="tabCadastroPessoaFisica" class="cor-secundaria" data-toggle="tab"
+                              data-value="PF">
+                              <b>
+                                <i class="fa-regular fa-square-check  icon-fixed-width"></i>
+                                <i class="icon-check-empty icon-fixed-width"></i>&nbsp; Pessoa Física
+                              </b>
+                            </a>
+                          </li>
+                          <li class="span6">
+                            <a href="#tipoJuridica" id="tabCadastroPessoaJuridica" class="cor-secundaria"
+                              data-toggle="tab" data-value="PJ">
+                              <b>
+                                <i class="fa-regular fa-square  icon-fixed-width"></i>
+                                <i class="icon-check-empty icon-fixed-width"></i>&nbsp; Pessoa Jurídica
+                              </b>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="row-fluid campos-top">
+                          <div class="control-group  required">
+                            <label class="control-label font-bold" for="id_nome">Nome completo</label>
+                            <div class="controls">
+                              <input autocomplete="name" class="input-xlarge span12" id="id_nome" maxlength="255"
+                                name="nome" type="text">
+                              <p class="help-block hide">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="row-fluid tab-pane fade active in" id="tipoFisica">
+                            <div class="control-group span6  required">
+                              <label class="control-label font-bold" for="id_cpf">CPF</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                  class="input-small span12" id="id_cpf" maxlength="14" name="cpf" spellcheck="false"
+                                  type="tel">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="campo-checkout-sexo control-group span6  hide"
+                              style="margin-left: 0; clear: both;">
+                              <label class="control-label " for="id_sexo">Sexo</label>
+                              <div class="controls">
+                                <select class="input-medium span12" id="id_sexo" name="sexo">
+                                  <option value="" selected="selected"> - Selecione - </option>
+                                  <option value="m">Masculino</option>
+                                  <option value="f">Feminino</option>
+                                </select>
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="campo-checkout-nascimento control-group span6  hide">
+                              <label class="control-label " for="id_data_nascimento">Data de nascimento</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                  class="input-small span12" id="id_data_nascimento" name="data_nascimento"
+                                  spellcheck="false" type="text" maxlength="10">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="tipoJuridica">
+                            <div class="row-fluid">
+                              <div class="control-group span6  required">
+                                <label class="control-label font-bold" for="id_cnpj">CNPJ</label>
+                                <div class="controls">
+                                  <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                    class="input-medium span12" id="id_cnpj" maxlength="18" name="cnpj"
+                                    spellcheck="false" type="text">
+                                  <p class="help-block hide">
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="control-group span6 ">
+                                <label class="control-label" for="id_%s">Inscrição Estadual</label>
+                                <div class="controls">
+                                  <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                    class="input-medium span12" id="id_ie" maxlength="128" name="ie" spellcheck="false"
+                                    type="text">
+                                  <p class="help-block hide">
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="control-group  required">
+                              <label class="control-label font-bold" for="id_razao_social">Razão Social</label>
+                              <div class="controls">
+                                <input class="input-big span12" id="id_razao_social" maxlength="128" name="razao_social"
+                                  type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row-fluid campos-bot">
+                          <div class="control-group span6  required" style="margin-left: 0;">
+                            <label class="control-label font-bold" for="id_telefone_celular">Celular</label>
+                            <div class="controls">
+                              <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                class="input-small span12" id="id_telefone_celular" name="telefone_celular"
+                                spellcheck="false" tel="" type="tel" maxlength="15">
+                              <p class="help-block hide">
+                              </p>
+                            </div>
+                          </div>
+                          <div class="control-group span6 ">
+                            <label class="control-label" for="id_telefone_principal">Telefone fixo</label>
+                            <div class="controls">
+                              <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                class="input-small span12" id="id_telefone_principal" name="telefone_principal"
+                                spellcheck="false" type="tel" maxlength="15">
+                              <p class="help-block hide">
+                              </p>
+                            </div>
+                          </div>
+                          <div class="control-group span6  hide" style="margin-left: 0;">
+                            <label class="control-label" for="id_telefone_comercial">Telefone comercial</label>
+                            <div class="controls">
+                              <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                class="input-small span12" id="id_telefone_comercial" name="telefone_comercial"
+                                spellcheck="false" type="tel" maxlength="15">
+                              <p class="help-block hide">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- /userExtraInfo -->
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="caixa-sombreada borda-principal">
+                    <fieldset data-recording-ignore="events">
+                      <legend class="titulo cor-secundaria"><i class="fa-solid fa-location-dot"></i> Entrega</legend>
+                      <div id="formularioEndereco" class="">
+                        <div id="exibirFormasEnvio" class="hide pull-right"
+                          style="margin-bottom: 15px; margin-top: 25px; display: block;">
+                          <a href="javascript:;" class="btn btn-small"><i class="fa-solid fa-pencil"></i> Alterar entrega</a>
+                        </div>
+                        <div class="formEndereco-conteiner">
+                          <div class="control-group  required" style="margin-bottom: 20px;">
+                            <label class="control-label font-bold" for="id_cep">CEP</label>
+                            <div class="controls">
+                              <input autocapitalize="off" autocomplete="off" autocorrect="off" class="input-small"
+                                id="id_cep" name="cep" spellcheck="false" type="tel" value="37470000" maxlength="9">
+                              <p class="help-block hide">
+                              </p>
+                            </div>
+                            <div class="envio-erro alert alert-errors alert-error hide"
+                              style="margin: 10px 0px; display: none;">
+                              CEP não informado
+                            </div>
+                            <ul class="hide borda-alpha"></ul>
+                          </div>
+                        </div>
+                        <div id="formasEnvio" class="hide" style="display: block;">
+                          <ul class="hide borda-alpha"></ul>
+                          <div class="formas envio accordion borda-alpha" id="formas-envio-wrapper">
+                            <div class="accordion-group pac forma-envio hide forma-envio-ativo" id="envio2-pac"
+                              data-id="2" data-nome="PAC" data-code="pac" data-valor="24.3" style="display: block;">
+                              <label for="formaEnvio2-pac" class="accordion-heading PAC">
+                                <span class="radio-conteiner">
+                                  <input type="radio" name="forma_envio" value="2" id="formaEnvio2-pac"
+                                    checked="checked" data-codigo="pac" data-preco="24.3" data-prazo="7">
+                                </span>
+                                <span class="forma-conteiner">
+                                  <span class="helper">
+                                  </span>
+                                  <div class="text-content">
+                                    <span class="cor-secundaria">
+                                      <span class="cor-principal envio-preco">
+                                        R$ 24,30
+                                      </span>
+                                      <b class="envio-prazo-entrega">
+                                        7 dias
+                                      </b>
+                                    </span>
+                                  </div>
+                                  <span class="envio-nome cor-secundaria" id="envio-nome-2">
+                                    PAC
+                                  </span>
+                                </span>
+                              </label>
+                            </div>
+                            <div class="accordion-group sedex forma-envio hide" id="envio1-sedex" data-id="1" data-nome="SEDEX" data-code="sedex" data-valor="25.8" style="display: none;">
+                              <label for="formaEnvio1-sedex" class="accordion-heading SEDEX">
+                                <span class="radio-conteiner">
+                                  <input type="radio" name="forma_envio" value="1" id="formaEnvio1-sedex" data-codigo="sedex" data-preco="25.8" data-prazo="3">
+                                </span>
+                                <span class="forma-conteiner">
+                                  <span class="helper">
+                                  </span>
+                                  <div class="text-content">
+                                    <span class="cor-secundaria">
+                                      <span class="cor-principal envio-preco">
+                                        R$ 25,80
+                                      </span>
+                                      <b class="envio-prazo-entrega">
+                                        3 dias
+                                      </b>
+                                    </span>
+                                  </div>
+                                  <span class="envio-nome cor-secundaria" id="envio-nome-1">
+                                    SEDEX
+                                  </span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <p class="warning-text">
+                            Dias úteis, após confirmação do pagamento.
+                          </p>
+                          <input type="hidden" name="forma_envio_code" value="pac" id="forma_envio_code">
+                        </div>
+                        <div class="formEndereco-conteiner" id="userNewAddressInfo">
+                          <hr class="hide" style="display: block;">
+                          <div class="row-fluid">
+                            <div class="control-group span9  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_endereco">Endereço</label>
+                              <div class="controls">
+                                <input class="input-xlarge span12" id="id_endereco" maxlength="255" name="endereco"
+                                  type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="control-group span3  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_numero">Número</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="address-line2" autocorrect="off"
+                                  class="input-mini span12" id="id_numero" maxlength="20" name="numero"
+                                  spellcheck="false" type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-fluid">
+                            <div class="control-group span6  hide" style="display: block;">
+                              <label class="control-label" for="id_complemento">Complemento</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                  class="input-small span12" id="id_complemento" maxlength="30" name="complemento"
+                                  spellcheck="false" type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="control-group span6  hide" style="display: block;">
+                              <label class="control-label" for="id_referencia">Referência</label>
+                              <div class="controls">
+                                <input class="span12" id="id_referencia" maxlength="255" name="referencia" type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-fluid">
+                            <div class="control-group span6  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_bairro">Bairro</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                  class="input-medium span12" id="id_bairro" maxlength="128" name="bairro"
+                                  spellcheck="false" type="text">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="control-group span6  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_cidade">Cidade</label>
+                              <div class="controls">
+                                <input autocapitalize="off" autocomplete="off" autocorrect="off"
+                                  class="input-medium span12" id="id_cidade" maxlength="128" name="cidade"
+                                  spellcheck="false" type="text" readonly="readonly">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-fluid">
+                            <div class="control-group span6  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_estado">Estado</label>
+                              <div class="controls">
+                                <select class="span12" id="id_estado" maxlength="2" name="estado" readonly="readonly">
+                                  <option value="AC">Acre</option>
+                                  <option value="AL">Alagoas</option>
+                                  <option value="AP">Amapá</option>
+                                  <option value="AM">Amazonas</option>
+                                  <option value="BA">Bahia</option>
+                                  <option value="CE">Ceará</option>
+                                  <option value="DF">Distrito Federal</option>
+                                  <option value="ES">Espírito Santo</option>
+                                  <option value="GO">Goiás</option>
+                                  <option value="MA">Maranhão</option>
+                                  <option value="MT">Mato Grosso</option>
+                                  <option value="MS">Mato Grosso do Sul</option>
+                                  <option value="MG">Minas Gerais</option>
+                                  <option value="PA">Pará</option>
+                                  <option value="PB">Paraíba</option>
+                                  <option value="PR">Paraná</option>
+                                  <option value="PE">Pernambuco</option>
+                                  <option value="PI">Piauí</option>
+                                  <option value="RJ">Rio de Janeiro</option>
+                                  <option value="RN">Rio Grande do Norte</option>
+                                  <option value="RS">Rio Grande do Sul</option>
+                                  <option value="RO">Rondônia</option>
+                                  <option value="RR">Roraima</option>
+                                  <option value="SC">Santa Catarina</option>
+                                  <option value="SP">São Paulo</option>
+                                  <option value="SE">Sergipe</option>
+                                  <option value="TO">Tocantins</option>
+                                </select>
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="control-group span6  hide required" style="display: block;">
+                              <label class="control-label font-bold" for="id_pais_id">País</label>
+                              <div class="controls">
+                                <input class="span12" id="id_pais_id" maxlength="30" name="pais_id" type="text"
+                                  value="BRA" readonly="readonly">
+                                <p class="help-block hide">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="caixa-sombreada borda-principal" id="formas-pagamento-wrapper">
+                    <fieldset data-recording-ignore="events">
+                      <legend class="titulo cor-secundaria"><i class="fa-solid fa-money-check-dollar"></i> Pagamento</legend>
+                      <div class="formas pagamento accordion borda-alpha" id="formasPagamento"
+                        data-recording-disable="">
+                        <input type="hidden" id="cart_selected_shipping" name="cart_selected_shipping" value="2">
+                        <input type="hidden" id="cart_selected_shipping_value" name="cart_selected_shipping_value">
+                        <input type="hidden" id="cart_selected_payment" name="cart_selected_payment" value="">
+                        <input type="hidden" id="payment_bank_id" name="payment_bank_id">
+                        <input type="hidden" id="payment_session_id" name="payment_session_id">
+                        <input type="hidden" id="payment_session_name" name="payment_session_name">
+                        <input type="hidden" id="payment_token" name="payment_token">
+                        <input type="hidden" id="payment_bin" name="payment_bin">
+                        <input type="hidden" id="payment_last_digits" name="payment_last_digits">
+                        <input type="hidden" id="payment_cvv" name="payment_cvv">
+                        <input type="hidden" id="payment_system_id" name="payment_system_id">
+                        <input type="hidden" id="payment_system_name" name="payment_system_name">
+                        <input type="hidden" id="payment_fingerprint" name="payment_fingerprint">
+                        <input type="hidden" id="payment_installments" name="payment_installments">
+                        <input type="hidden" id="payment_installments_value" name="payment_installments_value">
+                        <input type="hidden" id="payment_address_active" name="payment_address_active">
+                        <input type="hidden" id="payment_address_postalCode" name="payment_address_postalCode">
+                        <input type="hidden" id="payment_address_street" name="payment_address_street">
+                        <input type="hidden" id="payment_address_number" name="payment_address_number">
+                        <input type="hidden" id="payment_address_complement" name="payment_address_complement">
+                        <input type="hidden" id="payment_address_neighborhood" name="payment_address_neighborhood">
+                        <input type="hidden" id="payment_address_city" name="payment_address_city">
+                        <input type="hidden" id="payment_address_state" name="payment_address_state">
+                        <input type="hidden" id="payment_address_country" name="payment_address_country" value="BR">
+                        <input type="hidden" id="payment_client_active" name="payment_client_active">
+                        <input type="hidden" id="payment_client_name" name="payment_client_name">
+                        <input type="hidden" id="payment_client_document" name="payment_client_document">
+                        <input type="hidden" id="payment_client_birthday" name="payment_client_birthday">
+                        <input type="hidden" id="payment_client_phone" name="payment_client_phone">
+                        <div id="li-box-payment-minimum-value" data-value="0" class="alert"
+                          style="display: none; font-size: 14px; padding: 10px; text-align: center;">
+                          <i class="icon-info-sign"></i>
+                          <strong style="color: #ae8640;">
+                            Adicione mais
+                            <span class="li-box-payment-minimum-value-left">
+                              R$-.304,30
+                            </span>
+                            ao carrinho
+                          </strong>
+                          para poder finalizar a compra.
+                        </div>
+                        <div class="li-box-payment li-box-payment-cc" data-minimum-value="0.0">
+                          <div class="accordion-group cartao pagamento_selecao_conteiner" style="display: block;">
+                            <div class="accordion-heading" id="pagamentoCartao">
+                              <span class="radio-conteiner">
+                                <input type="radio" name="forma_pagamento" id="radio-cartao" data-code="cartao" value="">
+                              </span>
+                              <span class="forma-conteiner">
+                                <span class="helper"></span>
+                                <ul class="bandeiras-pagamento">
+                                  <li><i class="icone-pagamento mastercard" title="Mastercard"></i></li>
+                                  <li><i class="icone-pagamento visa" title="Visa"></i></li>
+                                  <li><i class="icone-pagamento hipercard" title="Hipercard"></i></li>
+                                  <li><i class="icone-pagamento elo" title="Elo"></i></li>
+                                  <li><i class="icone-pagamento misc" title="Outros"></i></li>
+                                </ul>
+                              </span>
+                            </div>
+                            <div id="escolha-cartao" class="mycollapse pagamento_selecao_info in">
+                              <div class="accordion-inner">
+                                <div class="control-group hide" id="bandeiras-manual">
+                                  <div class="controls">
+                                    <label class="control-label">Selecione uma Bandeira</label>
+                                    <ul class="bandeiras-pagamento">
+                                      <li data-name="Mastercard" data-class="jp-card-mastercard" class="hide"><i
+                                          class="icone-pagamento mastercard" title="Mastercard"></i></li>
+                                      <li data-name="Visa" data-class="jp-card-visa" class="hide"><i
+                                          class="icone-pagamento visa" title="Visa"></i></li>
+                                      <li data-name="Hipercard" data-class="jp-card-hipercard" class="hide"><i
+                                          class="icone-pagamento hipercard" title="Hipercard"></i></li>
+                                      <li data-name="Elo" data-class="jp-card-elo" class="hide"><i
+                                          class="icone-pagamento elo" title="Elo"></i></li>
+                                      <li data-name="Diners" data-class="jp-card-dinersclub" class="hide"><i
+                                          class="icone-pagamento diners" title="Diners"></i></li>
+                                      <li data-name="American Express" data-class="jp-card-amex" class="hide"><i
+                                          class="icone-pagamento amex" title="American Express"></i></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="clearfix">
+                                  <div class="span8">
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <label class="control-label" for="cartao_cartao_numero">Número do Cartão</label>
+                                        <input type="tel"
+                                          class="cartao_cartao_numero cartao_dados_numero span12 unknown"
+                                          placeholder="•••• •••• •••• ••••" id="cartao_cartao_numero"
+                                          name="cartao_cartao_numero" autocomplete="cc-number">
+                                        <span class="help-block erro">Este campo é obrigatório</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="span4">
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <label class="control-label" for="cartao_cartao_data_expiracao">Validade</label>
+                                        <input type="tel" maxlength="5" placeholder="mm/aa"
+                                          class="cartao_cartao_data_expiracao cartao_dados_expiracao span12"
+                                          id="cartao_cartao_data_expiracao" name="cartao_cartao_data_expiracao"
+                                          autocomplete="cc-exp">
+                                        <span class="help-block erro">Este campo é obrigatório</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="control-group">
+                                  <div class="controls">
+                                    <label class="control-label" for="cartao_cartao_nome">Nome do Titular
+                                      <small style="margin-left: 5px;">(Como escrito no cartão)</small>
+                                    </label>
+                                    <input type="text" class="cartao_cartao_nome cartao_dados_nome span12"
+                                      placeholder="" id="cartao_cartao_nome" name="cartao_cartao_nome"
+                                      autocomplete="cc-name">
+                                    <span class="help-block erro">Este campo é obrigatório</span>
+                                  </div>
+                                </div>
+                                <div class="clearfix">
+                                  <div class="span5">
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <label class="control-label nowrap" for="cartao_cartao_cvv">Cód. de
+                                          Segurança</label>
+                                        <div class="input-append" style="margin-bottom: 0;">
+                                          <input type="tel" placeholder="CCV"
+                                            class="cartao_cartao_cvv cartao_dados_cvv span7" id="cartao_cartao_cvv"
+                                            autocomplete="cc-csc">
+                                          <span class="add-on" data-toggle="tooltip" data-placement="right" title=""
+                                            data-original-title="Últimos 3 digitos no verso do cartão"><i class="fa-regular fa-circle-question"></i>
+                                          </span>
+                                          <div class="tooltip fade right" style="top: 854.138px; left: 1133.35px; display: block;">
+                                            <div class="tooltip-arrow"></div>
+                                            <div class="tooltip-inner tooltiptext">Últimos 3 digitos no verso do cartão</div>
+                                          </div>
+                                        </div>
+                                        <span class="help-block erro">Este campo é obrigatório</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="span7">
+                                    <div class="control-group">
+                                      <div class="controls aguardar-valor">
+                                        <label class="control-label" for="cartao_cartao_parcelas">Parcelas</label>
+                                        <select id="cartao_cartao_parcelas" class="cartao_dados_parcelas span12">
+                                          <option value="">Digite o número do cartão</option>
+                                        </select>
+                                        <span class="help-block erro">Escolha uma opção de parcela</span>
+                                      </div>
+                                      <div class="controls aguardar-valor" style="display: none;">
+                                        <label class="control-label" for="cartao_cartao_parcelas">Parcelas</label>
+                                        <select id="cartao_cartao_parcelas" class="cartao_dados_parcelas span12">
+                                          <option value="">Escolha...</option>
+                                          <option data-juros="0" data-valor-parcela="304.30" data-valor-total="304.30" value="1">1x de R$ 304,30 sem juros
+                                          </option>
+                                          <option data-juros="0" data-valor-parcela="152.15" data-valor-total="304.30" value="2">2x de R$ 152,15 sem juros
+                                          </option>
+                                          <option data-juros="0" data-valor-parcela="101.43" data-valor-total="304.29" value="3">3x de R$ 101,43 sem juros
+                                          </option>
+                                          <option data-juros="0" data-valor-parcela="76.08" data-valor-total="304.32" value="4">4x de R$ 76,08 sem juros
+                                          </option>
+                                          <option data-juros="0" data-valor-parcela="60.86" data-valor-total="304.30" value="5">5x de R$ 60,86 sem juros
+                                          </option>
+                                          <option data-juros="0" data-valor-parcela="50.72" data-valor-total="304.32" value="6">6x de R$ 50,72 sem juros
+                                          </option>
+                                          <option data-juros="14.72" data-valor-parcela="49.87" data-valor-total="349.09" value="7">7x de R$ 49,87</option>
+                                          <option data-juros="16.23" data-valor-parcela="44.21" data-valor-total="353.68" value="8">8x de R$ 44,21</option>
+                                          <option data-juros="17.69" data-valor-parcela="39.79" data-valor-total="358.11" value="9">9x de R$ 39,79</option>
+                                          <option data-juros="18.65" data-valor-parcela="36.11" data-valor-total="361.10" value="10">10x de R$ 36,11</option>
+                                          <option data-juros="20.12" data-valor-parcela="33.23" data-valor-total="365.53" value="11">11x de R$ 33,23</option>
+                                          <option data-juros="21.61" data-valor-parcela="30.84" data-valor-total="370.08" value="12">12x de R$ 30,84</option>
+                                        </select>
+                                        <span class="help-block erro">Escolha uma opção de parcela</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix">
+                                  <div class="control-group group_cartao_dados_titular">
+                                    <div class="controls">
+                                      <label class="checkbox">
+                                        <input type="checkbox" class="cartao_dados_titular_check"
+                                          id="cartao_check_dados_titular" checked="checked" onclick="">
+                                        <span class="cartao_check_dados_titular_pf cartao_dados_titular_pf ">Titular do
+                                          cartão é diferente do cadastro</span>
+                                        <span class="cartao_check_dados_titular_pj cartao_dados_titular_pj hide">Dados
+                                          pessoais do titular do cartão</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="cartao_dados_titular hide">
+                                  <div class="clearfix">
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_cpf">CPF do
+                                            titular</label>
+                                          <input id="cartao_dono_cartao_cpf" type="text"
+                                            class="cartao_dados_cpf input-cpf span12" value="" maxlength="14">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_data_nascimento">Data de
+                                            Nascimento</label>
+                                          <input id="cartao_dono_cartao_data_nascimento"
+                                            class="cartao_dados_nascimento input-data-nascimento span12" type="text"
+                                            value="" maxlength="10">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="clearfix">
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label"
+                                            for="cartao_dono_cartao_telefone">Telefone</label>
+                                          <input id="cartao_dono_cartao_telefone"
+                                            class="cartao_dados_telefone input-telefone span12" type="text" value=""
+                                            maxlength="15">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix">
+                                  <div class="control-group group_cartao_endereco">
+                                    <div class="controls">
+                                      <label class="checkbox">
+                                        <input type="checkbox" class="cartao_endereco_check"
+                                          id="cartao_check_dados_fatura">
+                                        Endereço do titular diferente do de entrega
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="cartao_dados_fatura hide">
+                                  <div class="clearfix">
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_cep">CEP</label>
+                                          <input id="cartao_dono_cartao_cep"
+                                            class="span12 input-cep cartao_endereco_cep" type="text" value=""
+                                            maxlength="9">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="clearfix">
+                                    <div class="span9">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_rua">Endereço</label>
+                                          <input id="cartao_dono_cartao_rua" class="span12 cartao_endereco_rua"
+                                            type="text" value="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="span3">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_numero">Número</label>
+                                          <input id="cartao_dono_cartao_numero" class="span12 cartao_endereco_numero"
+                                            type="text" value="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="clearfix">
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label"
+                                            for="cartao_dono_cartao_complemento">Complemento</label>
+                                          <input id="cartao_dono_cartao_complemento"
+                                            class="span12 cartao_endereco_compl" type="text" value="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_bairro">Bairro</label>
+                                          <input id="cartao_dono_cartao_bairro" class="span12 cartao_endereco_bairro"
+                                            type="text" value="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="clearfix">
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_cidade">Cidade</label>
+                                          <input id="cartao_dono_cartao_cidade" class="span12 cartao_endereco_cidade"
+                                            type="text" value="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="span6">
+                                      <div class="control-group">
+                                        <div class="controls">
+                                          <label class="control-label" for="cartao_dono_cartao_estado">Estado</label>
+                                          <select class="span12 cartao_endereco_estado" id="cartao_dono_cartao_estado">
+                                            <option value="">Selecione</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="text-right">
+                                  <span>Valor</span>
+                                  <h5 class="titulo cor-principal text-right pagamento-valor preco-carrinho-total">R$
+                                    304,30</h5>
+                                </div>
+                                <div class="payment-country-origin pull-right">
+                                  <small class="muted">
+                                    Esta compra está sendo feita no <strong>Brasil</strong>.
+                                    <img
+                                      src="./images/BR.png"
+                                      alt="BR">
+                                  </small>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="hidden" value="mercadopagov1" class="forma-pagamento-padrao">
+                        <div class="li-box-payment li-box-payment-mercadopagov1-520160" data-minimum-value="0.0">
+                          <div class="accordion-group mercadopagov1 pagamento_selecao_conteiner" style="display: none;">
+                            <div class="accordion-heading" id="pagamento520160">
+                              <span class="radio-conteiner">
+                                <input type="radio" name="forma_pagamento" id="radio-mercadopagov1-520160"
+                                  data-code="mercadopagov1" value="520160">
+                              </span>
+                              <span class="forma-conteiner">
+                                <span class="helper"></span>
+                                <img src="https://cdn.awsli.com.br/production/static/loja/estrutura/v1/img/bandeiras/boleto.png" alt="Pague com Boleto Bancário">
+                              </span>
+                            </div>
+                            <div id="escolha-mercadopagov1-520160" class="mycollapse pagamento_selecao_info" style="display: none;">
+                              <div class="accordion-inner">
+                                <div class="text-right">
+                                  <span>Valor</span>
+                                  <h5 class="titulo cor-principal text-right pagamento-valor preco-carrinho-total">R$ 304,30</h5>
+                                  <span class="forma-pagamento-parcela">Em até <span class="titulo">1x</span> sem juros</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="exibirFormasPagamento" class="hide text-center" style="display: block;text-align: center;margin: 10px;">
+                        <a href="javascript:;" class="btn btn-small"><i class="icon-pencil"></i> Alterar forma de
+                          pagamento</a>
+                      </div>
+                      <fieldset>
+                        <div class="control-group checkbox  required">
+                          <label for="id_politica_privacidade" class="control-label">
+                            <div class="controls">
+                              <input id="id_politica_privacidade" name="politica_privacidade" type="checkbox">
+                            </div>
+                            Li e concordo com os termos da <a class="politica-privacidade"
+                              href="/politica-de-privacidade"
+                              target="_blank">Política de Privacidade</a>
+                            <p class="help-block hide">
+                              <strong>Você não aceitou as políticas de privacidade</strong>
+                            </p>
+                          </label>
+                        </div>
+                      </fieldset>
+                      <div class="acao-editar" style="text-align: center;">
+                        <button type="button" id="finalizarCompra" class="botao principal grande consult-verde-aqua"
+                          data-loading-text="<i class='icon-refresh icon-animate'></i> Finalizando..."
+                          autocomplete="off">
+                          <i class="icon-ok"></i>Finalizar compra
+                        </button>
+                        <a href="/" id="continueShopping" class="botao grande mb-20"
+                          style="display: none; font-size: 19px;"><i class="icon-shopping-cart"></i>Continuar comprando</a>
+                        <div class="selo-ssl hidden-phone">
+                          <img src="https://cdn.awsli.com.br/production/static/img/struct/stamp_encryptssl_cart.png"
+                            alt="Compra 100% Segura">
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      <div class="secao-secundaria">
+        <a href="https://api.whatsapp.com/send?phone=5535992469968&amp;text=Ola pode me ajudar?" target="_blank" class="whats-btn-fixed"><svg
+            xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+            <path fill="#00E676"
+              d="M10.7 32.8l.6.3c2.5 1.5 5.3 2.2 8.1 2.2 8.8 0 16-7.2 16-16 0-4.2-1.7-8.3-4.7-11.3s-7-4.7-11.3-4.7c-8.8 0-16 7.2-15.9 16.1 0 3 .9 5.9 2.4 8.4l.4.6-1.6 5.9 6-1.5z">
+            </path>
+            <path fill="#FFF"
+              d="M32.4 6.4C29 2.9 24.3 1 19.5 1 9.3 1 1.1 9.3 1.2 19.4c0 3.2.9 6.3 2.4 9.1L1 38l9.7-2.5c2.7 1.5 5.7 2.2 8.7 2.2 10.1 0 18.3-8.3 18.3-18.4 0-4.9-1.9-9.5-5.3-12.9zM19.5 34.6c-2.7 0-5.4-.7-7.7-2.1l-.6-.3-5.8 1.5L6.9 28l-.4-.6c-4.4-7.1-2.3-16.5 4.9-20.9s16.5-2.3 20.9 4.9 2.3 16.5-4.9 20.9c-2.3 1.5-5.1 2.3-7.9 2.3zm8.8-11.1l-1.1-.5s-1.6-.7-2.6-1.2c-.1 0-.2-.1-.3-.1-.3 0-.5.1-.7.2 0 0-.1.1-1.5 1.7-.1.2-.3.3-.5.3h-.1c-.1 0-.3-.1-.4-.2l-.5-.2c-1.1-.5-2.1-1.1-2.9-1.9-.2-.2-.5-.4-.7-.6-.7-.7-1.4-1.5-1.9-2.4l-.1-.2c-.1-.1-.1-.2-.2-.4 0-.2 0-.4.1-.5 0 0 .4-.5.7-.8.2-.2.3-.5.5-.7.2-.3.3-.7.2-1-.1-.5-1.3-3.2-1.6-3.8-.2-.3-.4-.4-.7-.5h-1.1c-.2 0-.4.1-.6.1l-.1.1c-.2.1-.4.3-.6.4-.2.2-.3.4-.5.6-.7.9-1.1 2-1.1 3.1 0 .8.2 1.6.5 2.3l.1.3c.9 1.9 2.1 3.6 3.7 5.1l.4.4c.3.3.6.5.8.8 2.1 1.8 4.5 3.1 7.2 3.8.3.1.7.1 1 .2h1c.5 0 1.1-.2 1.5-.4.3-.2.5-.2.7-.4l.2-.2c.2-.2.4-.3.6-.5s.4-.4.5-.6c.2-.4.3-.9.4-1.4v-.7s-.1-.1-.3-.2z">
+            </path>
+          </svg></a>
+      </div>
+    </div>
+  </div>
+  <%- include('./partials/footer') %>
+</body>
+</html>

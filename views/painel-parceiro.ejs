@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grupo 01 PI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/panelPartner.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="js/main.js"  defer type="text/javascript"></script>
+</head>
+    <body>
+        <%- include('./partials/navbar') %>
+        <div id="home"></div>
+
+    <section id="container-general">
+
+        <div class="menu-partner">
+
+            <div class="menu-sup">
+                
+                <div><img src="./images/icone-parceiro.png" class="img-parc"></div>
+               
+                <div class="sup-item"><a href="#"> Nome  </a></div>
+               
+                <div class="sup-item"><a href="#"> ID parceiro </a></div>
+                
+                <div class="sup-item"><a href="#"> Platinum </a></div>
+            </div>
+
+            <div class="menu-inf">
+                
+                <div class="perfil">
+                    <div><img src="./images/icone-formulario.png"></div>
+                    
+                    <div><a href="#">Perfil</a></div>
+                </div>
+                <br>
+                <div class="planos">
+                    <div><img src="./images/estrela.png"></div>
+                
+                    <div><a href="#">Meus Planos</a></div>
+                </div>
+                <br>
+                <div class="lembre">
+                    <div><img src="./images/icone-email2.png "></div>
+                    
+                    <div><a href="#">Lembretes</a></div>
+                </div>
+                <br>
+                <div class="chat">
+                    <div><img src="./images/icone-chat.png"></div>
+                    
+                    <div><a href="#">Chat</a></div>
+                </div>
+            </div>
+
+        </div> 
+    
+    
+        <section class="container-out">
+
+            <div class="container-panel-partner">
+                <span class="panel-itens1"><strong>PAINEL DO PARCEIRO</strong></span>
+                <span class="panel-itens2"><a href="#">CONSULTAS DO DIA</a></span>
+                <span class="panel-itens3"><a href="#">PAINEL DE AVALIAÇÃO DO PROFISSIONAL</a></span>
+                <span class="panel-itens4"><a href="#">SUA PONTUAÇÃO ATUAL É DE...</a></span>
+            </div>
+
+            <div class="container2">
+
+                <div class="bloc">
+
+                    <div class="atend">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Atendimento</h5>
+                        <button>Acessar</button>
+                    </div> 
+
+                    <br>
+
+                    <div class="guia">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Guia / Receita</h5>
+                        <p><button>Acessar</button></p>
+                    </div>
+
+                </div>
+
+
+                <div class="bloc">
+
+                    <div class="pront">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Prontuário
+                            Online</h5>
+                        <p><button>Acessar</button></p>
+                    </div>
+
+                    <br>
+
+                    <div class="agend">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Agendas abertas</h5>
+                        <p><button>Acessar</button></p>
+                    </div>
+
+                </div>
+
+                
+                <div class="bloc">
+
+                    <div class="doc">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Documentos Solicitados</h5>
+                        <p><button>Acessar</button></p>
+                    </div>
+
+                    <br>
+                    
+                    <div class="novid">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Novidades para parceiros</h5>
+                        <p><button>Saiba mais</button></p>
+                    </div>
+
+                </div>
+
+                
+                <div class="bloc">
+
+                    <div class="aval">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Avaliação do atendimento paciente</h5>
+                        <p><button>Cancelar</button></p>
+                    </div>
+
+                    <br>
+
+                    <div class="pub">
+                        <div class="spn-img"> Imagem / Icone </div>
+                        <h5>Publicar artigo</h5>
+                        <p><button>Saiba mais</button></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </section>  
+    <%- include('./partials/footer') %>
+</body>
+</html>

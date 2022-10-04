@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/admin.js" defer></script>
+  <script src="js/main.js"defer type="text/javascript"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+  <title>Adicionar produtos</title>
+</head>
+
+    <%- include('./partials/navbar') %>
+
+
+
+
+
+  <header onclick="mostrar('produtos')" class="mostra">
+    <h1>lOJA PI</h1>
+  </header>
+
+  <main id="produtos" class="box">
+
+
+    <div class="title">
+      <h2>Produtos</h2>
+      <span>Lista de produtos da minha loja.</span>
+    </div>
+
+    <div class="card">
+
+      <div class="lineInput">
+
+        <label>Produto</label>
+        <input type="text" id='produto' placeholder="Nome do produto">
+
+      </div>
+
+      <div class="lineInput">
+
+        <label>Valor</label>
+        <input type="text" id='valor' placeholder='Valor do produto'>
+
+      </div>
+
+      <div class="lineInput">
+
+        <label>Descrição</label>
+        <textarea id="Descrição" cols="30" rows="10"></textarea placeholder='Descrisção do produto'>
+    
+      </div>
+
+
+
+
+     
+
+
+      <button onclick="produto.salvar()">Salvar</button>
+      <button onclick="produto.cancelar()">Deletar</button>
+    </div>
+
+
+    
+    <div class="content" >
+      <table border="1">
+        <thead>
+          <th class="center">ID</th>
+          <th >NOME</th>
+          <th>VALOR</th>
+          <th class="center">Ações</th>
+        </thead>
+
+
+        <tbody id="tbody">
+        </tbody>
+
+
+
+      </table>
+
+    </div>
+
+  </main>
+
+<!-- lista admin -->
+
+
+<header  onclick="mostrar('admin')"class="mostra">
+  <h1>ADMIN PI</h1>
+</header>
+  <section id="admin" >
+
+
+    <div class="box">
+
+      <div class="title">
+        <h2>Admin</h2>
+        <span>Lista de Admin da minha loja.</span>
+      </div>
+
+
+
+
+
+      <div class="card">
+
+        <div class="lineInput">
+  
+          <label>Nome</label>
+          <input type="text" id='nome' placeholder="Nome">
+  
+        </div>
+  
+        <div class="lineInput">
+  
+          <label>Email</label>
+          <input type="text" id='email' placeholder=email'>
+  
+        </div>
+  
+        <div class="lineInput">
+  
+          <label>Telefone</label>
+          <input type="text"id='telefone' placeholder="telefone">
+        </div>
+  
+  
+  
+  
+       
+  
+  
+        <button onclick="admin.salvar()">Salvar</button>
+        <button onclick="admin.cancelar()">Deletar</button>
+
+
+      </div>
+
+      
+        <div class="content">
+          <table border="1">
+            <thead>
+              <th class="center">ID</th>
+              <th >Nome</th>
+              <th>Email</th>
+              <th>telefone</th>
+              <th class="center">Ações</th>
+            </thead>
+          
+
+
+            
+        <tbody id="tbodyAdmin">
+        </tbody>
+
+
+
+          </table>
+    
+      </div>
+    </section>
+
+
+
+
+
+
+
+</body>
+
+</html>
+</main>

@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  color: #02505C
+}
+
+
+
+body , html {
+  background-color: #cbcdcf;
+  width: 100vw;
+}
+
+
+
+header {
+  margin-top :60px;
+  background: #8ACCA6;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  transition: all 540ms;
+}
+
+
+.box{
+  padding: 30px 50px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+
+.lineInput {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+input,textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: 0;
+  width: 100%;
+}
+
+button {
+  border: 0px;
+  padding: 10px;
+  outline: 0;
+  background-color: #8ACCA6;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #02505C;
+  transition: 540ms;
+}
+
+button:hover {
+  background-color: #6b9f81;
+}
+
+
+.content {
+  margin-top: 35px;
+}
+
+table {
+ border-collapse: collapse ;
+ border: 1px solid gray;
+ width: 100%;
+}
+
+table th {
+  background-color: rgb(161, 155, 155);
+}
+
+table td, th {
+  text-align: left;
+  padding: 1px 5px;
+}
+
+
+
+
+table td img{
+  width: 22px;
+}
+
+
+#navabar {
+ font-size: 15px;
+ text-transform: uppercase;
+
+}
+
+.mostra:hover {
+background: #34ca73;
+}
+
