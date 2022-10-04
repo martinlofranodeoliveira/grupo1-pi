@@ -5,6 +5,10 @@
     padding:0;
 }
 
+body, section {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }
@@ -18,17 +22,18 @@ a {
  */
 
 #container-general {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     margin-top: 80px;
     margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
     padding: 15px;
 }
 
 .menu-partner {
     display: flex;
     flex-direction: column;
+    
 }
 
 .menu-sup {
@@ -36,6 +41,7 @@ a {
     flex-direction: column;
     align-items: center;
     background: #6db2b4;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .img-parc {
@@ -59,6 +65,7 @@ a {
     background: #6db2b4;
     margin-top: 15px;
     padding: 10px;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .menu-inf span a{
@@ -125,9 +132,13 @@ a {
     height: 324px;
     background: #6db2b4;
     margin: 0 auto;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .panel-itens1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 98%;
     height: 40px;
     border: solid #14967c;
@@ -136,20 +147,17 @@ a {
     margin: 0 auto
 }
 
-.panel-itens1 strong {
-    text-align: center;
-    margin-left: 430px;
-}
 
 .panel-itens2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 25%;
     height: 200px;
     border-radius: 10px;
     border: solid #14967c;
     background: #37ccae;
     margin: 0 auto;
-    text-align: center;
-    padding-top: 80px;
     font-weight: bold;
 }
 
@@ -198,6 +206,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 
@@ -208,6 +217,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .pront {
@@ -217,6 +227,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .agend {
@@ -226,6 +237,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .doc {
@@ -235,6 +247,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .novid {
@@ -244,6 +257,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .aval {
@@ -253,6 +267,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .pub {
@@ -262,6 +277,7 @@ a {
     background: #37ccae;
     margin: 0 auto;
     font-weight: bold;
+    box-shadow: 5px 5px 5px #37ccae;
 }
 
 .spn-img {
@@ -273,21 +289,26 @@ a {
 h5 {
     font-size: 14px;
     text-align: center;
-    min-height: 50px;
     font-weight: bold;
+    min-height: 61px;
+    padding: 5px;
 }
 
-p {
-    text-align: center;
+.botao {
+    display: block;
+    align-items: center;
+    border: none;
 }
 
-button {
-    width: 90%;
+.botao button {
+    width: 60%;
     font-size: 14px;
     font-weight: bolder;
     border-radius: 10px;
     background: #ffffff;
-    margin: 5px 9px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 @media (min-width: 992px) and (max-width:1024px){
@@ -311,54 +332,42 @@ button {
         flex-wrap: wrap;
         padding-top: 20px;
         width: 95%;
-        height: 324px;
+        height: 313px;
         background: #6db2b4;
         margin: 0 auto;
     }
 
-    .panel-itens1 strong {
-        position: relative;
-        margin: 20px 20px 20px 281px;
-    }
-
     .panel-itens2 {
-        width: 25%;
-        height: 200px;
-        border-radius: 10px;
-        border: solid #14967c;
-        background: #37ccae;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 80px;
-        font-weight: bold;
-    }
-
-    .panel-itens3 {
+        justify-content: center;
+        align-items: center ;
         width: 26%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 80px;
+        font-weight: bold;
+    }
+
+    .panel-itens3 {
+        justify-content: center;
+        align-items: center ;
+        width: 26%;
+        height: 200px;
+        border-radius: 10px;
+        border: solid #14967c;
+        background: #37ccae;
         font-weight: bold;
     }
 
     .panel-itens4 {
+        justify-content: center;
+        align-items: center ;
         width: 27%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 80px;
         font-weight: bold;
-    }
-
-    .panel-itens4 a {
-        padding: 5px;
     }
 
     .bloc {
@@ -370,8 +379,18 @@ button {
     h5 {
     font-size: 14px;
     text-align: center;
-    min-height: 50px;
+    min-height: 61px;
     font-weight: bold;
+    }
+
+    .botao button {
+        width: 60%;
+        font-size: 14px;
+        font-weight: bolder;
+        border-radius: 10px;
+        background: #ffffff;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -479,10 +498,6 @@ button {
         margin: 0 auto;
     }
 
-    .panel-itens1 strong {
-        margin-left: 169px;
-    }
-
     .panel-itens2 {
         width: 25%;
         height: 200px;
@@ -588,18 +603,21 @@ button {
     }
 
     h5 {
-        font-size: 13px;
+        font-size: 14px;
         text-align: center;
         margin: 0 auto;
         font-weight: bold;
         min-height: 83px;
     }
     
-    button {
+     .botao button {
+        width: 90%;
+        font-size: 12px;
         font-weight: bolder;
         border-radius: 10px;
         background: #ffffff;
-        margin: 0 5px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -711,40 +729,37 @@ button {
         margin: 0 auto;
     }
 
-    .panel-itens1 strong {
-        margin: 147px;
-    }
     
     .panel-itens2 {
+        justify-content: center;
+        align-items: center;
         width: 30%;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
-        text-align: center;
-        padding-top: 60px;
         font-weight: bolder;
     }
 
     .panel-itens3 {
+        justify-content: center;
+        align-items: center;
         width: 29%;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
-        text-align: center;
-        padding-top: 60px;
         font-weight: bolder;
     }
 
     .panel-itens4 {
+        justify-content: center;
+        align-items: center;
         width: 29%;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
-        text-align: center;
-        padding-top: 60px;
         font-weight: bolder;
     }
 
@@ -755,7 +770,6 @@ button {
 
     .bloc {
         width: 25%;
-        margin-top: 27px;
     }
 
     .spn-img {
@@ -844,7 +858,7 @@ button {
         font-weight: bolder;
     }
 
-    button {
+    .botoes button {
         width: 80%;
         font-size: 13px;
         border-radius: 15px;
@@ -861,6 +875,7 @@ button {
     display: flex;
     flex-direction: column;
     padding: 11px;
+    width: 100vw;
     }
 
     .menu-partner {
@@ -959,43 +974,40 @@ button {
         margin: 0 auto;
     }
 
-    .panel-itens1 strong {
-        margin-left: 126px;
-    }
-
     .panel-itens2 {
+        justify-content: center;
+        align-items: center;
         width: 25%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
-        margin: 0 auto;
         text-align: center;
-        padding-top: 80px;
+        margin: 0 auto;
         font-weight: bolder;
     }
 
     .panel-itens3 {
+        justify-content: center;
+        align-items: center;
         width: 28%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
-        text-align: center;
-        padding-top: 80px;
         font-weight: bolder;
     }
 
     .panel-itens4 {
+        justify-content: center;
+        align-items: center;
         width: 26%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
-        text-align: center;
-        padding-top: 80px;
         font-weight: bolder;
     }
 
