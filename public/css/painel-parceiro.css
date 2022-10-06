@@ -870,12 +870,12 @@ h5 {
 @media (max-width: 480px) {
    
     #container-general {
-    margin-top: 80px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    padding: 11px;
-    width: 100vw;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        padding: 11px;
+        width: 100vw;
     }
 
     .menu-partner {
@@ -957,12 +957,14 @@ h5 {
     }
 
     .container-panel-partner {
-        display: flex;
-        flex-wrap: wrap;
         padding-top: 20px;
         width: 100%;
         height: 324px;
         background: #6db2b4;
+    }
+
+    .letras {
+        font-size: 12px;
     }
 
     .panel-itens1 {
@@ -977,37 +979,34 @@ h5 {
     .panel-itens2 {
         justify-content: center;
         align-items: center;
-        width: 25%;
+        width: 31%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
         text-align: center;
-        margin: 0 auto;
         font-weight: bolder;
     }
 
     .panel-itens3 {
         justify-content: center;
         align-items: center;
-        width: 28%;
+        width: 32%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
-        margin: 0 auto;
         font-weight: bolder;
     }
 
     .panel-itens4 {
         justify-content: center;
         align-items: center;
-        width: 26%;
+        width: 30%;
         height: 200px;
         border-radius: 10px;
         border: solid #14967c;
         background: #37ccae;
-        margin: 0 auto;
         font-weight: bolder;
     }
 
@@ -1030,25 +1029,16 @@ h5 {
 
     .atend {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
         font-weight: bold;
     }
-    .atend button {
-        width: 30%;
-        font-size: 14px;
-        font-weight: bolder;
-        border-radius: 10px;
-        background: #ffffff;
-        margin: 2px 152px;
     
-    }
-
     .guia {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
@@ -1057,7 +1047,7 @@ h5 {
 
     .pront {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
@@ -1066,17 +1056,16 @@ h5 {
 
     .agend {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
         font-weight: bold;
     }
 
-    
     .doc {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
@@ -1085,7 +1074,7 @@ h5 {
 
     .novid {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
@@ -1094,7 +1083,7 @@ h5 {
 
     .aval {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
@@ -1103,26 +1092,32 @@ h5 {
 
     .pub {
         width: 100%;
-        height: 150px;
+        height: 180px;
         border: solid #14967c;
         background: #37ccae;
         margin: 0 auto;
         font-weight: bold;
     }
-    
-    button {
-        width: 30%;
-        font-size: 14px;
+
+    h5 {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .botao {
+        align-items: center;
+        border: none;
+    }
+
+    .botao button {
+        width: 45%;
+        font-size: 16px;
         font-weight: bolder;
         border-radius: 10px;
         background: #ffffff;
         margin: 0px auto;
     }
 
-    h5 {
-        font-size: 1.5rem;
-        text-align: center;
-        min-height: 60px;
-        font-weight: bolder;
-    }
+
 }
