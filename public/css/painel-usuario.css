@@ -24,12 +24,11 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
 /*  ESPAÇO PARA PUBLICIDADE VERTICAL NO TOP */ 
 #space-advertising {
   width: 100vw;
-  margin: 15px 15px 15px 15px;
+  margin-top: 60px;
   background: grey;
   height: 100px;
   color: white;
   text-align: center;
-  position: relative;
 }
 
 /* PARTE SUPERIRO DASHBOARD */
