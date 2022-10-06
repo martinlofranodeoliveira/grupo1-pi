@@ -348,19 +348,19 @@ h5 {
 }
 
 .contBot {
-  width: 100%;
-  margin: 0 auto;
-  align-items: center;
+  display: block;
+  width: 70%;
   justify-content: center;
-  border: none;
+  align-items: center;
+  margin-left: 60px;
 }
 
-.bot {
-  width: 70%;
+.contBot button {
+  width: 60%;
   font-size: 14px;
   font-weight: bolder;
   border-radius: 10px;
-  background: #ffffff; 
+  background: #ffffff;
 }
 
 @media (min-width: 992px) and (max-width:1024px){
@@ -379,13 +379,34 @@ h5 {
     background: #D9D9D9;
     width: 30%;
   }
+
   .letraPub {
     font-size: 18px;
   }
+
+  .contBot {
+    display: block;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+}
+
+  .contBot button {
+    width: 80%;
+    font-size: 14px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background: #ffffff;
+}
 }
 
 @media (min-width: 600px) and (max-width:768px){
 
+  a {
+    text-decoration: none;
+    font-size: 13px;
+  }
   .menu-sup {
     display: flex;
     flex-direction: column;
@@ -397,7 +418,7 @@ h5 {
   .sup-item {
     width: 90%;
     background: #D9D9D9;
-    margin: 5px;
+    margin: 10px;
   }
 
   .menu-inf {
@@ -419,6 +440,15 @@ h5 {
   .planos {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #D9D9D9;
+  }
+
+  .chat {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     align-items: center;
     width: 100%;
     background: #D9D9D9;
@@ -456,6 +486,8 @@ h5 {
 
   .letra {
     font-size: 14px;
+    min-height: 80px;
+
   }
 
   .spn-img {
@@ -532,13 +564,15 @@ h5 {
   }
 
   .contBot {
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    border: none;
-    }
+    margin-left: 12px;
+  }
 
-  .bot button {
+  .contBot button {
     width: 80%;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bolder;
     border-radius: 10px;
     background: #ffffff;
@@ -591,7 +625,7 @@ h5 {
   }
 
   button {
-    width: 0%;
+    width: 100%;
     border-radius: 10px;
     background: #ffffff;
   }
