@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/panelPatient.css">
+<link rel="stylesheet" href="css/painel-usuario.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 <script src="js/main.js"  defer type="text/javascript"></script>
@@ -15,7 +15,7 @@
     <%- include('./partials/navbar') %>
 <div id="home"></div>
     <header>
-        <div class="space-advertising">
+        <div id="space-advertising">
             <a href="#">ESPAÇO PARA PROPAGANDA TERCEIROS</a>
         </div>
     </header> 
@@ -28,9 +28,9 @@
                 
                 <div><img src="./images/icone-parceiro.png" class="img-parc"></div>
                
-                <div class="sup-item"><a href="#"> Nome  </a></div>
+                <div class="sup-item"><a href="#"> Nome Completo</a></div>
                
-                <div class="sup-item"><a href="#"> ID parceiro </a></div>
+                <div class="sup-item"><a href="#"> N° ID </a></div>
                 
                 <div class="sup-item"><a href="#"> Platinum </a></div>
             </div>
@@ -65,7 +65,7 @@
                     <form action="#" method="post">
                         <input type="text" name="search" id="search" placeholder="O que você precisa hoje?" required>
 
-                        <button type="submit"><i class="lupa"><img src="./images/icone-lupa.png" ></i></button> <!--Colocar icone de lupa--->
+                        <button id="lupa" type="submit"><i><img src="./images/icone-lupa.png" ></i></button> <!--Colocar icone de lupa--->
                     </form>
                 </div>
 
@@ -73,44 +73,44 @@
                     <div id="consult-panel">Histórico de consultas</div>
         
                     <div class="container-hist">
-                        <div class="consult-hist"><a href="#">Data última <br> consulta</a></div>
+                        <div class="consult-hist"><a class="letra" href="#">Data última <br> consulta</a></div>
 
-                        <div class="consult-hist"><a href="#">Data próxima <br> consulta</a></div>
+                        <div class="consult-hist"><a class="letra" href="#">Data próxima <br> consulta</a></div>
                     </div> 
                 </div>    
             </div>
             <div class="container-consult-inf">
                 <div class="bloc">
 
-                    <div class="atend">
+                    <div class="token">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Atendimento</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Token de Atendimento</h5>
+                        <div class="contBot"><button class="bot">Acessar</button></div>
                     </div> 
 
                     <br>
 
-                    <div class="guia">
+                    <div class="cancela">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Guia / Receita</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Cancelamento de Consulta</h5>
+                        <div class="contBot"><button>Cancelar</button></div>
                     </div>
                 </div>
 
                 <div class="bloc">
 
-                    <div class="atend">
+                    <div class="avalie">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Atendimento</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Avalie sua consulta</h5>
+                        <div class="contBot"><button class="bot">Acesar</button></div>
                     </div> 
 
                     <br>
 
-                    <div class="guia">
+                    <div class="solic">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Guia / Receita</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Solicitação de Documentos Médicos</h5>
+                        <div class="contBot"><button class="bot">Acessar</button></div>
                     </div>
             
                 </div>
@@ -119,10 +119,10 @@
         <div class="container3">
             <div class="container-publi">
                 <div class="publi-item">
-                    <h3>Ofertas do dia <br> produtos</h3>
+                    <h3 class="letraPub">Ofertas do dia <br> produtos</h3>
                 </div>
                 <div class="publi-item">
-                    <h3>Ofertas do dia <br> parceiros</h3>
+                    <h3 class="letraPub">Ofertas do dia <br> parceiros</h3>
                 </div>
             </div>
 
@@ -130,36 +130,36 @@
             <div class="container-publi-inf">
                 <div class="bloc">
 
-                    <div class="atend">
+                    <div class="agend">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Atendimento</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Agendamento de Exames</h5>
+                        <div class="contBot"><button class="bot">Acessar</button></div>
                     </div> 
 
                     <br>
 
-                    <div class="guia">
+                    <div class="prontu">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Guia / Receita</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Prontuário Médico</h5>
+                        <div class="contBot"><button class="bot">Acessar</button></div>
                     </div>
             
                 </div>
 
                 <div class="bloc">
 
-                    <div class="atend">
+                    <div class="cancela">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Atendimento</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Cancelamento de Exames</h5>
+                        <div class="contBot"><button class="bot">Cancelar</button></div>
                     </div> 
 
                     <br>
 
-                    <div class="guia">
+                    <div class="art">
                         <div class="spn-img"> Imagem / Icone </div>
-                        <h5>Guia / Receita</h5>
-                        <p><button>Acessar</button></p>
+                        <h5 class="letra">Artigos Médicos</h5>
+                        <div class="contBot"><button class="bot">Saiba mais</button></div>
                     </div>
         
             </div>
@@ -167,6 +167,18 @@
         </div>
             
     </section>
+     <footer class="consult-center consult-verde consult-padding-64">
+        <a href="#space-advertising" class="consult-button consult-blue-aqua-st consult-round-xlarge"><i class="fa fa-arrow-up consult-margin-right"></i>Voltar para o Topo</a>
+        <div class="consult-xlarge consult-section  consult-redes-blue-aqua ">
+            <i class="fa-brands fa-facebook-official consult-hover-opacity "></i>
+            <i class="fa-brands fa-instagram consult-hover-opacity  "></i>
+            <i class="fa-brands fa-snapchat consult-hover-opacity  "></i>
+            <i class="fa-brands fa-pinterest-p consult-hover-opacity  "></i>
+            <i class="fa-brands fa-twitter consult-hover-opacity  "></i>
+            <i class="fa-brands fa-linkedin consult-hover-opacity "></i>
+        </div>
+        <p>Criado por <a href="#" title="Grupo 01 PI" target="_blank" class="consult-hover-text-green">Grupo 01 PI</a></p>
+    </footer>
      
 <%- include('./partials/footer') %>
 </body>
