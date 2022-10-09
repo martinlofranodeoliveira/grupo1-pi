@@ -55,28 +55,33 @@
             
 
             <div class="organizar-cadastro">
-            <form id="cadastroUsuario" action="/cadastro" method="post">
+            <form id="cadastroUsuario" action="/salvarcadastro" method="post">
 
                 <div class="Inome-cadrastro">
                     <label for="nome"><span class="material-symbols-outlined">
                         person
                         </span></label>
-                        <input type="text" id="nome" placeholder="  Nome" required>
+                        <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Nome" required>
                 </div>
 
                 <div class="Igmail-cadrastro">
                     <label for="gmail-cadrastro"> <span class="material-symbols-outlined">
                         contact_mail</label>
-                        <input type="email" id="gmail-cadrastro" placeholder="  E-mail" required>
+                        <input type="email" name="email" id="gmail-cadrastro" autocomplete="off" placeholder="E-mail" required onclick="erro()">
                 </div>
 
                 <div class="Isenha-cadrastro">
                     <label for="senha-cadrastro"><span class="material-symbols-outlined">
                             password
                         </span></label>
-                    <input type="password" id="senha-cadrastro"   placeholder="  Senha" required>
+                    <input type="password" name="senha" id="senha-cadrastro"   placeholder="Senha" required>
                 </div>
-
+                <div class="Isenha-cadrastro">
+                    <label for="senha-cadrastro"><span class="material-symbols-outlined">
+                            password
+                        </span></label>
+                    <input type="password" name="confisenha" id="confisenha"   placeholder="Confirmar Senha" required>
+                </div>
 
                 <input type="submit" id="Ientra-cadrastro" value="Cadastrar">
             </div>

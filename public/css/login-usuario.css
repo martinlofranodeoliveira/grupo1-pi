@@ -137,7 +137,7 @@ p#recuperar>a {
 .cadrastro {
     background: white;
     width: 90vw;
-    height: 300px;
+    min-height: 300px;
     margin: 30px auto;
     text-align: center;
     padding: 20px;
@@ -215,6 +215,7 @@ form>.Isenha-cadrastro {
     border-radius: 8px;
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 
