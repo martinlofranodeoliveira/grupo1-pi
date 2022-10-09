@@ -2,9 +2,14 @@ const path = require("path");
 
 const homeController = {
     index: (req, res) => {
-        
+        let fs = require("fs"); 
+        let contato = fs.readFileSync("./database/contato.json", "utf8")
+        contato = JSON.parse(contato);
+        console.log(contato)
+
         res.render("index", {
             title: 'Página Inicial',
+            contato
         });
     },
     envioFormulario: (req, res) => {
@@ -15,7 +20,9 @@ const homeController = {
         let mensagem = req.body.mensagem;
         
 
-        let contato = [];
+        let fs = require("fs");
+        let contato = fs.readFileSync("./database/contato.json", "utf8")
+        contato = JSON.parse(contato)
 
         let novoContato = {
             nome,
@@ -24,21 +31,15 @@ const homeController = {
             mensagem,
         };
 
-
-        let fs = require("fs");
-
-        fs.writeFile("../database/contato.json", json, "utf8", function (err) {
-
-            if (err) {
-                return console.log(err);
-
-            }
-
-            res.redirect('/');
-
-        }); 
-        contato.push(novoContato); 
-         
+        
+        console.log(req.body);
+        contato.push(novoContato);
+        
+        fs.writeFile("./database/contato.json", JSON.stringify(contato), "utf8", function (err) {
+            console.log(err) 
+            res.redirect("/")
+        })
+    
         
     },
     
