@@ -1,4 +1,4 @@
-
+/* 
 // Criação do evento no botão Formulário de Contato
  document.querySelector('.botaoEnviaForm').addEventListener('click',function (event){
     event.preventDefault();
@@ -55,4 +55,4 @@
     }
     alert("Dados enviados com sucesso!"); 
     // return true;
-  });   
+  });    */
