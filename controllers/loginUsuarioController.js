@@ -9,5 +9,13 @@ const loginUsuarioController = {
             title: 'Login Usuário',
         });
     },
+    salvarCadastro: (req, res) => {
+        
+        console.log (req.body);
+    },
+    loginCadastro: (req, res) => {
+        
+        console.log (req.body);
+    },
 };
 module.exports = loginUsuarioController
