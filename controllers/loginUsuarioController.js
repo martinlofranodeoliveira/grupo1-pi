@@ -1,4 +1,6 @@
 const path = require("path");
+const transporter = require("../public/js/nodemailer");
+const md5 = require('md5');
 
 const loginUsuarioController = {
     login: (req, res) => {

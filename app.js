@@ -1,8 +1,10 @@
+//NODE MODULES ------------------------------------------------------------------------
 const express = require('express');
 const app = express();
 const path = require('path')
 const methodOverride = require('method-override');
 
+//CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
 const routerLoginUsuario = require('./routes/loginUsuario.js')
@@ -18,6 +20,7 @@ const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
 const routerPlanoUsuario = require('./routes/planoUsuario.js')
 const routerPlanoParceiro = require('./routes/planoParceiro.js')
 
+//BIBLIOTECAS ------------------------------------------------------------------
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -26,6 +29,8 @@ app.use(methodOverride('_method'));
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'));
 
+
+//USO DAS ROTAS ------------------------------------------------------------------------
 app.use('/', routerHome)
 app.use('/', routerAdmin)
 app.use('/', routerLoginUsuario)
@@ -42,7 +47,7 @@ app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
 
 
-
+//SERVIDOR LOCAL ---------------------------------------------------------------
 app.listen(3000, () => {console.log("Servidor rodando na porta 3000 🚀")});
 
 module.exports = app;
