@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const methodOverride = require('method-override');
-const bodyParser = require("body-parser");
 
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
@@ -38,8 +37,8 @@ app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
 
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.listen(3000, () => {console.log("Servidor rodando na porta 3000 🚀")});
