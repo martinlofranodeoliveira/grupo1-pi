@@ -6,7 +6,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "martinguitarrist@gmail.com", //email que irá enviar as mensagens
-    pass: "Yashurun" //a senha do mesmo email
+    pass: "jtiuveujxshkbtoc" //a senha do mesmo email
   }
 });
 
