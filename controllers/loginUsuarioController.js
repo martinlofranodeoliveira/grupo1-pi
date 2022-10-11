@@ -18,13 +18,17 @@ const loginController = {
         cadastro = JSON.parse(cadastro);
         console.log(cadastro);
 
-        cadastro.forEach((item) => {
-            if (item.email === email && senha === item.senha) {
-                res.redirect("/painel-usuario")
-            } else{
-                res.redirect("/login-usuario");
-            };
-        });
+        let message = (cadastro, email, senha, req, res) => {
+          for (var i = 0; i < cadastro.length; i++) {
+              if (cadastro[i].email === email && cadastro[i].senha === senha) {
+                  req.session.email = email;
+                  req.session.senha = cadastro[i].senha;
+                  return res.redirect("/painel-usuario")
+              } else {
+                  return res.redirect("/login-usuario");
+              }
+          }
+      }
     },
     salvarCadastro: (req, res) => {
         let nome = req.body.nome;
@@ -32,11 +36,12 @@ const loginController = {
         let senha = md5(req.body.senha);
         let confisenha = md5(req.body.confisenha);
         let fs = require("fs");
-
+        let cadastro = fs.readFileSync("./database/usuarios.json", "utf8");
+        cadastro = JSON.parse(cadastro);
 
 
             if(senha != confisenha || nome == "" || email == "" || senha == "" || confisenha == ""){
-              Cadastro.destroy({
+              cadastro.destroy({
                 where: {
                   nome: nome,
                   email: email,
