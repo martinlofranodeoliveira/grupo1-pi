@@ -245,6 +245,10 @@ div#local-produto>div#local-org1 {
 
 
   }
+  .org1.produtos-em-destaque{
+    display: flex;
+    flex-direction: column;
+  }
 
   section#nosso-produto>div#local-produto {
     flex-direction: row;
