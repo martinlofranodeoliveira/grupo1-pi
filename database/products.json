@@ -2,6 +2,7 @@
     {
         "id": 1,
         "nome": "oximetro",
+        "previaDescricao": "Oximetro Pulso de dedo portátil",
         "descricao": "Oximetro Pulso de dedo portátil tem as funções, como aferição de Sp02 (oxigênio no sangue) e frequência cardíaca de alta precisão nos resultados,com rápido resultado, e não invasivo (sem dor), ele é leve e compacto, para melhor transporte e autonomia de 20 horas. Aferição de frequência cardíaca com curva plestimográfica. Resultado rápido, seguro e eficaz",
         "preco": 89.00,
         "visitas": 10,
@@ -10,6 +11,7 @@
     {
         "id": 2,
         "nome": "otoscopio",
+        "previaDescricao": "Otoscópio Mini Mikatos Otoscópio mini Mikatos",
         "descricao": "Otoscópio Mini Mikatos Otoscópio mini Mikatos oferece um excelente custo benefício, é leve e pode ser levado no bolso. Específico para exames das partes internas do ouvido, possui lâmpada Xenon para iluminar através de feixe de luz. Concentrado e uma lente de aumento de 2,5x para uma análise com excelente nitidez. Possibilitando ao profissional a amplitude e iluminação suficientes para um diagnóstico preciso. É constituído de peças móveis com sistema de rosca (cabo e cabeçote) e de fácil limpeza. CARACTERÍSTICAS: - Cabo com botão liga/desliga; - Presilha em aço inoxidável; - Cabeçote com lente acrílica de 2,5x de aumento; 02 espéculos pretos esterilizáveis 33 mm; 02 espéculos pretos esterilizáveis 37 mm; 05 espéculos cinzas reutilizáveis 33 mm; 05 espéculos cinzas reutilizáveis 37 mm; - 01 lâmpada 2,5Volts; - 01 estojo para acondicionamento. Registro na ANVISA 80218930006",
         "preco": 219.99,
         "visitas": 5,
@@ -18,6 +20,7 @@
     {
         "id": 3,
         "nome": "estetoscopio",
+        "previaDescricao": "Estetoscópio Spirit Pro-Lite - Black Edition O Spirit Pro-Lite",
         "descricao": "Estetoscópio Spirit Pro-Lite - Black Edition O Spirit Pro-Lite é indicado para verificação de dados vitais, auxiliar a aferição da pressão arterial e serviços de triagem;Cabeça dupla permite a auscultação dos sons de altas e baixas frequências;Molas internas reforçadas com camada dupla de metal, para maior resistência e melhor ajuste da tensão;As hastes binaurais são leves, mais resistentes e ajustadas a um ângulo de 15, o que proporciona melhor ergonomia e conforto;Fabricado com materiais de excelente qualidade, melhor resposta das frequências, com graves e agudos bem definidos. KIT SOBRESSALENTE QUE ACOMPANHA O PRODUTO:- 01 par de olivas macias;- 01 membrana do diafragma. BENEFÍCIOS:- Leve, pesa menos que 100g, as partes em metal possuem acabamento escovado;- As olivas macias de silicone ajustam-se anatomicamente ao canal auditivo, permitindo maior conforto e seu encaixe sem rosca cria uma excelente vedação acústica;- Olivas com tecnologia de Nano silicone, não absorvem sujeiras e são de fácil limpeza;- Utiliza sistema de anel não frio para maior conforto térmico do paciente;- Tubo PVC com diversas opções de cores, incluindo tons perolizados e transparentes;- O acabamento das partes em metal podem ser na cor preta, versão black edition. PRECAUÇÕES:- Não é recomendado expor o estetoscópio a temperaturas extremas;- O uso regular do estetoscópio pendurado no pescoço, em contato com a gordura da pele humana, pode resultar no endurecimento do tubo de PVC. Recomenda-se colocar o tubo em cima da gola;- Um tratamento de rotina com um protetor de vinil ou óleo mineral mantém flexível e maleável;- Não submerja em nenhum liquido, nem submeta a esterilização à vapor. LIMPEZA E DESINFECÇÃO:- Todos os componentes do estetoscópio podem ser limpos usando um pano macio umedecido com com água e sabão neutro ou álcool;- Em condições normais não é necessária a remoção do anel de borracha e diafragma para limpeza;- As olivas podem ser separados dos tubos auriculares para efetuar uma l",
         "preco": 229.99,
         "visitas": 8,
@@ -26,6 +29,7 @@
     {
         "id": 4,
         "nome": "termometro",
+        "previaDescricao": "Termômetro Digital infra-vermelho Temperatura Corporal",
         "descricao": "Termômetro Digital infra-vermelho Temperatura Corporal - Homologado pela ANVISA Cadastro anvisa nr. 8.20.277-9 Numero da AFE : (PM15M2x0WX95) Termômetro Digital Pistola Portátil, faça medição de temperatura sem contato, de maneira conveniente e sem risco de contaminação cruzada. Faça a medição de temperaturas de maneira prática e rápida (em apenas 5 segundos). Modo de usar: - Coloque pilhas na entrada na parte inferior do termômetro - Pressione o botão de medição, e o resultado aparecerá em apenas 5 segundos - Defina livremente o volume do alarme de acordo de sua necessidade (botões de regulagem de volume na lateral do aparelho) -Fácil leitura da temperatura durante o dia e a noite, o termômetro possuí Tela de LCD com luz de fundo Especificações do Produto: - Leitura de temperatura em apenas 5 segundos - Faça a leitura da temperatura sem contato nenhum, evitando contaminação cruzada - Peso do produto: 120g - Desligamento automático após 30 segundos sem uso - Possui alerta na Tela LCD colorido, com cores verde, laranja ou vermelho de acordo com a temperatura do índividuo - Fonte de alimentação: 2 pilhas alcalinas AAA (não inclusas no produto) - Faixa de medição: 32° a 42,9° - Curiosidade: Pode ser efetuada a medição de temperaturas de animais e líquidos - Observação: não incluso as pilhas, por conta da politica do ML, não é possível o envio de materiais desse tipo. ",
         "preco": 40.49,
         "visitas": 7,
@@ -34,6 +38,7 @@
     {
         "id": 5,
         "nome": "Mascara cirurgica descartavel",
+        "previaDescricao": "Mascaras descartáveis tripla com clipe nasal",
         "descricao": "Mascaras descartáveis tripla com clipe nasal de proteção individual cirúrgica com elástico roliço e baixa sensação de sufocamento além de um ótimo tamanho para seu conforto. PRODUTO REGISTRADO NA ANVISA N°8.20.213-7 Tempo de uso: 4 horas, recomendado o descarte após esse período ********************************************************************* DESCRIÇÃO DO PRODUTO Máscara Cirúrgica descartável tem 3 camadas de TNT, com gramatura de 50g/m² a camada interna (SMMMS) e 20 g/m² nas camadas externas, conferindo assim uma eficiência de filtragem bacteriológica acima de 95%, clipe nasal ajustável totalmente revestido, atóxico, hidrofóbica, hipoalergênica, elástico para apoio e ajuste à face que se prendem atrás da orelha dos usuários. Confeccionada em tamanho único retangular(17,5x9,5cm), com acabamento em toda extremidade por solda eletrônica. Existem 3 vincos no centro da máscara que se ajustam ao aumento ou diminuição do tamanho, protegendo o nariz e a boca do usuário. ********************************************************************* INDICAÇÃO DE USO 1- Retirar o produto da embalagem com assepsia 2- Colocar a máscara no rosto. 3- Ajustar o elástico atrás das orelhas 4- Ajustar o clipe da máscara ao nariz 5- Produto não estéril descartável 6- Usar por até 4 horas desde que esteja íntegra, sem sujidade visível e sem umidade (Uso estendido, sem retirar do rosto). 7- Não reutilizar (DESCARTÁVEL). 8- Descartar em local adequado 9- É importante lembrar que a máscara é de uso individual e, portanto, não deve ser compartilhada 10- Não devem ser manipuladas enquanto a pessoa estiver usando e, antes de serem retiradas, é preciso lavar as mãos ********************************************************************* ESPECIFICAÇÕES TÉCNICAS Confeccionadas em TNT 100% polipropileno Camada interna de filtragem SMMMS Material descartável Atóxico Cor Branca Gramatura 50 g/m² e 20g/m² Tamanho 17,5cm x 9,5cm Caixa individual com 50unidades",
         "preco": 29.90,
         "visitas": 15,
@@ -42,6 +47,7 @@
     {
         "id": 6,
         "nome": "Seringa descartavel sem agulha",
+        "previaDescricao": "Seringa descartavel sem agulha",
         "descricao": "Seringa descartavel sem agulha",
         "preco": 34.00,
         "visitas": 2,
@@ -50,6 +56,7 @@
     {
         "id": 7,
         "nome": "Compressa de gaze esteril",
+        "previaDescricao": "PRODUTO ESTÉRIL - PRONTO PARA USO!",
         "descricao": "PRODUTO ESTÉRIL - PRONTO PARA USO ! Melhor preço e qualidade do mercado livre 100 pacotes de envelopes com 10 unidades de compressa de gaze 13 fios As compressas cirúrgicas de gaze hidrófila são fabricadas com tecido puro algodão, isento de impurezas, macio e altamente absorventes. Afim de evitar o desfiamento das compressas, as dobras laterais são para dentro. INSTRUÇÕES DE USO E CONSERVAÇÃO As compressas cirúrgicas de gaze hidrófila são utilizadas em curativos de maneira geral ou em cirurgias para absorção de sangue e secreções líquidas. Podem ser utilizadas também em assepsias. Produto médico hospitalar de uso único - Destruir após o uso - Proibido reprocessar. A esterilização das compressas são à óxido de etileno Conservar em local seco, limpo e fresco. Validade: 05 anos a partir da data de fabricação. - entrega rápida ( postagem em 24 horas após pedido efetivado ) - produto de qualidade ( produtos com qualidade e embalagem própria ) - custo beneficio ( compra direta da fábrica, intermediamos como representante ) - melhor preço do mercado ( preços menores que varejistas, lojas, farmácias, entre outros ) - garantia do produto ( receba seu produto sem transtornos, atendendo exatamente o que está anunciado ) compressas de gaze, gaze, luvas, luva preta, nitrilo, coletor, perfuro, caixa, luvas vinil, compressas, papel lençol, lenço tnt, lenço de papel, branco, estéril, não estéril, gaze 500 unidades, envelope gaze, esterilizadas, atadura, ataduras, crepom, atadura de crepe, gazinha, curativo, hospitalar, material hospitalar, estética, odontologia, veterinária, tatuador, cabeleireiro, produto hospitalar, descartáveis, descartável, gase, hidrófila, algodão, gaze de algodão, para curativo",
         "preco": 124.90,
         "visitas": 9,
@@ -58,6 +65,7 @@
     {
         "id": 8,
         "nome": "Esparadrapo branco microporoso",
+        "previaDescricao": "Esparadrapo branco microporoso",
         "descricao": "Esparadrapo branco microporoso",
         "preco": 12.00,
         "visitas": 3,
