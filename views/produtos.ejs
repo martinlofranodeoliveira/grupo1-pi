@@ -98,57 +98,11 @@
         
         <div id="local-produto">
             <div class="org1">
-        
-                <div class="produto-em-destaque">
-                    <div>IMAGEM</div>
-                    <div>Produto A</div>              
-                </div>
-                
-                <div>
-                    
-                    <p>IMAGEM <br> Produto B</p>
-                
-                </div>
-                
-                <div>
-                    
-                    <p>IMAGEM <br> Produto C</p>
-                
-                </div>
-                
-                <div>
-
-                    <p>IMAGEM <br> Produto D</p>
-                
-                </div>
-            
-            </div>
-            
-            <div class="org1">
-               
-                <div>
-                   
-                    <p>IMAGEM <br> Produto E</p>
-               
-                </div>
-                
-                <div>
-                   
-                    <p>IMAGEM <br> Produto F</p>
-                
-                </div>
-                
-                <div>
-                   
-                    <p>IMAGEM <br> Produto G</p>
-                
-                </div>
-                
-                <div>
-                   
-                    <p>IMAGEM <br> Produto H</p>
-               
-                </div>
+                <% for(let i = 0; i <= 7; i++){ %>
+                    <div>
+                        <img src="/images/<%= products[i].imagem %> " alt="<%= products[i].nome %>">
+                    </div>
+                    <% } %>
             </div>
         </div>
     </section>
@@ -159,7 +113,22 @@
 
         <div id="local-produto">
             <div id="local-org1">
-
+                <!-- ------------------- INSERE ELEMENTOS DINAMICAMENTE NA SESSÃO "CONFIRA NOSSOS PRODUTOS"------------- -->
+                <!-- <% for(let i = 0; i <= 7; i++){ %>
+                    <div class="prof">
+                        <div class="back-image">
+                            <p><img src="/images/<%= products[i].imagem %>" alt="<%= products[i].nome %>"></p>
+                        </div>
+                        <div class="dados">
+                            <p class="name"><%= products[i].nome %></p>
+                            <p class="Categoria"><%= products[i].preco %></p>
+                            <p class="descrição"><%= products[i].descricao %></p>
+                                <a  href="descricao-produto/:<%= products[i].id %>">
+                                <input type="button" id="buttomW" value="CONSULTE AGORA MESMO" font-size='12px'>
+                                </a>
+                        </div>
+                    </div>    
+                <% } %> -->
 
 
                 <div class="prof">
