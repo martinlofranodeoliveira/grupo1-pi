@@ -45,6 +45,9 @@ app.use('/', routerCheckout)
 app.use('/', routerCheckoutPlanos)
 app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
+app.use((req, res) => {
+    return res.status(404).render('404')
+}) //Rota de erro 404
 
 
 //SERVIDOR LOCAL ---------------------------------------------------------------
