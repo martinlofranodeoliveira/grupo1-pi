@@ -1,6 +1,7 @@
 const path = require("path");
 const transporter = require("../public/js/nodemailer");
 const md5 = require("md5");
+const fs = require("fs");
 
 const loginController = {
   login: (req, res) => {
@@ -17,7 +18,7 @@ const loginController = {
     let existe = false; //cria uma variável para verificar se o email existe no arquivo
     for (var i = 0; i < cadastro.length; i++) { //faz uma verificaçao no arquivo usuarios.json
       if (cadastro[i].email === email && cadastro[i].senha === senha) {
-        existe = true;
+       existe = true;
       }
     }
     if (existe) { //se o email e senha existirem no arquivo, redireciona para a página de perfil

@@ -20,7 +20,7 @@ const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
 const routerPlanoUsuario = require('./routes/planoUsuario.js')
 const routerPlanoParceiro = require('./routes/planoParceiro.js')
 
-//BIBLIOTECAS ------------------------------------------------------------------
+//MIDDLEWARES ------------------------------------------------------------------------
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
