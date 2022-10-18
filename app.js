@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const methodOverride = require('method-override');
-
+const logMiddleware = require('./middlewares/log');
 //CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-
+app.use(logMiddleware);
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'));
 
