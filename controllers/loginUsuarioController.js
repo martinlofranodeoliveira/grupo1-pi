@@ -28,7 +28,7 @@ const loginController = {
     } 
   }
 ,
-salvarCadastro: (req, res) => {
+salvarCadastro: function (req, res) {
 
   let nome = req.body.nome;
   let endereco = req.body.endereco;
