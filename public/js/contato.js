@@ -1,4 +1,5 @@
-/* 
+const contatoController = require ("../controllers/contatoController");
+
 // Criação do evento no botão Formulário de Contato
  document.querySelector('.botaoEnviaForm').addEventListener('click',function (event){
     event.preventDefault();
@@ -54,4 +55,5 @@
       return false;
     }
     alert("Dados enviados com sucesso!"); 
-  });       */
+    contatoController.envioFormulario();
+  });         

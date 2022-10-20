@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const methodOverride = require('method-override');
-
+const logMiddleware = require('./middlewares/log');
 //CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
@@ -20,12 +20,12 @@ const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
 const routerPlanoUsuario = require('./routes/planoUsuario.js')
 const routerPlanoParceiro = require('./routes/planoParceiro.js')
 
-//BIBLIOTECAS ------------------------------------------------------------------
+//MIDDLEWARES ------------------------------------------------------------------------
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-
+app.use(logMiddleware);
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'));
 
@@ -45,6 +45,9 @@ app.use('/', routerCheckout)
 app.use('/', routerCheckoutPlanos)
 app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
+app.use((req, res) => {
+    return res.status(404).render('404')
+}) //Rota de erro 404
 
 
 //SERVIDOR LOCAL ---------------------------------------------------------------
