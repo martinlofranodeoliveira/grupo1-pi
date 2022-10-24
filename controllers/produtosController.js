@@ -10,5 +10,8 @@ const produtosController = {
             products,
         });
     },
+    detalheProduto: (req, res) => {
+
+    },
 };
 module.exports = produtosController
