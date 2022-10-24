@@ -49,5 +49,11 @@ const loginController = {
       res.redirect("/login-usuario");
     }
   },
+  logout: (req, res) => {
+    res.clearCookie("usuario");
+    req.session.destroy();
+    res.redirect("/");
+  },
+
 };
 module.exports = loginController;
