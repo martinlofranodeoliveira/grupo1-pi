@@ -4,6 +4,8 @@ const app = express();
 const path = require('path')
 const methodOverride = require('method-override');
 const logMiddleware = require('./middlewares/log');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 //CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
@@ -28,7 +30,12 @@ app.use(methodOverride('_method'));
 app.use(logMiddleware);
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'));
-
+app.use(session({   
+    secret: 'secret-PI-Grupo-01',
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(cookieParser('secret-PI-Grupo-01'));
 
 //USO DAS ROTAS ------------------------------------------------------------------------
 app.use('/', routerHome)

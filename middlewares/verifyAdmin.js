@@ -1,12 +1,13 @@
 let admins = require('../database/admins.json');
 
-function admin(req, res, next) {
-    let user = req.body.user;
-    let password = req.body.password;
 
-    if (user && password){
+function admin(req, res, next) {
+    let email = req.body.email;
+    let senha = req.body.senha;
+
+    if (email && senha){
         admins.forEach(usr => {
-            if (user == usr.user && password == usr.password) {
+            if (email == usr.email && senha == usr.senha) {
                 next();
             }
         });
