@@ -9,18 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="css/login-usuario.css">
-    <script src="js/login-usuario.js"  defer type="text/javascript"></script>
+    <script src="js/login-usuario.js" defer type="text/javascript"></script>
 </head>
+
 <body>
     <main class="container">
         <section class="text-primario">
 
-                <p id="logo">LOGO</p>
+            <p id="logo">LOGO</p>
 
             <h1 id="text-bem-vindo">Bem vindo(a) de volta</h1>
             <p id="text-subtitulo">Acesse sua conta agora mesmo</p>
 
-           
+
 
             <form class="organizar" method="post" action="/login">
                 <div class="Igmail-login">
@@ -36,11 +37,19 @@
                     <label for="senha-login"><span class="material-symbols-outlined">
                             password
                         </span></label>
-                    <input type="password" name="senha" id="senha-login"   placeholder="  Senha" required>
+                    <input type="password" name="senha" id="senha-login" placeholder="  Senha" required>
                 </div>
+
+                <div class="lembrar"
+                    style="text-align: left;display: block;padding-left: 20px;font-size: 14px;color: white;">
+                    <input type="checkbox" name="lembrar" id="lembrar" style="margin-top: 5px;">
+                    <label for="lembrar" style="font-size: 14px;">Lembrar-me</label>
+                </div>
+                <div class="entrar">
                     <input id="Ientra-login" type="submit" value="ENTRAR">
+                </div>
                 <p id="recuperar"><a href="">Esqueci minha senha</a></p>
-                
+
             </form>
 
 
@@ -49,38 +58,66 @@
         <section class="cadrastro">
             <h1>Criar uma conta</h1>
             <p class="cadastroP">Preencha seus dados</p>
-            
+
 
             <div class="organizar-cadastro">
-            <form id="cadastroUsuario" action="/salvarcadastro" method="post">
+                <form id="cadastroUsuario" action="/salvarcadastro" method="post">
 
-                <div class="Inome-cadrastro">
-                    <label for="nome"><span class="material-symbols-outlined">
-                        person
-                        </span></label>
+                    <div class="Inome-cadrastro">
+                        <label for="nome"><span class="material-symbols-outlined">
+                                person
+                            </span></label>
                         <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Nome" required>
-                </div>
+                        <p id="erro"></p>
+                    </div>
 
-                <div class="Igmail-cadrastro">
-                    <label for="gmail-cadrastro"> <span class="material-symbols-outlined">
-                        contact_mail</label>
-                        <input type="email" name="email" id="gmail-cadrastro" autocomplete="off" placeholder="E-mail" required onclick="erro()">
-                </div>
+                    <div class="Igmail-cadrastro">
+                        <label for="gmail-cadrastro"> <span class="material-symbols-outlined">
+                                contact_mail</label>
+                        <input type="email" name="email" id="gmail-cadrastro" autocomplete="off" placeholder="E-mail"
+                            required onclick="erro()">
+                        <p id="erro"></p>
+                    </div>
 
-                <div class="Isenha-cadrastro">
-                    <label for="senha-cadrastro"><span class="material-symbols-outlined">
-                            password
-                        </span></label>
-                    <input type="password" name="senha" id="senha-cadrastro"   placeholder="Senha" required>
-                </div>
-                <div class="Isenha-cadrastro">
-                    <label for="senha-cadrastro"><span class="material-symbols-outlined">
-                            password
-                        </span></label>
-                    <input type="password" name="confisenha" id="confisenha"   placeholder="Confirmar Senha" required>
-                </div>
+                    <div class="Isenha-cadrastro">
+                        <label for="senha-cadrastro"><span class="material-symbols-outlined">
+                                password
+                            </span></label>
+                        <input type="password" name="senha" id="senha-cadrastro" placeholder="Senha" required>
+                        <p id="erro"></p>
+                    </div>
+                    <div class="Isenha-cadrastro">
+                        <label for="senha-cadrastro"><span class="material-symbols-outlined">
+                                password
+                            </span></label>
+                        <input type="password" name="confisenha" id="confisenha" placeholder="Confirmar Senha" required>
+                        <p id="erro"></p>
+                    </div>
+                    <div class="telefone" style="display: flex;margin-top: 15px;border-radius: 8px;margin: 0 auto;width: 100%;margin-bottom: 10px;">
+                        <label for="telefone" style="padding-left: 10px;padding-right: 10px;padding-top: 5px;background-color: #54858A;border-radius: 20px 0 0px 20px;">
+                            <span class="material-symbols-outlined">
+                                phone
+                            </span></label>
+                        <input type="text" name="telefone" id="telefone" autocomplete="off" placeholder="Telefone"
+                            required="" style="width: 100%;border: none;background: #dadada;border-radius: 0px 20px 20px 0;">
+                        <p id="erro"></p>
+                    </div>
+                    <div class="avatar" style="text-align: left;font-size: 14px;">
+                        <span style="text-align: left;">
+                            Foto de perfil
+                        </span>
+                        <label for="avatar">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </label>
+                        <input type="file" name="avatar" id="avatar" autocomplete="off" placeholder="Avatar"
+                            required="">
+                    </div>
+                    <div class="Ientra-cadrastro">
+                        <input type="submit" id="Ientra-cadrastro" value="Cadastrar">
+                    </div>
 
-                <input type="submit" id="Ientra-cadrastro" value="Cadastrar">
             </div>
             </form>
         </section>
