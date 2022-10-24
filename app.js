@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const logMiddleware = require('./middlewares/log');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const { check } = require('express-validator');
 //CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
@@ -36,6 +37,11 @@ app.use(session({
     saveUninitialized: true
 }))
 app.use(cookieParser('secret-PI-Grupo-01'));
+app.use((req, res, next) => {
+    res.locals.usuario = req.session.usuario;
+    next();
+})
+
 
 //USO DAS ROTAS ------------------------------------------------------------------------
 app.use('/', routerHome)

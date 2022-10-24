@@ -12,11 +12,11 @@ module.exports = [
         .isEmail().withMessage('O email deve ser válido'),
     check('senha')
         .notEmpty().withMessage('O campo senha é obrigatório').bail()
-        .isLength({ min: 6 }).withMessage('A senha deve ter no mínimo 6 caracteres'),
+        .isLength({ min: 6 }).withMessage('A senha deve ter no mínimo 6 caracteres')
         .bail().trim().bail(),
     check('confirmarSenha')
         .notEmpty().withMessage('O campo confirmar senha é obrigatório').bail()
-        .isLength({ min: 6 }).withMessage('A senha deve ter no mínimo 6 caracteres'),
+        .isLength({ min: 6 }).withMessage('A senha deve ter no mínimo 6 caracteres')
         .bail().trim().bail(),
     check('confirmarSenha')
         .custom((value, { req }) => {
