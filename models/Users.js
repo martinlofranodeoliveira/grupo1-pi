@@ -1,4 +1,4 @@
-const  { fstat } = require('fs');
+const { fstat } = require('fs');
 
 const fs = require('fs');
 
@@ -8,3 +8,4 @@ const User = {
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
     },
 }
+console.log(User.getUsers());
