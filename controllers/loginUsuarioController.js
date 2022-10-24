@@ -10,7 +10,8 @@ const loginController = {
     });
   },
   salvarCadastro: (req, res) => {
-    let usuarios = User.getUsers();
+    console.log(User.cadastro.getUsers());
+    let usuarios = User.cadastro.getUsers();
     let { nome, email, senha, telefone } = req.body;
     let avatar = req.files.avatar;
     let avatarName = avatar.name;
@@ -30,16 +31,16 @@ const loginController = {
       telefone,
       avatar: avatarPathNew2,
     };
-    usuarios.push(usuario);
+    usuarios.cadastro.push(usuario);
     fs.writeFileSync(User.fileName, JSON.stringify(usuarios));
     fs.renameSync(avatarPath, avatarPathNew);
     res.redirect("/painel-usuario");
   },
   loginCadastro: (req, res) => {
-    let usuarios = User.getUsers();
+    let usuarios = User.cadastro.getUsers();
     let { email, senha } = req.body;
     let senhaCript = md5(senha);
-    let usuario = usuarios.find((usuario) => {
+    let usuario = usuarios.cadastro.find((usuario) => {
       return usuario.email == email && usuario.senha == senhaCript;
     });
     if (usuario) {
