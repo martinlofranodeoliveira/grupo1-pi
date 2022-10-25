@@ -114,23 +114,22 @@
         <div id="local-produto">
             <div id="local-org1">
                 <!-- ------------------- INSERE ELEMENTOS DINAMICAMENTE NA SESSÃO "CONFIRA NOSSOS PRODUTOS"------------- -->
-                <% for(let i = 0; i < products.length; i++){ %>
+
+                <% products.forEach((product) => { %> 
                     <div class="prof">
                         <div class="back-image">
-                            <p><img src="/images/<%= products[i].imagem %>" alt="<%= products[i].nome %>"></p>
+                            <p><img src="/images/<%= product.imagem %>" alt="<%= product.nome %>"></p>
                         </div>
                         <div class="dados">
-                            <p class="name"><%= products[i].nome %></p>
-                            <p class="Categoria"><%= products[i].preco %></p>
-                            <p class="descrição"><%= products[i].previaDescricao %></p>
-                                <a  href="descricao-produto/:<%= products[i].id %>">
-                                <input type="button" id="buttomW" value="CONSULTE AGORA MESMO" font-size='12px'>
+                            <p class="name"><%= product.nome %></p>
+                            <p class="Categoria"><%= product.preco %></p>
+                            <p class="descrição"><%= product.previaDescricao %></p>
+                                <a  href="descricao-produto/<%= product.id %>">
+                                    <input type="button" id="buttomW" value="CONSULTE AGORA MESMO" font-size='12px'>
                                 </a>
                         </div>
-                    </div>    
-                <% } %>
-
-
+                    </div> 
+                <% }) %> 
             </div>
         </div>
     </section>

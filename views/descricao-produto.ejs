@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/descricao-produto.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/descricao-produto.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
-  <script src="js/Avaliacao.js" defer></script>
-  <script src="js/main.js"  defer type="text/javascript"></script>
+  <script src="/js/Avaliacao.js" defer></script>
+  <script src="/js/main.js"  defer type="text/javascript"></script>
 
   <title>PRODUTOS</title>
 </head>
@@ -29,40 +29,36 @@
     <div id="org2">
 
       <div id="imagem-produto">
-
-
-
+        <img src="/images/<%= descricaoProduto.imagem %>" alt="<%= descricaoProduto.nome %>">
       </div>
 
       <div id="descricao-produto">
 
-        <h1>NOME DO PRODUTO</h1>
+        <h1><%= descricaoProduto.nome %> </h1>
 
         <div id="estrela">
           <a href="javascript:void(0)" onclick="Avaliar(1)">
-            <img src="images/estrela.png" id="s1"></a>
+            <img src="/images/estrela.png" id="s1"></a>
 
           <a href="javascript:void(0)" onclick="Avaliar(2)">
-            <img src="images/estrela.png" id="s2"></a>
+            <img src="/images/estrela.png" id="s2"></a>
 
           <a href="javascript:void(0)" onclick="Avaliar(3)">
-            <img src="images/estrela.png" id="s3"></a>
+            <img src="/images/estrela.png" id="s3"></a>
 
           <a href="javascript:void(0)" onclick="Avaliar(4)">
-            <img src="images/estrela.png" id="s4"></a>
+            <img src="/images/estrela.png" id="s4"></a>
 
           <a href="javascript:void(0)" onclick="Avaliar(5)">
-            <img src="images/estrela.png" id="s5"></a>
+            <img src="/images/estrela.png" id="s5"></a>
         </div>
 
         <div id="subtiulo">
 
-          <p> Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo
-            vai
-            girarzis!Detraxit consequat et quo num tendi nada.</p>
+          <p>Valor: <%= descricaoProduto.preco %>  </p>
 
-          <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
-            morreus.</p>
+          <!-- <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
+            morreus.</p> -->
 
         </div>
 
@@ -89,36 +85,19 @@
     <div id="barra">ㅤ</div>
 
     <div id="detalhes">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.</p>
+      <p><%= descricaoProduto.descricao %></p>
 
     </div>
     <div id="barra">ㅤ</div>
 
-    <section id="produtos-relacionavaies">
+    <!-- <section id="produtos-relacionavaies">
 
       <h1 id="TITULO">PRUDUTOS RELACIONADOS</h1>
       <p id="subtitulo">complementar</p>
 
 
       <div id="org1">
-        <!-- div pruduto -->
+        div pruduto
         <div id="card">
 
           <div id="img">IMAGEM <br> PRODUTO X</div>
@@ -137,7 +116,7 @@
             <a href="carrinho"> <input type="button" name="" id="COMPRA" value="COMPRAR AGORA">
             </a>
 
-          </div>
+          </div> 
 
         </div>
 
@@ -215,7 +194,7 @@
       </div>
 
 
-    </section>
+    </section> -->
     <!--  Section "Estatísticas" -->
     <div class=" consult-azul-aqua-md ">
       <div class="consult-container container consult-row consult-center consult-padding-64">
