@@ -1,8 +1,10 @@
 const path = require("path");
+const { validationResult } = require('express-validator');
 const transporter = require("../public/js/nodemailer");
 const md5 = require("md5");
+const bcrypt = require("bcrypt");
 const fs = require("fs");
-const User = require('../models/Users.js');
+const User = require('../models/Users');
 const loginController = {
   login: (req, res) => {
     res.render("login-usuario", {
@@ -10,31 +12,23 @@ const loginController = {
     });
   },
   salvarCadastro: (req, res) => {
-    console.log(User.cadastro.getUsers());
-    let usuarios = User.cadastro.getUsers();
-    let { nome, email, senha, telefone } = req.body;
-    let avatar = req.files.avatar;
-    let avatarName = avatar.name;
-    let avatarPath = avatar.path;
-    let avatarType = avatar.mimetype;
-    let avatarSize = avatar.size;
-    let avatarNameSplit = avatarName.split(".");
-    let avatarExt = avatarNameSplit[avatarNameSplit.length - 1];
-    let avatarNameNew = `${md5(avatarName)}.${avatarExt}`;
-    let avatarPathNew = path.join(__dirname, "../public/img/avatar", avatarNameNew);
-    let avatarPathNew2 = `/img/avatar/${avatarNameNew}`;
-    let senhaCript = md5(senha);
-    let usuario = {
-      nome,
-      email,
-      senha: senhaCript,
-      telefone,
-      avatar: avatarPathNew2,
-    };
-    usuarios.cadastro.push(usuario);
-    fs.writeFileSync(User.fileName, JSON.stringify(usuarios));
-    fs.renameSync(avatarPath, avatarPathNew);
-    res.redirect("/painel-usuario");
+   const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("login-usuario", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+    let userToCreate = {
+      ...req.body,
+      password: bcrypt.hashSync(req.body.password, 10),
+    }
+
+    let userCreate = User.create(userToCreate);
+
+
+    User.create(req.body);
+    res.redirect("painel-usuario");
   },
   loginCadastro: (req, res) => {
     let usuarios = User.cadastro.getUsers();

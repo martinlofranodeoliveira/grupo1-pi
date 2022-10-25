@@ -15,6 +15,11 @@ const User = {
         let usuario = usuarios.cadastro.find(usuario => usuario.email == email);
         return usuario;
     },
+    findUserByField: function(field, value) {
+        let usuarios = this.getUsers();
+        let usuario = usuarios.cadastro.find(usuario => usuario[field] == value);
+        return usuario;
+    },
     findUserByEmailAndPass: function(email, pass) {
         let usuarios = this.getUsers();
         let usuario = usuarios.cadastro.find(usuario => usuario.email == email && usuario.pass == pass);
@@ -76,5 +81,5 @@ const User = {
         let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email && usuario.pass != pass || usuario.id != id && usuario.name != name);
         this.writeUsers(filteredUsers);
     },
-}/* 
-console.log(User.findUserById(1)); */
+}
+module.exports = User;

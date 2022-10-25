@@ -15,7 +15,12 @@
 }
 
 
-
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
 
 
 html,
