@@ -21,6 +21,20 @@ const loginController = {
         oldData: req.body,
       });
     }
+
+    let userExists = User.findByField("email", req.body.email);
+      if (userExists) {
+        return res.render("login-usuario", {
+          errors: {
+            email: {
+              msg: "Este email já está cadastrado",
+            },
+          },
+          oldData: req.body,
+        });
+      }
+
+
     let userToCreate = {
       ...req.body,
       password: bcrypt.hashSync(req.body.password, 10),
