@@ -1,8 +1,12 @@
 const path = require("path");
+const { validationResult } = require('express-validator');
 const transporter = require("../public/js/nodemailer");
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const md5 = require("md5");
+const bcrypt = require("bcrypt");
 const fs = require("fs");
-const User = require('../models/Users.js');
+const User = require('../models/Users');
 const loginController = {
   login: (req, res) => {
     res.render("login-usuario", {
@@ -10,44 +14,65 @@ const loginController = {
     });
   },
   salvarCadastro: (req, res) => {
-    let usuarios = User.getUsers();
-    let { nome, email, senha, telefone } = req.body;
-    let avatar = req.files.avatar;
-    let avatarName = avatar.name;
-    let avatarPath = avatar.path;
-    let avatarType = avatar.mimetype;
-    let avatarSize = avatar.size;
-    let avatarNameSplit = avatarName.split(".");
-    let avatarExt = avatarNameSplit[avatarNameSplit.length - 1];
-    let avatarNameNew = `${md5(avatarName)}.${avatarExt}`;
-    let avatarPathNew = path.join(__dirname, "../public/img/avatar", avatarNameNew);
-    let avatarPathNew2 = `/img/avatar/${avatarNameNew}`;
-    let senhaCript = md5(senha);
-    let usuario = {
-      nome,
-      email,
-      senha: senhaCript,
-      telefone,
-      avatar: avatarPathNew2,
-    };
-    usuarios.push(usuario);
-    fs.writeFileSync(User.fileName, JSON.stringify(usuarios));
-    fs.renameSync(avatarPath, avatarPathNew);
+   const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("login-usuario", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    let userExists = User.findByField("email", req.body.email);
+      if (userExists) {
+        return res.render("login-usuario", {
+          errors: {
+            email: {
+              msg: "Este email já está cadastrado",
+            },
+          },
+          oldData: req.body,
+        });
+      }
+
+
+    let userToCreate = {
+      ...req.body,
+      password: bcrypt.hashSync(req.body.password, 10),
+    }
+
+    let userCreate = User.create(userToCreate);
+
+
+    User.create(req.body);
     res.redirect("/painel-usuario");
   },
   loginCadastro: (req, res) => {
-    let usuarios = User.getUsers();
-    let { email, senha } = req.body;
-    let senhaCript = md5(senha);
-    let usuario = usuarios.find((usuario) => {
-      return usuario.email == email && usuario.senha == senhaCript;
-    });
-    if (usuario) {
-      req.session.usuario = usuario;
-      res.redirect("/painel-usuario");
-    } else {
-      res.redirect("/login-usuario");
+    let userExists = User.findByField("email", req.body.email);
+    if (userExists) {
+      let passwordMatch = bcrypt.compareSync(req.body.senha, userExists.senha);
+      if (passwordMatch) {
+        req.session.userLogged = userExists;
+        if (req.body.lembrar) {
+          res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 })
+        }
+        return res.redirect("/painel-usuario");
+      }
+      return res.render("login-usuario", {
+        errors: {
+          email: {
+            msg: "Credenciais inválidas"
+          }
+        }
+      });
     }
+    return res.render("login-usuario", {
+      errors: {
+        email: {
+          msg: "Usuário não cadastrado"
+        }
+      }
+    });
+
   },
   logout: (req, res) => {
     res.clearCookie("usuario");

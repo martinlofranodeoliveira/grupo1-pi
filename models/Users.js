@@ -7,22 +7,27 @@ const User = {
     },
     findUserById: function(id) {
         let usuarios = this.getUsers();
-        let usuario = usuarios.find(usuario => usuario.id == id);
+        let usuario = usuarios.cadastro.find(usuario => usuario.id == id);
         return usuario;
     },
     findUserByEmail: function(email) {
         let usuarios = this.getUsers();
-        let usuario = usuarios.find(usuario => usuario.email == email);
+        let usuario = usuarios.cadastro.find(usuario => usuario.email == email);
+        return usuario;
+    },
+    findUserByField: function(field, value) {
+        let usuarios = this.getUsers();
+        let usuario = usuarios.cadastro.find(usuario => usuario[field] == value);
         return usuario;
     },
     findUserByEmailAndPass: function(email, pass) {
         let usuarios = this.getUsers();
-        let usuario = usuarios.find(usuario => usuario.email == email && usuario.pass == pass);
+        let usuario = usuarios.cadastro.find(usuario => usuario.email == email && usuario.pass == pass);
         return usuario;
     },
     generateId: function() {
         let usuarios = this.getUsers();
-        let lastUser = usuarios.pop();
+        let lastUser = usuarios.cadastro.pop();
         if (lastUser) {
             return lastUser.id + 1;
         }
@@ -34,7 +39,7 @@ const User = {
             id: this.generateId(),
             ...data
         };
-        usuarios.push(newUser);
+        usuarios.cadastro.push(newUser);
         this.writeUsers(usuarios);
     },
     writeUsers: function(usuarios) {
@@ -42,39 +47,39 @@ const User = {
     },
     update: function(data) {
         let usuarios = this.getUsers();
-        let userIndex = usuarios.findIndex(usuario => usuario.id == data.id);
+        let userIndex = usuarios.cadastro.findIndex(usuario => usuario.id == data.id);
         usuarios[userIndex] = data;
         this.writeUsers(usuarios);
     },
     delete: function(id) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.id != id);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.id != id);
         this.writeUsers(filteredUsers);
     },
     deleteByEmail: function(email) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.email != email);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email);
         this.writeUsers(filteredUsers);
     },
     deleteByEmailAndPass: function(email, pass) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.email != email && usuario.pass != pass);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email && usuario.pass != pass);
         this.writeUsers(filteredUsers);
     },
     deleteByEmailOrPass: function(email, pass) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.email != email || usuario.pass != pass);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email || usuario.pass != pass);
         this.writeUsers(filteredUsers);
     },
     deleteByEmailAndPassOrId: function(email, pass, id) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.email != email && usuario.pass != pass || usuario.id != id);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email && usuario.pass != pass || usuario.id != id);
         this.writeUsers(filteredUsers);
     },
     deleteByEmailAndPassOrIdAndName: function(email, pass, id, name) {
         let usuarios = this.getUsers();
-        let filteredUsers = usuarios.filter(usuario => usuario.email != email && usuario.pass != pass || usuario.id != id && usuario.name != name);
+        let filteredUsers = usuarios.cadastro.filter(usuario => usuario.email != email && usuario.pass != pass || usuario.id != id && usuario.name != name);
         this.writeUsers(filteredUsers);
     },
 }
-console.log(User.getUsers());
+module.exports = User;

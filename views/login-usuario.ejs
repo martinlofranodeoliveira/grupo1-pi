@@ -30,14 +30,24 @@
                             contact_mail
                         </span>
                     </label>
-                    <input type="email" name="email" id="gmail-login" placeholder="E-mail" required>
+                    <input type="email" name="email" value="<%= locals.oldData ? oldData.name : null %>" id="gmail-login" placeholder="E-mail" required>
+                    <% if (locals.error && errors.name) { %>
+                        <div class="error">
+                            <p><%= errors.name.msg %></p>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="Isenha-login">
                     <label for="senha-login"><span class="material-symbols-outlined">
                             password
                         </span></label>
-                    <input type="password" name="senha" id="senha-login" placeholder="  Senha" required>
+                    <input type="password" name="senha" id="senha-login" placeholder="Senha" required>
+                    <% if (locals.error && errors.senha) { %>
+                        <div class="error">
+                            <p><%= errors.senha.msg %></p>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div class="lembrar"
@@ -45,6 +55,12 @@
                     <input type="checkbox" name="lembrar" id="lembrar" style="margin-top: 5px;">
                     <label for="lembrar" style="font-size: 14px;">Lembrar-me</label>
                 </div>
+                <% if (locals.error) { %>
+                    <div class="error">
+                        <p><%= error %></p>
+                    </div>
+                <% } %>
+
                 <div class="entrar">
                     <input id="Ientra-login" type="submit" value="ENTRAR">
                 </div>
@@ -68,7 +84,11 @@
                                 person
                             </span></label>
                         <input type="text" name="nome" id="nome" autocomplete="off" placeholder="Nome" required>
-                        <p id="erro"></p>
+                        <% if (locals.error && errors.nome) { %>
+                            <div class="error">
+                                <p><%= errors.nome.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="Igmail-cadrastro">
@@ -76,7 +96,11 @@
                                 contact_mail</label>
                         <input type="email" name="email" id="gmail-cadrastro" autocomplete="off" placeholder="E-mail"
                             required onclick="erro()">
-                        <p id="erro"></p>
+                        <% if (locals.error && errors.email) { %>
+                            <div class="error">
+                                <p><%= errors.email.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="Isenha-cadrastro">
@@ -84,14 +108,22 @@
                                 password
                             </span></label>
                         <input type="password" name="senha" id="senha-cadrastro" placeholder="Senha" required>
-                        <p id="erro"></p>
+                        <% if (locals.error && errors.senha) { %>
+                            <div class="error">
+                                <p><%= errors.senha.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="Isenha-cadrastro">
                         <label for="senha-cadrastro"><span class="material-symbols-outlined">
                                 password
                             </span></label>
                         <input type="password" name="confisenha" id="confisenha" placeholder="Confirmar Senha" required>
-                        <p id="erro"></p>
+                        <% if (locals.error && errors.confisenha) { %>
+                            <div class="error">
+                                <p><%= errors.confisenha.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="telefone" style="display: flex;margin-top: 15px;border-radius: 8px;margin: 0 auto;width: 100%;margin-bottom: 10px;">
                         <label for="telefone" style="padding-left: 10px;padding-right: 10px;padding-top: 5px;background-color: #54858A;border-radius: 20px 0 0px 20px;">
@@ -100,7 +132,11 @@
                             </span></label>
                         <input type="text" name="telefone" id="telefone" autocomplete="off" placeholder="Telefone"
                             required="" style="width: 100%;border: none;background: #dadada;border-radius: 0px 20px 20px 0;">
-                        <p id="erro"></p>
+                        <% if (locals.error && errors.telefone) { %>
+                            <div class="error">
+                                <p><%= errors.telefone.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="avatar" style="text-align: left;font-size: 14px;">
                         <span style="text-align: left;">
@@ -114,6 +150,11 @@
                         <input type="file" name="avatar" id="avatar" autocomplete="off" placeholder="Avatar"
                             required="">
                     </div>
+                    <% if (locals.error) { %>
+                        <div class="error">
+                            <p><%= error %></p>
+                        </div>
+                    <% } %>
                     <div class="Ientra-cadrastro">
                         <input type="submit" id="Ientra-cadrastro" value="Cadastrar">
                     </div>
