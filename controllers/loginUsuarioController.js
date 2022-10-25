@@ -1,6 +1,8 @@
 const path = require("path");
 const { validationResult } = require('express-validator');
 const transporter = require("../public/js/nodemailer");
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const md5 = require("md5");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
@@ -28,21 +30,35 @@ const loginController = {
 
 
     User.create(req.body);
-    res.redirect("painel-usuario");
+    res.redirect("/painel-usuario");
   },
   loginCadastro: (req, res) => {
-    let usuarios = User.cadastro.getUsers();
-    let { email, senha } = req.body;
-    let senhaCript = md5(senha);
-    let usuario = usuarios.cadastro.find((usuario) => {
-      return usuario.email == email && usuario.senha == senhaCript;
-    });
-    if (usuario) {
-      req.session.usuario = usuario;
-      res.redirect("/painel-usuario");
-    } else {
-      res.redirect("/login-usuario");
+    let userExists = User.findByField("email", req.body.email);
+    if (userExists) {
+      let passwordMatch = bcrypt.compareSync(req.body.senha, userExists.senha);
+      if (passwordMatch) {
+        req.session.userLogged = userExists;
+        if (req.body.lembrar) {
+          res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 })
+        }
+        return res.redirect("/painel-usuario");
+      }
+      return res.render("login-usuario", {
+        errors: {
+          email: {
+            msg: "Credenciais inválidas"
+          }
+        }
+      });
     }
+    return res.render("login-usuario", {
+      errors: {
+        email: {
+          msg: "Usuário não cadastrado"
+        }
+      }
+    });
+
   },
   logout: (req, res) => {
     res.clearCookie("usuario");
