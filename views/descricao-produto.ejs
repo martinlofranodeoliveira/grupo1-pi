@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/descricao-produto.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/descricao-produto.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
@@ -29,14 +29,12 @@
     <div id="org2">
 
       <div id="imagem-produto">
-
-
-
+        <img src="/images/<%= descricaoProduto.imagem %>" alt="<%= descricaoProduto.nome %>">
       </div>
 
       <div id="descricao-produto">
 
-        <h1>NOME DO PRODUTO</h1>
+        <h1><%= descricaoProduto.nome %> </h1>
 
         <div id="estrela">
           <a href="javascript:void(0)" onclick="Avaliar(1)">
@@ -57,12 +55,10 @@
 
         <div id="subtiulo">
 
-          <p> Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo
-            vai
-            girarzis!Detraxit consequat et quo num tendi nada.</p>
+          <p>Valor: <%= descricaoProduto.preco %>  </p>
 
-          <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
-            morreus.</p>
+          <!-- <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
+            morreus.</p> -->
 
         </div>
 
@@ -89,24 +85,7 @@
     <div id="barra">ㅤ</div>
 
     <div id="detalhes">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, unde non? Tenetur
-        esse totam
-        itaque deleniti omnis voluptates veritatis. Quisquam dolores assumenda quod ullam fuga debitis saepe
-        hic. Aut, sit.</p>
+      <p><%= descricaoProduto.descricao %></p>
 
     </div>
     <div id="barra">ㅤ</div>

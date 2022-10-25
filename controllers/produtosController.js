@@ -10,8 +10,10 @@ const produtosController = {
             products,
         });
     },
-    detalheProduto: (req, res) => {
-
-    },
+    // detalheProduto: (req, res) => {
+    //     let id = req.params.id;
+    //     let detalhaProduto = products.find(product => product.id ==id);
+    //     res.render('descricaoProduto', detalhaProduto);
+    // },
 };
 module.exports = produtosController
