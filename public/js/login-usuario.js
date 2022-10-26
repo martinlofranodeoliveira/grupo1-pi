@@ -1,4 +1,4 @@
-var gmailCadastro = document.getElementById("gmail-cadrastro");
+/* var gmailCadastro = document.getElementById("gmail-cadrastro");
 var senhaCadastro = document.getElementById("senha-cadrastro");
 var nomeCadastro = document.getElementById("nome");
 
@@ -25,4 +25,4 @@ function validaCadastro(){
   alert("Usuário criado com sucesso");
 }
 
-btnEntrar.addEventListener("click", validaCadastro);
+btnEntrar.addEventListener("click", validaCadastro); */

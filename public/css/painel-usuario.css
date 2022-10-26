@@ -349,10 +349,8 @@ h5 {
 
 .contBot {
   display: block;
-  width: 70%;
-  justify-content: center;
-  align-items: center;
-  margin-left: 60px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contBot button {
@@ -582,7 +580,33 @@ h5 {
 }
 
 @media (max-width: 480px){
-
+  #container-general {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 2px 0px 2px;
+}
+.container2 {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+.container3 {
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 30px;
+}
+form {
+    padding: 0px;
+}
   .container-hist {
     display: flex;
     /* width: 90%; */

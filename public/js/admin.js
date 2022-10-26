@@ -39,10 +39,11 @@ class Produto {
 
             let imgEdit = document.createElement('img')
             imgEdit.src = 'images/edit.svg'
+            imgEdit.setAttribute('onclick', 'produto.editar(' + this.arryaProdutos[i].id + ')')
 
             let imgDelete = document.createElement('img')
             imgDelete.src = 'images/delete.svg'
-            imgDelete.setAttribute('onclick', 'produto.deletar('+this.arryaProdutos[i].id +')')
+            imgDelete.setAttribute('onclick', 'produto.deletar(' + this.arryaProdutos[i].id + ')')
 
             td_acoes.appendChild(imgEdit)
             td_acoes.appendChild(imgDelete)
@@ -101,15 +102,50 @@ class Produto {
 
         let tbody = document.getElementById('tbody');
 
-        for(let i = 0 ; i < this.arryaProdutos.length ; i++) {
-            if(this.arryaProdutos[i].id == id){
-                this.arryaProdutos.slice(i,1)
+        for (let i = 0; i < this.arryaProdutos.length; i++) {
+            if (this.arryaProdutos[i].id == id) {
+                this.arryaProdutos.splice(i, 1)
                 tbody.deleteRow(i);
+
+
             }
         }
     }
+    editar(id) {
 
-}
+
+        document.getElementById('produto').value = produto.nomeProduto;
+
+
+        document.getElementById('valor').value = produto.valorProduto;
+
+        this.id = id
+        document.getElementById('Descrição').value = produto.DescriçãoProduto;
+
+
+
+
+        let tbody = document.getElementById('tbody');
+
+        for (let i = 0; i < this.arryaProdutos.length; i++) {
+            if (this.arryaProdutos[i].id == id) {
+
+                document.getElementById('produto').value = this.arryaProdutos[i].nomeProduto
+                document.getElementById('valor').value = this.arryaProdutos[i].valorProduto
+                document.getElementById('Descrição').value = this.arryaProdutos[i].DescriçãoProduto
+
+                tbody.deleteRow(i)
+                this.arryaProdutos.splice(i, 1)
+
+            }
+        }
+
+
+            }
+        }
+    
+
+
 
 
 
@@ -122,17 +158,17 @@ var produto = new Produto();
 
 function mostrar(id) {
     if (document.getElementById(id).style.display == 'block') {
-      document.getElementById(id).style.display = 'none';
+        document.getElementById(id).style.display = 'none';
     } else {
-      document.getElementById(id).style.display = 'block'; 
-    }        
-  }
+        document.getElementById(id).style.display = 'block';
+    }
+}
 
 
 
-/* admin */
+/* admin  parte admin*/
 
-  class Admin {
+/* class Admin {
 
     constructor() {
         this.id = 1;
@@ -160,8 +196,8 @@ function mostrar(id) {
 
             let td_id = tr.insertCell();
             let td_nome = tr.insertCell();
-            let td_email= tr.insertCell();
-            let td_telefone= tr.insertCell();
+            let td_email = tr.insertCell();
+            let td_telefone = tr.insertCell();
             let td_acoes = tr.insertCell();
 
 
@@ -178,7 +214,7 @@ function mostrar(id) {
 
             let imgDeleteAdm = document.createElement('img')
             imgDeleteAdm.src = 'images/delete.svg'
-            imgDeleteAdm.setAttribute('onclick', 'admin.deletar('+this.arryaAdmin[i].id +')')
+            imgDeleteAdm.setAttribute('onclick', 'admin.deletar(' + this.arryaAdmin[i].id + ')')
 
             td_acoes.appendChild(imgEditAdm)
             td_acoes.appendChild(imgDeleteAdm)
@@ -195,7 +231,7 @@ function mostrar(id) {
 
         admin.id = this.id
         admin.nome = document.getElementById('nome').value;
-        admin.email= document.getElementById('email').value;
+        admin.email = document.getElementById('email').value;
         admin.telefone = document.getElementById('telefone').value;
         return admin;
     }
@@ -228,25 +264,57 @@ function mostrar(id) {
 
 
     cancelar() {
-        document.getElementById('nome').value= '';
+        document.getElementById('nome').value = '';
         document.getElementById('email').value = '';
         document.getElementById('telefone').value = '';
     }
 
     deletar(id) {
 
-        let tbody = document.getElementById('tbodyAdmin');
+        let tbody = document.getElementById('tbody');
 
-        for(let i = 0 ; i < this.arryaAdmin.length ; i++) {
-            if(this.arryaAdmin[i].id == id){
-                this.arryaAdmin.slice(i,1)
+        for (let i = 0; i < this.arryaProdutos.length; i++) {
+            if (this.arryaProdutos[i].id == id) {
+                this.arryaProdutos.splice(i, 1)
                 tbody.deleteRow(i);
+
+
             }
         }
     }
+    editar(id) {
 
+
+        document.getElementById('produto').value = produto.nomeProduto;
+
+
+        document.getElementById('valor').value = produto.valorProduto;
+
+        this.id = id
+        document.getElementById('Descrição').value = produto.DescriçãoProduto;
+
+
+
+
+        let tbody = document.getElementById('tbody');
+
+        for (let i = 0; i < this.arryaProdutos.length; i++) {
+            if (this.arryaProdutos[i].id == id) {
+
+                document.getElementById('produto').value = this.arryaProdutos[i].nomeProduto
+                document.getElementById('valor').value = this.arryaProdutos[i].valorProduto
+                document.getElementById('Descrição').value = this.arryaProdutos[i].DescriçãoProduto
+
+                tbody.deleteRow(i)
+                this.arryaProdutos.splice(i, 1)
+
+            }
+        }
+
+
+ }
 }
 
 
 
-var admin = new Admin();
+var admin = new Admin(); */

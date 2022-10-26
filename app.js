@@ -1,7 +1,13 @@
+//NODE MODULES ------------------------------------------------------------------------
 const express = require('express');
 const app = express();
 const path = require('path')
-
+const methodOverride = require('method-override');
+const logMiddleware = require('./middlewares/log');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const { check } = require('express-validator');
+//CHAMADA DAS ROTAS ------------------------------------------------------------------------
 const routerHome = require('./routes/home.js')
 const routerAdmin = require('./routes/admin.js')
 const routerLoginUsuario = require('./routes/loginUsuario.js')
@@ -17,8 +23,27 @@ const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
 const routerPlanoUsuario = require('./routes/planoUsuario.js')
 const routerPlanoParceiro = require('./routes/planoParceiro.js')
 
+//MIDDLEWARES ------------------------------------------------------------------------
+app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(methodOverride('_method'));
+app.use(logMiddleware);
 app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, '/views'));
+app.use(session({   
+    secret: 'secret-PI-Grupo-01',
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(cookieParser('secret-PI-Grupo-01'));
+app.use((req, res, next) => {
+    res.locals.usuario = req.session.usuario;
+    next();
+})
 
+
+//USO DAS ROTAS ------------------------------------------------------------------------
 app.use('/', routerHome)
 app.use('/', routerAdmin)
 app.use('/', routerLoginUsuario)
@@ -33,6 +58,12 @@ app.use('/', routerCheckout)
 app.use('/', routerCheckoutPlanos)
 app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
+app.use((req, res) => {
+    return res.status(404).render('404')
+}) //Rota de erro 404
 
-app.use(express.static(path.join(__dirname, '/public')));
-app.listen(3000, () => {console.log("Servidor rodando na porta 3000")}) 
+
+//SERVIDOR LOCAL ---------------------------------------------------------------
+app.listen(3000, () => {console.log("Servidor rodando na porta 3000 🚀")});
+
+module.exports = app;

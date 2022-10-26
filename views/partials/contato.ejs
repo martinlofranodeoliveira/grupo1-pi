@@ -3,13 +3,13 @@
     <h3 class="consult-center">Contato</h3>
     <p class="consult-center consult-large">Para Dúvidas, Reclamações ou Sugestões preencha o formulário abaixo</p>
     <div style="margin-top:48px">
-      <form action="" method="post"  onsubmit="return validaForm()" name="formulario">
-        <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Nome" required name="Nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"></p>
+      <form action="/" method="POST" name="formulario">
+        <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" id="nome" placeholder="Nome" required name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"></p>
         <p class="d-flex">
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email" placeholder="Email" required name="Email">
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" required name="Telefone" pattern="[0-9]+$">
+           <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email"  id="email" placeholder="Email" required name="email">
+           <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" id="telefone" required name="telefone" pattern="[0-9]+$">
         </p>
-        <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" required name="Mensagem"></textarea></p>
+        <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" id="mensagem" required name="mensagem"></textarea></p>
         <p>
           <button class="botaoEnviaForm consult-button consult-verde consult-round-xlarge" type="submit">
             <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM

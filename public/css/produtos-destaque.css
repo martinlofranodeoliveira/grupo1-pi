@@ -102,20 +102,25 @@ section#produto-destaque>div#local-produto {
 section#produto-destaque>div#local-produto>.org1 {
   display: flex;
   gap: 20px;
-
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 section#produto-destaque>div#local-produto>.org1>div {
-  background: #D9D9D9;
+  display: flex;
   padding: 8px;
   width: 17vw;
   height: 17vh;
-
-
-  display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  margin: 15px;
+  
+}
+
+section#produto-destaque>div#local-produto>.org1>div img{
+  height:20ch;
+  width: fit-content;
 }
 
 section#produto-destaque>div#local-produto>.org2 {
@@ -169,27 +174,32 @@ section#nosso-produto>div#local-produto {
 div#local-produto>div#local-org1 {
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items:flex-start ;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 
 .prof {
   width: 18vw;
-
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  padding: 20px;
 }
 
 .back-image {
   background: #D9D9D9;
 
   width: 100%;
-  height:100px;
+  height: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.back-image img{
+  height:10vw;
+  width: fit-content;
 }
 .dados>p {
   color: #A7C6BE;
@@ -197,6 +207,7 @@ div#local-produto>div#local-org1 {
   text-align: start;
   right: 0px;
   font-size: 13px;
+  padding-top: 20px;
 }
 
 .dados>.name {
@@ -243,9 +254,13 @@ div#local-produto>div#local-org1 {
     width: 80vw;
     height: 30vh;
 
-
   }
-
+ section#produto-destaque>div#local-produto>.org1>div>img { 
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;   
+}
+ 
   section#nosso-produto>div#local-produto {
     flex-direction: row;
     flex-wrap:wrap;
