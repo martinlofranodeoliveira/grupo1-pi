@@ -8,6 +8,24 @@
    "confisenha": "$2b$10$jXRHatmsp2wkevHMhqTcouPZ3UzsD2//XwpsZUiOq.5kkNVLydcie",
    "telefone": "35992469968",
    "avatar": "1666836129148.jpg"
+  },
+  {
+   "id": 2,
+   "nome": "tst",
+   "email": "teste@gmail.com",
+   "senha": "$2b$10$xFmTDl/5Bg6pu8GffGsg8OyEtlLrCeAWDZg46gcMZFXogbMmozz3.",
+   "confisenha": "$2b$10$s9wbdWw5MeirdgldD7eUHuq10xWddWC0.29jK1Lvr66wW.T1UlVNu",
+   "telefone": "88981552341",
+   "avatar": "1667358762725.png"
+  },
+  {
+   "id": 3,
+   "nome": "italo",
+   "email": "italo@gmail.com",
+   "senha": "$2b$10$WnZEPI0ky8kHWTOT9ySWeOk2HqfyVJs0UgYFI2NIIcoh9W08uZobK",
+   "confisenha": "$2b$10$Dlzb83SiUMQ2KXWWlMyhaeIlETc2oOS1eH4OzXDiIkuZlq0JR6feG",
+   "telefone": "88981552341",
+   "avatar": "1667363101028.jpg"
   }
  ]
 }

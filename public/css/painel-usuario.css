@@ -654,3 +654,15 @@ form {
     background: #ffffff;
   }
 }
+
+.img1 {
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 > img {
+  height: 100px;
+}
