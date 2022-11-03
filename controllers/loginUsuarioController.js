@@ -13,41 +13,8 @@ const loginController = {
       title: "Login Usuário",
     });
   },
-  salvarCadastro: (req, res) => {
-   const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render("login-usuario", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
-
-    let userExists = User.findByField("email", req.body.email);
-      if (userExists) {
-        return res.render("login-usuario", {
-          errors: {
-            email: {
-              msg: "Este email já está cadastrado",
-            },
-          },
-          oldData: req.body,
-        });
-      }
-
-
-    let userToCreate = {
-      ...req.body,
-      password: bcrypt.hashSync(req.body.password, 10),
-    }
-
-    let userCreate = User.create(userToCreate);
-
-
-    User.create(req.body);
-    res.redirect("/painel-usuario");
-  },
   loginCadastro: (req, res) => {
-    let userExists = User.findByField("email", req.body.email);
+    let userExists = User.findUserByField("email", req.body.email);
     if (userExists) {
       let passwordMatch = bcrypt.compareSync(req.body.senha, userExists.senha);
       if (passwordMatch) {
@@ -60,7 +27,10 @@ const loginController = {
       return res.render("login-usuario", {
         errors: {
           email: {
-            msg: "Credenciais inválidas"
+            msg: "Credenciais Inválidas",
+          },
+          senha: {
+            msg: "Senha incorreta"
           }
         }
       });
@@ -68,7 +38,10 @@ const loginController = {
     return res.render("login-usuario", {
       errors: {
         email: {
-          msg: "Usuário não cadastrado"
+          msg: "Credenciais inválidas"
+        },
+        senha: {
+          msg: "Credenciais inválidas"
         }
       }
     });

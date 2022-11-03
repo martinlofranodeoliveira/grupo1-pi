@@ -9,6 +9,5 @@ const loginMiddlewares = require('../middlewares/verifyRegistroUsuario.js');
 const uploadFile = require('../middlewares/multerMidleware.js');
 
 router.get('/login-usuario', loginUsuarioController.login)
-router.post('/salvarcadastro', uploadFile.single('avatar'), loginMiddlewares, loginUsuarioController.salvarCadastro)
 router.post('/login', loginUsuarioController.loginCadastro)
 module.exports = router;

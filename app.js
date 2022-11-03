@@ -22,6 +22,7 @@ const routerCheckout = require('./routes/checkout.js')
 const routerCheckoutPlanos = require('./routes/checkoutPlanos.js')
 const routerPlanoUsuario = require('./routes/planoUsuario.js')
 const routerPlanoParceiro = require('./routes/planoParceiro.js')
+const routerCadastro = require('./routes/CadastroUsuario.js')
 
 //MIDDLEWARES ------------------------------------------------------------------------
 app.use(express.static(path.join(__dirname, '/public')));
@@ -58,6 +59,7 @@ app.use('/', routerCheckout)
 app.use('/', routerCheckoutPlanos)
 app.use('/', routerPlanoUsuario)
 app.use('/', routerPlanoParceiro)
+app.use('/', routerCadastro)
 app.use((req, res) => {
     return res.status(404).render('404')
 }) //Rota de erro 404
