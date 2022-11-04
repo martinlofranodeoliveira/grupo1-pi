@@ -1,12 +1,18 @@
-let express = require('express')
+let express = require("express");
 let router = express.Router();
 
-const homeController = require('../controllers/homeController.js')
-const contatoController = require('../controllers/contatoController.js')
+/* controllers */
+const homeUsers = require("../controllers/homeController");
 
 
-router.get('/', homeController.index)
-router.post('/', contatoController.envioFormulario)
 
+/* planos */
+router.get('/plano-usuario', homeUsers.selecaoPlano)//plano usuarios 
+router.get('/plano-parceiro', homeUsers.selecaoPlanoProfissional)//planos parceiro
+
+/* checkoutPlanos */
+router.get('/checkout-Planos',homeUsers.checkoutPlanos)//checkoutPlanos
+
+router.get('/checkout', homeUsers.checkout)//checkout
 
 module.exports = router;

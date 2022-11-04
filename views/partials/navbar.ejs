@@ -3,13 +3,34 @@
   <div class="consult-bar consult-white consult-card" id="myNavbar">
     <a href="/" class="consult-bar-item consult-button consult-wide">LOGO</a>
     <!-- Right-sided navbar links -->
+    <% if (locals.islogin){ %>
+      <div class="consult-right consult-hide-small">
+        <a href="/painel-usuario" class="consult-bar-item consult-button"><i class="fa fa-users"></i>Dashboard</a>
+        <a href="/sair" class="consult-bar-item consult-button"><i class="fa fa-th"></i>Sair</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="consult-bar-item consult-button consult-right consult-hide-large consult-hide-medium" onclick="consult_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="consult-sidebar consult-bar-block consult-verde consult-card consult-animate-left consult-hide-medium consult-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="consult_close()" class="consult-bar-item consult-button consult-large consult-padding-16">Fechar ×</a>
+    <a href="/painel-usuario onclick="consult_close()" class="consult-bar-item consult-button">dashboard</a>
+    <a href="/sair" onclick="consult_close()" class="consult-bar-item consult-button">sair</a>
+   
+  </nav>
+   <% } else {  %> 
     <div class="consult-right consult-hide-small">
-      <a href="#quemsomos" class="consult-bar-item consult-button">Quem Somos</a>
-      <a href="login-parceiro" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Sou Parceiro</a>
+      <a href="#quemsomos" class="consult-bar-item consult-button"><i class="fa fa-users"></i>Quem Somos</a>
+      <a href="login" class="consult-bar-item consult-button"><i class="fa fa-users"></i> Sou Parceiro</a>
       <a href="servicos" class="consult-bar-item consult-button"><i class="fa fa-th"></i> Serviços</a>
       <a href="produtos" class="consult-bar-item consult-button"><i class="fa fa-bag-shopping"></i> Produtos</a>
       <a href="#contato" class="consult-bar-item consult-button"><i class="fa fa-envelope"></i> Contato</a>
-      <a href="login-usuario" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Entrar</a>
+      <a href="login" class="consult-bar-item consult-button"><i class="fa fa-user"></i> Entrar</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -29,3 +50,5 @@
   <a href="#contato" onclick="consult_close()" class="consult-bar-item consult-button">Contato</a>
   <a href="login-usuario" onclick="consult_close()" class="consult-bar-item consult-button">Entrar</a>
 </nav>
+</nav>
+  <% } %> 
