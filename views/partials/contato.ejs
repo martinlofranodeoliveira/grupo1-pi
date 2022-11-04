@@ -4,16 +4,44 @@
     <p class="consult-center consult-large">Para Dúvidas, Reclamações ou Sugestões preencha o formulário abaixo</p>
     <div style="margin-top:48px">
       <form action="/" method="POST" name="formulario">
-        <p><input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" id="nome" placeholder="Nome" required name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"></p>
+        <p>
+          <input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" id="nome" placeholder="Nome" required name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+        </p>
+        <% if (locals.errors && errors.nome) { %>
+          <div class="error">
+              <p><%= errors.nome.msg %></p>
+          </div>
+      <% } %>
         <p class="d-flex">
            <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email"  id="email" placeholder="Email" required name="email">
+           <% if (locals.errors && errors.email) { %>
+            <div class="error">
+                <p><%= errors.email.msg %></p>
+            </div>
+        <% } %>
            <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" id="telefone" required name="telefone" pattern="[0-9]+$">
+           <% if (locals.errors && errors.telefone) { %>
+            <div class="error">
+                <p><%= errors.telefone.msg %></p>
+            </div>
+        <% } %>
         </p>
-        <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" id="mensagem" required name="mensagem"></textarea></p>
+        <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" id="mensagem" required name="mensagem"></textarea>
+          <% if (locals.errors && errors.mensagem) { %>
+            <div class="error">
+                <p><%= errors.mensagem.msg %></p>
+            </div>
+        <% } %>
+        </p>
         <p>
-          <button class="botaoEnviaForm consult-button consult-verde consult-round-xlarge" type="submit">
+          <button class="botaoEnviaForm consult-button consult-verde consult-round-xlarge" type="submit" name="submit">
             <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
           </button>
+          <% if (locals.sucess && errors.submit) { %>
+            <div class="error">
+                <p><%= sucess.submit.msg %></p>
+            </div>
+        <% } %>
         </p>
       </form>
      
