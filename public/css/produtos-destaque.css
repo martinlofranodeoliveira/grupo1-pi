@@ -1,11 +1,22 @@
 @charset "UFT-8";
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  color: #02505c;
+}
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif; color:#02505C}
-    
-p {color: #02505C;}
+p {
+  color: #02505c;
+}
 
-body, html {
+body,
+html {
   height: 100%;
   line-height: 1.8;
 }
@@ -21,22 +32,24 @@ body, html {
   box-sizing: border-box;
 }
 
-
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0px 0;
 }
 
-
 h1,
 p {
-  color: #02505C;
+  color: #02505c;
 }
 
 /*conteudo principal*/
 
-section#produto-Destaque{
-  background: #D4EBE3;
+section#produto-Destaque {
+  background: #d4ebe3;
   text-align: center;
   width: 100vw;
   height: 70vh;
@@ -44,24 +57,23 @@ section#produto-Destaque{
   padding-bottom: 30px;
 }
 
-section#produto-Destaque>h1#titulo-produto {
+section#produto-Destaque > h1#titulo-produto {
   padding-top: 40px;
 }
 
-section#produto-Destaque>div#fotos-produto {
+section#produto-Destaque > div#fotos-produto {
   width: 95%;
   height: 80%;
 
-  background: #D9D9D9;
+  background: #d9d9d9;
   margin: 20px auto;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  
 }
-section#produto-Destaque>div#fotos-produto>span {
+section#produto-Destaque > div#fotos-produto > span {
   text-transform: uppercase;
   color: red;
   height: 40vh;
@@ -70,25 +82,23 @@ section#produto-Destaque>div#fotos-produto>span {
 /* part da imgs de serviço */
 
 section#produto-destaque {
-  background: #D4EBE3;
+  background: #d4ebe3;
   text-align: center;
   width: 100vw;
 
-  padding-bottom:30px
+  padding-bottom: 30px;
 }
 
-section#produto-destaque>h1#titulo-produto {
+section#produto-destaque > h1#titulo-produto {
   padding-top: 20px;
-
-
 }
 
-section#produto-destaque>p#subtitulo-produto {
+section#produto-destaque > p#subtitulo-produto {
   font-size: 9px;
   padding-top: 8px;
 }
 
-section#produto-destaque>div#local-produto {
+section#produto-destaque > div#local-produto {
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -99,14 +109,14 @@ section#produto-destaque>div#local-produto {
   justify-content: center;
 }
 
-section#produto-destaque>div#local-produto>.org1 {
+section#produto-destaque > div#local-produto > .org1 {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-section#produto-destaque>div#local-produto>.org1>div {
+section#produto-destaque > div#local-produto > .org1 > div {
   display: flex;
   padding: 8px;
   width: 17vw;
@@ -115,22 +125,28 @@ section#produto-destaque>div#local-produto>.org1>div {
   align-items: center;
   box-sizing: border-box;
   margin: 15px;
-  
+}
+section#nosso-produto
+  > div#local-produto
+  > div#local-org1
+  > .prof
+  > .dados
+  > .descrição {
+  min-height: 105px;
 }
 
-section#produto-destaque>div#local-produto>.org1>div img{
-  height:20ch;
+section#produto-destaque > div#local-produto > .org1 > div img {
+  height: 20ch;
   width: fit-content;
 }
 
-section#produto-destaque>div#local-produto>.org2 {
+section#produto-destaque > div#local-produto > .org2 {
   display: flex;
   gap: 20px;
-
 }
 
-section#produto-destaque>div#local-produto>.org2>div {
-  background: #D9D9D9;
+section#produto-destaque > div#local-produto > .org2 > div {
+  background: #d9d9d9;
   padding: 8px;
   width: 17vw;
   height: 17vh;
@@ -138,7 +154,6 @@ section#produto-destaque>div#local-produto>.org2>div {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /* CONFIRA TODOS NOSSOS PRODUTOS */
@@ -150,38 +165,37 @@ section#nosso-produto {
   padding-bottom: 30px;
 }
 
-section#nosso-produto>h1 {
+section#nosso-produto > h1 {
   padding-top: 20px;
 }
 
-section#nosso-produto>p {
+section#nosso-produto > p {
   font-size: 12px;
   padding-top: 8px;
 }
 
-section#nosso-produto>div#local-produto {
+section#nosso-produto > div#local-produto {
   display: flex;
   width: 90%;
   margin: auto;
   gap: 20px;
-  flex-direction: column;  
+  flex-direction: column;
   margin-top: 75px;
   align-items: center;
   justify-content: center;
-
 }
 
-div#local-produto>div#local-org1 {
+div#local-produto > div#local-org1 {
   display: flex;
   justify-content: center;
-  align-items:flex-start ;
+  align-items: flex-start;
   gap: 25px;
   flex-wrap: wrap;
 }
 
-
 .prof {
-  width: 18vw;
+  width: 20vw;
+  height: 435px;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -189,7 +203,7 @@ div#local-produto>div#local-org1 {
 }
 
 .back-image {
-  background: #D9D9D9;
+  background: #d9d9d9;
 
   width: 100%;
   height: 10vw;
@@ -197,12 +211,12 @@ div#local-produto>div#local-org1 {
   justify-content: center;
   align-items: center;
 }
-.back-image img{
-  height:10vw;
+.back-image img {
+  height: 10vw;
   width: fit-content;
 }
-.dados>p {
-  color: #A7C6BE;
+.dados > p {
+  color: #a7c6be;
   margin: 10px 10px 10px 0px;
   text-align: start;
   right: 0px;
@@ -210,139 +224,148 @@ div#local-produto>div#local-org1 {
   padding-top: 20px;
 }
 
-.dados>.name {
+.dados > .name {
   padding-left: 10px;
 }
 
-.dados>.Categoria {
+.dados > .Categoria {
   padding-left: 10px;
 }
-.dados>.descrição {
+.dados > .descrição {
   padding-left: 10px;
 }
 
-#buttomW, #buttomX, #buttomY,#buttomZ {
+#buttomW,
+#buttomX,
+#buttomY,
+#buttomZ {
   width: 90%;
-  background-color: #39B55F;
+  background-color: #39b55f;
   border: none;
   height: 29px;
   border-radius: 12px;
   margin-bottom: 10px;
 }
 
-#buttomW[type= button],#buttomX[type= button],#buttomY[type= button],#buttomZ[type= button]  {
+#buttomW[type="button"],
+#buttomX[type="button"],
+#buttomY[type="button"],
+#buttomZ[type="button"] {
   font-size: 10px;
-  color : white
+  color: white;
 }
 
-@media (max-width:600px){
-
-  section#produto-destaque{
+@media (max-width: 600px) {
+  section#produto-destaque {
     width: 100vw;
     height: auto;
-    padding-bottom:30px ;
+    padding-bottom: 30px;
   }
-  section#produto-destaque>div#local-produto{
+  section#produto-destaque > div#local-produto {
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
 
-  section#produto-destaque>div#local-produto>.org1 {
-    flex-direction:column;
+  section#produto-destaque > div#local-produto > .org1 {
+    flex-direction: column;
   }
-  section#produto-destaque>div#local-produto>.org1>div {
+  section#produto-destaque > div#local-produto > .org1 > div {
     width: 80vw;
     height: 30vh;
-
   }
- section#produto-destaque>div#local-produto>.org1>div>img { 
+  section#produto-destaque > div#local-produto > .org1 > div > img {
     object-fit: contain;
     max-width: 100%;
-    max-height: 100%;   
-}
- 
-  section#nosso-produto>div#local-produto {
-    flex-direction: row;
-    flex-wrap:wrap;
+    max-height: 100%;
   }
 
-  div#local-produto>div#local-org1 {
-    flex-direction:column;
+  section#nosso-produto > div#local-produto {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  div#local-produto > div#local-org1 {
+    flex-direction: column;
   }
 
   .prof {
     width: 80vw;
+    height: 315px;
   }
-  div#local-produto>div#local-org1 {
-    flex-direction:column;
+  section#nosso-produto
+    > div#local-produto
+    > div#local-org1
+    > .prof
+    > .dados
+    > .descrição {
+    min-height: 75px;
   }
 
-
+  div#local-produto > div#local-org1 {
+    flex-direction: column;
+  }
 }
-
-
 
 /* SLIDER */
-#img1{
-  background:url(../images/covid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-enthusiastic-smiling-doctor-physi.jpg)no-repeat;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 10px;
-
-}
-
-#img2{
-  background:url(../images/depositphotos_14994909-stock-photo-two-holding-hands.jpg)no-repeat;
+#img1 {
+  background: url(../images/covid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-enthusiastic-smiling-doctor-physi.jpg)
+    no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 10px;
 }
-#img3{
-  background:url(../images/hands-of-unrecognizable-female-doctor-writing-on-form-and-typing-on-laptop-keyboard.jpg)no-repeat;
+
+#img2 {
+  background: url(../images/depositphotos_14994909-stock-photo-two-holding-hands.jpg)
+    no-repeat;
   background-size: cover;
   background-position: center center;
   border-radius: 10px;
-
+}
+#img3 {
+  background: url(../images/hands-of-unrecognizable-female-doctor-writing-on-form-and-typing-on-laptop-keyboard.jpg)
+    no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
 }
 
-.slider{
-  margin: 0 auto ;
+.slider {
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.slides{
+.slides {
   width: 400%;
   height: 100%;
   display: flex;
 }
 
-.slides input{
+.slides input {
   display: none;
 }
 
-
-.slide{
+.slide {
   width: 25%;
   position: relative;
   transition: 2s;
 }
 
-.slide img{
+.slide img {
   width: 100%;
 }
 
-
-.manual-navgation{
+.manual-navgation {
   position: relative;
   width: 100%;
-  margin-top:-30px ;
+  margin-top: -30px;
   display: flex;
   justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
   border: 2px solid rgb(50, 50, 249);
   padding: 5px;
   border-radius: 10px;
@@ -350,20 +373,20 @@ div#local-produto>div#local-org1 {
   transition: 0.5s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
   background-color: gray;
 }
 
-#radio1:checked ~.first {
-  margin-left:0 ;
+#radio1:checked ~ .first {
+  margin-left: 0;
 }
-#radio2:checked ~.first {
-  margin-left:-25% ;
+#radio2:checked ~ .first {
+  margin-left: -25%;
 }
-#radio3:checked ~.first {
-  margin-left:-50%;
+#radio3:checked ~ .first {
+  margin-left: -50%;
 }
