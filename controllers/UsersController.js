@@ -65,7 +65,7 @@ const Users = {
         return res.redirect("/painel-usuario");
       }
 
-      return res.redirect("/login", {
+      return res.render("login-usuario", {
         errors: {
           email: {
             msg: "Credenciais Inválidas",
@@ -76,7 +76,7 @@ const Users = {
         },
       });
     }
-    return res.redirect("/login", {
+    return res.render("login-usuario", {
       errors: {
         email: {
           msg: "Credenciais inválidas",
