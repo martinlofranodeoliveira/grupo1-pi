@@ -226,6 +226,8 @@ div#local-produto>div#local-org1 {
   padding-left: 10px;
   margin: 0;
   min-height: 50px;
+  font-weight: bold;
+  font-size: 17px;
 }
 .dados>.descrição {
   padding-left: 10px;
