@@ -106,7 +106,16 @@ section#produto-destaque>div#local-produto>.org1>div {
   
 }
 
-section#produto-destaque>div#local-produto>.org1>div img{
+section#produto-destaque>div#local-produto>.org1>div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 150px;
+  margin-top: 25px;
+}
+
+section#produto-destaque>div#local-produto>.org1>div a img{
   display: flex;
   align-items: center;
   justify-content: center;

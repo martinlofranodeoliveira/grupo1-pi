@@ -68,7 +68,9 @@
             <div class="org1">
                 <% for(let i = 0; i < 4; i++){ %>
                     <div>
+                        <a  href="descricao-produto/<%= products[i].id %>">
                         <img src="/images/<%= products[i].imagem %> " alt="<%= products[i].nome %>">
+                        </a>
                     </div>
                     <% } %>
             </div>
