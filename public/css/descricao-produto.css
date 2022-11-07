@@ -54,8 +54,36 @@ body {
     width: 30%;
     padding: 0px;
     margin: 0px;
-    position: relative;
-    bottom: 20px;
+}
+
+div#estrela {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    justify-content: center;
+}
+img#s1 {
+    height: 33px;
+}
+img#s2 {
+    height: 33px;
+}
+img#s3 {
+    height: 33px;
+}
+img#s4 {
+    height: 33px;
+}
+img#s5 {
+    height: 33px;
+}
+.d-flex{
+    display: flex;
+}
+.espaco60{
+    width: 60%;
 }
 
 #org2>div#imagem-produto>img {
@@ -77,11 +105,13 @@ div#descricao-produto {
     text-transform: capitalize;
 }
 
-div#descricao-produto>div#subtiulo {
+div#descricao-produto>div#subtiulo p {
     display: flex;
     flex-direction: column;
-
     gap: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    font-variant: lining-nums;
 }
 
 input[type=number] {
@@ -100,7 +130,9 @@ input#CalcularFrete {
 
 div span {
     text-transform: none;
-    font-size: 13px;
+    float: left;
+    display: flex;
+    font-size: 16px;
 }
 
 input[type=button] {
@@ -117,6 +149,7 @@ input[type=button] {
 div#descricao-produto>div#frete>form {
     display: flex;
     flex-direction: row;
+    margin-bottom: 0px;
 }
 
 
