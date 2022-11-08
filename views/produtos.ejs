@@ -27,7 +27,6 @@
         
         <!-- conteudo produto em destaque -->
         
-        <h1 id="titulo-produto">SEJAM MUITO BEM VINDOS!</h1>
         <div id="fotos-produto">
             <div class="slider">
                 <div class="slides">
@@ -53,36 +52,6 @@
         
         </div>
     </section>
-  
-  <!--  Section "Estatísticas" -->
-  <div class=" consult-azul-aqua-md ">
-    <div class="consult-container container consult-row consult-center consult-padding-64">
-      <div class="consult-quarter">
-        <span class="consult-xxlarge">+de 1500</span>
-        <br>Parceiros
-     
-    </div>
-     
-    <div class="consult-quarter">
-        <span class="consult-xxlarge">99%</span>
-        <br>Pessoas atendidas em menos de 24 horas
-      
-    </div>
-      
-      <div class="consult-quarter">
-        <span class="consult-xxlarge">27</span>
-        <br>Presente em todos os Estados Brasileiros
-     
-    </div>
-     
-    <div class="consult-quarter">
-        <span class="consult-xxlarge">+100.000</span>
-        <br>Usuários
-     
-    </div>
-    </div>
-  </div>
- 
   <header id="produto">
 
   </header>
@@ -91,16 +60,17 @@
       
     <section id="produto-destaque">
  
-        <h1 id="titulo-produto">O que você precisa hoje?</h1>
+        <h1 id="titulo-produto">Os melhores produtos na área da sáude</h1>
         
-        <p id="subtitulo-produto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>
-            tempor incididunt ut labore et dolore.</p>
+        <p id="subtitulo-produto">Confira os produtos mais vendidos.</p>
         
         <div id="local-produto">
             <div class="org1">
-                <% for(let i = 0; i < 8; i++){ %>
+                <% for(let i = 0; i < 4; i++){ %>
                     <div>
+                        <a  href="descricao-produto/<%= products[i].id %>">
                         <img src="/images/<%= products[i].imagem %> " alt="<%= products[i].nome %>">
+                        </a>
                     </div>
                     <% } %>
             </div>
@@ -109,7 +79,7 @@
     
     <section id="nosso-produto">
         <h1>Confira Nossos Produtos</h1>
-        <p>SUBTITULO TEXTO COMPLEMENTAR XPTO</p>
+        <p>Produtos em Promoção</p>
 
         <div id="local-produto">
             <div id="local-org1">
@@ -118,14 +88,14 @@
                 <% products.forEach((product) => { %> 
                     <div class="prof">
                         <div class="back-image">
-                            <p><img src="/images/<%= product.imagem %>" alt="<%= product.nome %>"></p>
+                            <a href="descricao-produto/<%= product.id %>" title="<%= product.nome %>"><img src="/images/<%= product.imagem %>" alt="<%= product.nome %>"></a>
                         </div>
                         <div class="dados">
                             <p class="name"><%= product.nome %></p>
-                            <p class="Categoria"><%= product.preco %></p>
+                            <p class="Categoria">R$ <%= product.preco %></p>
                             <p class="descrição"><%= product.previaDescricao %></p>
                                 <a  href="descricao-produto/<%= product.id %>">
-                                    <input type="button" id="buttomW" value="CONSULTE AGORA MESMO" font-size='12px'>
+                                    <input type="button" id="buttomW" value="Comprar agora" font-size='12px'>
                                 </a>
                         </div>
                     </div> 
