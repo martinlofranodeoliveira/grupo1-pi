@@ -63,6 +63,7 @@ div#estrela {
     margin: 0 auto;
     width: 40%;
     justify-content: center;
+    margin-bottom: 20px;
 }
 img#s1 {
     height: 33px;
@@ -363,6 +364,35 @@ input#COMPRA[type=button] {
         justify-content: center;
         align-items: center;
         margin-top: 10px;
+        flex-direction: column;
+    }
+
+    div#descricao-produto {
+        width: 70%;
+        text-transform: capitalize;
+        margin-top: 20px;
+    }
+
+    div#estrela {
+        width: 100%;
+        position: relative;
+        right: 30px;
+        margin-bottom: 20px;
+        display: block;
+        justify-content: normal;
+        align-items: normal;
+        text-align: inherit;
+    }
+    
+    .espaco60{
+        display: none;
+    }
+
+    div#descricao-produto>div#frete>form {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+        padding: 0;
     }
 
     #org2 {
