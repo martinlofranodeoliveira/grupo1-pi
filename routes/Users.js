@@ -23,9 +23,6 @@ router.post('/login', Users.loginCadastro) //receber dados via post
 router.get("/painel-parceiro",notLogged, Users.dashboard); //painel parceiro
 router.get("/painel-usuario",notLogged, Users.dashboardUsuario); // painel usuario
 
-/* home  */
-router.get("/",Logged, Users.index);
-router.post("/", Users.envioFormulario); //receber formularios via post
 
 /* sair perfil */
 router.get("/sair",notLogged, Users.logout);

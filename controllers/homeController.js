@@ -1,4 +1,6 @@
 const path = require("path");
+const { validationResult } = require("express-validator");
+const homeContato = require("../models/home");
 
 const homeController = {
   selecaoPlano: (req, res) => {
@@ -24,6 +26,22 @@ const homeController = {
       title: "Finalização de Compra Planos",
     });
   },
+
+  contato: (req, res) => {
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("index", {
+        title: "Contato",
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+    let contato = {
+      ...req.body,
+    };
+    let contatoCreate = homeContato.create(contato);
+    res.redirect("/");
+  }
 };
 
 module.exports = homeController;
