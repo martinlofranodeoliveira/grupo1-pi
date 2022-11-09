@@ -6,30 +6,49 @@
       <form action="/" method="POST" name="formulario">
         <p>
           <input class="consult-input consult-border consult-azul-aqua-lg-input" type="text" id="nome" placeholder="Nome"  name="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+          <% if (locals.errors && errors.nome) { %>
+            <div class="error">
+                <span><%= errors.nome.msg %></span>
+            </div>
+          <% } %>
         </p>
-        <% if (locals.errors && errors.nome) { %>
-          <div class="error">
-              <p><%= errors.nome.msg %></p>
+       
+        <div style="width: 100%;">
+          <p style="
+      margin: 0px;
+      float: left;
+      padding: 0;
+      width: 48.2%;
+      margin-right: 10px;
+  ">
+             <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email" id="email" placeholder="Email" name="email" style="
+      width: 100%;
+  ">
+             
+          </p>
+          <p style="
+      margin: 0;
+      float: left;
+      width: 50%;
+      margin-left: 1%;
+  ">
+             <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]+$" style="
+      width: 100%;
+  ">
+          </p>
           </div>
-      <% } %>
-        <p class="d-flex">
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email"  id="email" placeholder="Email"  name="email">
-           <% if (locals.errors && errors.email) { %>
-            <div class="error">
-                <p><%= errors.email.msg %></p>
-            </div>
-        <% } %>
-           <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]+$">
-           <% if (locals.errors && errors.telefone) { %>
-            <div class="error">
-                <p><%= errors.telefone.msg %></p>
-            </div>
-        <% } %>
-        </p>
+        <div style="width: 100%;" class="d-flex">
+          <% if (locals.errors && errors.email) { %>
+            <span class="error" style="width: 50%;"><%= errors.email.msg %></span>
+          <% } %>
+          <% if (locals.errors && errors.telefone) { %>
+            <span class="error" style="width: 50%;"><%= errors.telefone.msg %></span>
+          <% } %>
+        </div>
         <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" id="mensagem" name="mensagem"></textarea>
           <% if (locals.errors && errors.mensagem) { %>
             <div class="error">
-                <p><%= errors.mensagem.msg %></p>
+                <span><%= errors.mensagem.msg %></span>
             </div>
         <% } %>
         </p>
