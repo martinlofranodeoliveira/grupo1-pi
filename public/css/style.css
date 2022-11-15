@@ -28,6 +28,37 @@ div .error {
   font-size: 12px;
 }
 
+input#nome {
+    margin-bottom: 0;
+}
+
+.mob{
+    display:none;
+}
+
+.emailIn{
+    margin: 0px;
+    float: left;
+    padding: 0;
+    width: 48.2%;
+    margin-right: 10px;
+}
+
+.wd-100{
+    width: 100% !important;
+}
+
+.wd-50{
+    width: 50% !important;
+}
+
+.telIn{
+    margin: 0;
+    float: left;
+    width: 50%;
+    margin-left: 1%;
+}
+
 .bgimg-1 {
     background-position: center;
     background-size: cover;
@@ -1218,7 +1249,27 @@ a:visited, a:focus, input[type="text"]:focus, input[type="password"]:focus, inpu
     }
 }
 
-@media (max-width:600px){
+@media (max-width:600px){       
+    .desk{
+        display: none;
+    }
+
+    .mob{
+        display: block;
+    }
+
+    .emailIn{
+        width: 100% !important;
+    }
+
+    .telIn{
+        width: 100% !important;
+        margin-left: 0% !important;
+    }
+
+    .wd-50{
+        width: 100% !important;
+    }
     .consult-col{
         margin-top: 10px;
     }

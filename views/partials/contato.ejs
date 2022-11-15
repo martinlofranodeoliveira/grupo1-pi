@@ -12,38 +12,45 @@
             </div>
           <% } %>
         </p>
-       
-        <div style="width: 100%;">
-          <p style="
-      margin: 0px;
-      float: left;
-      padding: 0;
-      width: 48.2%;
-      margin-right: 10px;
-  ">
-             <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right" type="email" id="email" placeholder="Email" name="email" style="
-      width: 100%;
-  ">
-             
+       <div class="desk">
+        <div class="wd-100">
+          <p class="emailIn">
+            <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right wd-100" type="email" id="email" placeholder="Email" name="email">
+            
           </p>
-          <p style="
-      margin: 0;
-      float: left;
-      width: 50%;
-      margin-left: 1%;
-  ">
-             <input class="consult-input2 consult-border consult-azul-aqua-lg-input" type="tel" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]+$" style="
-      width: 100%;
-  ">
+          <p class="telIn">
+            <input class="consult-input2 consult-border consult-azul-aqua-lg-input wd-100" type="tel" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]+$">
           </p>
           </div>
-        <div style="width: 100%;" class="d-flex">
+        <div class="d-flex wd-100">
           <% if (locals.errors && errors.email) { %>
-            <span class="error" style="width: 50%;"><%= errors.email.msg %></span>
+            <span class="error wd-50"><%= errors.email.msg %></span>
           <% } %>
           <% if (locals.errors && errors.telefone) { %>
-            <span class="error" style="width: 50%;"><%= errors.telefone.msg %></span>
+            <span class="error wd-50"><%= errors.telefone.msg %></span>
           <% } %>
+        </div>
+       </div> 
+       <div class="mob">
+          <div class="wd-100">
+            <p class="emailIn">
+              <input class="consult-input2 consult-border consult-azul-aqua-lg-input consult-margin-right wd-100" type="email" id="email" placeholder="Email" name="email">
+              
+            </p>
+            <div class="d-flex wd-100">
+              <% if (locals.errors && errors.email) { %>
+                <span class="error wd-50"><%= errors.email.msg %></span>
+              <% } %>
+            </div>
+            <p class="telIn">
+              <input class="consult-input2 consult-border consult-azul-aqua-lg-input wd-100" type="tel" placeholder="Telefone" id="telefone" name="telefone" pattern="[0-9]+$">
+            </p>
+            </div>
+          <div class="d-flex wd-100">
+            <% if (locals.errors && errors.telefone) { %>
+              <span class="error wd-50"><%= errors.telefone.msg %></span>
+            <% } %>
+          </div>
         </div>
         <p><textarea class="consult-input consult-border consult-azul-aqua-lg-input" type="text" placeholder="Mensagem" id="mensagem" name="mensagem"></textarea>
           <% if (locals.errors && errors.mensagem) { %>
