@@ -1,0 +1,68 @@
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="css/login-usuario.css">
+  <script src="js/login-usuario.js" defer type="text/javascript"></script>
+</head>
+
+<body>
+ <main class="container">
+      <section class="text-primario">
+
+          <p id="logo">LOGO</p>
+
+          <h1 id="text-bem-vindo">Bem vindo(a) de volta</h1>
+          <p id="text-subtitulo">Acesse sua conta agora mesmo</p>
+
+
+
+          <form class="organizar" method="post" action="/loginAdm">
+              <div class="Igmail-login">
+                  <label for="gmail-login">
+                      <span class="material-symbols-outlined">
+                          contact_mail
+                      </span>
+                  </label>
+                  <input type="email" name="email" value="<%= locals.oldData ? oldData.name : null %>" id="gmail-login" placeholder="E-mail" >
+                 
+              </div>
+              <% if (locals.errors && errors.email) { %>
+                <div class="error">
+                    <p><%= errors.email.msg %></p>
+                </div>
+            <% } %>
+              <div class="Isenha-login">
+                  <label for="senha-login"><span class="material-symbols-outlined">
+                          password
+                      </span></label>
+                  <input type="password" name="senha" id="senha-login" placeholder="Senha" >
+                 
+              </div>
+              <% if (locals.errors && errors.senha) { %>
+                <div class="error">
+                    <p><%= errors.senha.msg %></p>
+                </div>
+             <% } %>
+
+              <div class="lembrar"
+                  style="text-align: left;display: block;padding-left: 20px;font-size: 14px;color: white;">
+                  <input type="checkbox" name="lembrar" id="lembrar" style="margin-top: 5px;">
+                  <label for="lembrar" style="font-size: 14px;">Lembrar-me</label>
+              </div>
+            
+
+              <div class="entrar">
+                  <input id="Ientra-login" type="submit" value="ENTRAR">
+              </div>
+              <p id="recuperar"><a href="">Esqueci minha senha</a></p>
+
+        </form> 
+      </section>
+    </main>
+  </body>
+</html>
+

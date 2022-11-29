@@ -16,6 +16,7 @@ const routerServicos = require("./routes/servicos.js");
 const routerDescricaoProduto = require("./routes/descricaoProduto.js");
 const routerCarrinho = require("./routes/carrinho.js");
 const Users = require("./routes/Users.js");
+const admin = require("./routes/admin.js");
 const routerAdmin = require("./routes/admin.js");
 
 //MIDDLEWARES ------------------------------------------------------------------------
@@ -39,11 +40,11 @@ app.use(UserDados);
 //USO DAS ROTAS ------------------------------------------------------------------------
 app.use("/", routerHome);
 app.use("/", Users);
+app.use("/", admin);
 app.use("/", routerProdutos);
 app.use("/", routerServicos);
 app.use("/", routerDescricaoProduto);
 app.use("/", routerCarrinho);
-app.use("/", routerAdmin);
 app.use((req, res) => {
   return res.status(404).render("404");
 }); //Rota de erro 404
