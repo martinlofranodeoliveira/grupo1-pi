@@ -31,14 +31,14 @@ body {
 }
 
 
-/* cabesalho produto */
+/* cabecalho produto */
 
-.cabesalho-produto {
+.cabecalho-produto {
     width: 100vw;
     background: #D4EBE3;
     height: 40vh;
     margin-top: 40px;
-    
+
 }
 
 #org2 {
@@ -46,54 +46,111 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 50px 20px 20px 20px;
     margin-top: 60px;
-
 }
 
 #org2>div#imagem-produto {
     width: 30%;
-    /* background: #D9D9D9; */
-    height:200px;   
-
-  
-    
+    padding: 0px;
+    margin: 0px;
 }
-#org2>div#imagem-produto>img{
-    height: 55vh;
+
+div#estrela {
     display: flex;
     align-items: center;
-
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+img#s1 {
+    height: 33px;
+}
+img#s2 {
+    height: 33px;
+}
+img#s3 {
+    height: 33px;
+}
+img#s4 {
+    height: 33px;
+}
+img#s5 {
+    height: 33px;
+}
+.d-flex{
+    display: flex;
+}
+.espaco60{
+    width: 60%;
 }
 
-div#descricao-produto>div#subtiulo {
+#org2>div#imagem-produto>img {
+    width: 230px;
+    display: flex;
+    float: right;
+    margin-right: 50px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 26px;
+}
+
+div#descricao-produto {
+    width: 70%;
+    text-transform: capitalize;
+}
+
+div#descricao-produto>div#subtiulo p {
     display: flex;
     flex-direction: column;
-
     gap: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    font-variant: lining-nums;
 }
 
 input[type=number] {
     height: 35px;
-    width: 35%;
+    width: 90px;
     border-radius: 12px;
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     border: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+input#CalcularFrete {
+    width: 150px;
+}
+
+div span {
+    text-transform: none;
+    float: left;
+    display: flex;
+    font-size: 16px;
 }
 
 input[type=button] {
     height: 35px;
-    width: 35%;
+    width: 100%;
     border-radius: 12px;
     background-color: #39B55F;
     border: none;
     color: white;
+    padding: 10px 20px 20px 20px;
+    margin-left: 10px;
 }
 
 div#descricao-produto>div#frete>form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 0px;
 }
 
 
@@ -108,8 +165,8 @@ div#descricao-produto>div#frete>form {
 
 .descricao>div#barra {
     width: 100%;
-    background: #87AAAE;
-    height: 25%;
+    background: #87aaae;
+    height: 1%;
 }
 
 .descricao>div#detalhes {
@@ -126,6 +183,7 @@ div#descricao-produto>div#frete>form {
 
 .descricao>div#detalhes>p {
     margin-left: 30px;
+    padding: 20px;
 }
 
 
@@ -137,7 +195,7 @@ div#descricao-produto>div#frete>form {
     align-items: center;
     align-items: center;
     padding: 20px;
-    gap:20px
+    gap: 20px
 }
 
 div#org1 {
@@ -146,7 +204,7 @@ div#org1 {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -170,7 +228,7 @@ div#card>div#img {
     font-weight: bolder;
 }
 
-div#card>div#descricao{
+div#card>div#descricao {
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -200,32 +258,32 @@ input#COMPRA[type=button] {
     width: 90%;
 
 }
+
 @media screen and (min-width:1200px) {
-    .cabesalho-produto{
-        height:30vw;
-        font-size: 9px;
+    .cabecalho-produto {
+        height: auto;
     }
 
 }
 
-@media screen and (min-width:922px) and (max-width:1200px){
-    .cabesalho-produto{
-        height:40vw;
-        font-size: 9px;
+@media screen and (min-width:922px) and (max-width:1200px) {
+    .cabecalho-produto {
+        height: auto;
     }
 
 }
 
 @media screen and (min-width:835px)and (max-width:1200px) {
-    .cabesalho-produto{ height:50vw;}
- 
+    .cabecalho-produto {
+        height: auto;
+    }
+
 }
 
 
 @media screen and (min-width:768px)and (max-width:835px) {
-    .cabesalho-produto{
-        height:70vw;
-        font-size: 9px;
+    .cabecalho-produto {
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -239,62 +297,102 @@ input#COMPRA[type=button] {
         align-items: center;
         padding: 20px;
         gap: 20px;
-       
-    
-    
+
+
+
     }
 
 }
-@media screen and (min-width:600px) and (max-width:768px){
-    .cabesalho-produto{
-        height:80vw;
+
+@media screen and (min-width:600px) and (max-width:768px) {
+    .cabecalho-produto {
+        height: 80vw;
         font-size: 9px;
         display: flex;
         justify-content: center;
         align-items: center;
 
     }
-    #estrela>a{
+
+    
+
+    #estrela>a {
         width: 20px;
         height: 20%;
     }
-   
-    
+
+
     #org2>div#imagem-produto {
         width: 70%;
         background: #D9D9D9;
-        height:250px;   
-    
-      
-        
+        height: 250px;
+
+
+
     }
+
     div#org1 {
         width: 100vw;
         flex-direction: column;
-    
+
     }
-    
+
     div#card {
         width: 50%;
-    ;
+        ;
     }
-    
 
-    
+
+
 
 }
 
 @media screen and (max-width:600px) {
-    .cabesalho-produto{
-        margin-top:40px ;
-        height:120vh;
-        font-size: 9px;
+    #org2>div#imagem-produto {
+        width: 30%;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        bottom: 0px !important;
+    }
+    
+    
+    .cabecalho-produto {
+        height: auto;
+        font-size: 13px;
         display: flex;
         justify-content: center;
         align-items: center;
-      
-    
+        margin-top: 10px;
+        flex-direction: column;
+    }
 
+    div#descricao-produto {
+        width: 70%;
+        text-transform: capitalize;
+        margin-top: 20px;
+    }
+
+    div#estrela {
+        width: 100%;
+        position: relative;
+        right: 30px;
+        margin-bottom: 20px;
+        display: block;
+        justify-content: normal;
+        align-items: normal;
+        text-align: inherit;
+    }
+    
+    .espaco60{
+        display: none;
+    }
+
+    div#descricao-produto>div#frete>form {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+        padding: 0;
     }
 
     #org2 {
@@ -303,38 +401,24 @@ input#COMPRA[type=button] {
         justify-content: center;
         align-items: center;
         padding: 20px;
-        gap: 20px;
         flex-direction: column;
-        margin-top: 50px;
     }
 
     #org2>div#imagem-produto {
-        width: 80%;
-        background: #D9D9D9;
-        height:300px;   
-    
-      
-        
+        width: 100%;
     }
-    #estrela>a{
+
+    #estrela>a {
         width: 20px;
         height: 20%;
-    
-   
-    
-    
-      
-        
     }
+
     div#org1 {
         width: 100vw;
         flex-direction: column;
-    
     }
-    
+
     div#card {
         width: 90%;
-    ;
     }
 }
-

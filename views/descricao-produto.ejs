@@ -25,7 +25,8 @@
   </header>
   <div id="home"></div>
   <!-- produto visual -->
-  <section class="cabesalho-produto">
+  <section class="cabecalho-produto">
+    
     <div id="org2">
 
       <div id="imagem-produto">
@@ -36,26 +37,9 @@
 
         <h1><%= descricaoProduto.nome %> </h1>
 
-        <div id="estrela">
-          <a href="javascript:void(0)" onclick="Avaliar(1)">
-            <img src="/images/estrela.png" id="s1"></a>
-
-          <a href="javascript:void(0)" onclick="Avaliar(2)">
-            <img src="/images/estrela.png" id="s2"></a>
-
-          <a href="javascript:void(0)" onclick="Avaliar(3)">
-            <img src="/images/estrela.png" id="s3"></a>
-
-          <a href="javascript:void(0)" onclick="Avaliar(4)">
-            <img src="/images/estrela.png" id="s4"></a>
-
-          <a href="javascript:void(0)" onclick="Avaliar(5)">
-            <img src="/images/estrela.png" id="s5"></a>
-        </div>
 
         <div id="subtiulo">
-
-          <p>Valor: <%= descricaoProduto.preco %>  </p>
+          <p> R$ <%= descricaoProduto.preco %>  </p>
 
           <!-- <p>Copo furadis é disculpa de bebadis, arcu quam euismod magna.Atirei o pau no gatis, per gatis num
             morreus.</p> -->
@@ -63,22 +47,48 @@
         </div>
 
         <div id="frete">
-          <p>CALCULAR FRETE</p>
+          <p>Quantidade</p>
           <form action="" method="post">
 
-            <input type="number" id="CalcularFrete">
+            <input type="number" id="quantidadeProduto">
             <a href="carrinho">
               <input type="button" name="" id="button-frete" value="COMPRAR AGORA">
             </a>
+            
           </form>
+          <span>
+            Calcule o frete
+          </span><br>
+          <input type="number" id="CalcularFrete">
+          
         </div>
 
 
 
       </div>
     </div>
-  </section>
+    
+  <div class="d-flex">
+    <div id="estrela">
+      <a href="javascript:void(0)" onclick="Avaliar(1)">
+        <img src="/images/estrela.png" id="s1"></a>
 
+      <a href="javascript:void(0)" onclick="Avaliar(2)">
+        <img src="/images/estrela.png" id="s2"></a>
+
+      <a href="javascript:void(0)" onclick="Avaliar(3)">
+        <img src="/images/estrela.png" id="s3"></a>
+
+      <a href="javascript:void(0)" onclick="Avaliar(4)">
+        <img src="/images/estrela.png" id="s4"></a>
+
+      <a href="javascript:void(0)" onclick="Avaliar(5)">
+        <img src="/images/estrela.png" id="s5"></a>
+    </div> 
+    <div class="espaco60">
+    </div>
+  </div>
+  </section>
   <!-- descrição do produto -->
   <section class="descricao">
 
