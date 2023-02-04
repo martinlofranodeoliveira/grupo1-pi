@@ -1,6 +1,6 @@
 const path = require("path");
 const { validationResult } = require("express-validator");
-const homeContato = require("../models/home");
+const homeContato = require("../models/Home");
 
 const homeController = {
   selecaoPlano: (req, res) => {
